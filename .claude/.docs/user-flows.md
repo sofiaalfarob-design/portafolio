@@ -8,48 +8,44 @@
 
 ```
 Step 1: Land on Home Page
+  - Implementación de Skeleton Loaders para evitar saltos de layout (CLS).
   |
   v
-Step 2: Read Hero section
-  - See title, specialization, and key stats (8+ years, 30+ projects, etc.)
-  - See "Available for remote projects" badge
+Step 2: Experience the Hero Section
+  - Ver Video (Background/Showreel) con [Autoplay + Mute] para impacto visual inmediato.
+  - Leer Título, Especialización y "Key Stats" (8+ años, 30+ proyectos).
+  - Validar status con el badge "Available for remote projects".
   |
-  +---> [Option A] Click "View Case Studies" -> Jump to Featured Case Studies section (#projects)
-  +---> [Option B] Click "Let's Talk" -> Scroll to CTA/Contact section (#contact)
-  +---> [Option C] Scroll down naturally
-  |
-  v
-Step 3: Browse Featured Case Studies (4 cards in 2x2 grid)
-  - Scan thumbnails, categories, titles, metrics, and tags
-  |
-  +---> Click "View this Project" on any card -> Navigate to Case Study Detail page
-  +---> Click "View more projects" -> Navigate to /case-studies
-  +---> Continue scrolling
+  +---> [Option A] Click "View Case Studies" -> Smooth scroll a #projects.
+  +---> [Option B] Click "Let's Talk" -> Smooth scroll a #contact.
+  +---> [Option C] Scroll natural (activación de Scroll-Spy en el Navbar).
   |
   v
-Step 4: View The Experimental Lab section
-  - See innovation projects with status (Completed / In Progress / Planned)
+Step 3: Scan Featured Case Studies (2x2 Grid)
+  - Orden de lectura jerárquico: 
+    1. Categoría (Contexto rápido) 
+    2. Título (Nombre del proyecto) 
+    3. Descripción (Propuesta de valor/Problema resuelto).
+  - Revisión de métricas de impacto y tags técnicos (herramientas AI/Design).
   |
-  +---> Click "Book a Call" -> Navigate to contact/booking
-  +---> Continue scrolling
-  |
-  v
-Step 5: View Skills & Methodology section
-  - Scan 6 skill category cards to evaluate technical breadth
-  |
-  v
-Step 6: View "Why Work With Me" section
-  - Read value propositions
+  +---> Hover en Card: Micro-interacción (elevation + color shift).
+  +---> Click "View this Project" -> Navegación a Case Study Detail.
+  +---> Click "View more projects" -> Navegación a /case-studies.
   |
   v
-Step 7: Reach CTA / Contact section
-  - See "Ready to Accelerate Your Product?"
+Step 4: View Experimental Lab section
+  - Proyectos de innovación con badges de estado dinámicos (Live/WIP/Planned).
   |
-  +---> Click "Connect on LinkedIn" -> External: LinkedIn profile
-  +---> Click "Send Email" -> Opens mailto: link
-  +---> Click "Book a Call" -> External: Calendly or booking page
-  +---> Click "Download Resume (PDF)" -> Download file
-  +---> Click "GitHub" -> External: GitHub profile
+  +---> Click "Book a Call" -> Calendly/Booking.
+  |
+  v
+Step 5: Trust Signals & Technical Breadth
+  - Browse "Skills & Methodology" (6 categorías).
+  - Read "Why Work With Me" (Propuesta de valor estratégica).
+  |
+  v
+Step 6: Conversion (Sticky Footer/CTA Section)
+  - Acceso a LinkedIn, Email, Resume, GitHub.
 ```
 
 **Key conversion points:** "Let's Talk" (hero), "Book a Call" (lab), CTA section (bottom)

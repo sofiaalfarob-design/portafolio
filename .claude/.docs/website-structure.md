@@ -20,14 +20,14 @@
 
 ### Navigation Structure (Header)
 
-| Position | Item            | Link Target          |
-|----------|-----------------|----------------------|
-| Left     | Logo (S.)       | `/` (Home)           |
-| Right    | Portfolio       | `/#projects` (anchor)|
-| Right    | Case Studies    | `/case-studies`      |
-| Right    | The Lab         | `/#lab` (anchor)     |
-| Right    | About Me        | `/#about` (anchor)   |
-| Right    | **Get in touch** (CTA button) | `/#contact` or modal |
+| Position | Item                             | Link Target          |
+|----------|----------------------------------|----------------------|
+| Left     | Logo (image link-home.png)       | `/` (Home)           |
+| Right    | Portfolio                        | `/#projects` (anchor)|
+| Right    | Case Studies                     | `/case-studies`      |
+| Right    | The Lab                          | `/#lab` (anchor)     |
+| Right    | About Me                         | `/#about` (anchor)   |
+| Right    | **Get in touch** (CTA button)    | `/#contact` or modal |
 
 ### Footer Navigation
 
@@ -59,33 +59,33 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
   - `40%` Efficiency improved
   - `15+` Design Systems
 - **CTAs:** Two buttons side by side
-  - "View Case Studies" (outlined/secondary)
+  - "View Case Studies" (Black pill/primary)
   - "Let's Talk" (outlined/secondary)
-- **Visual collage:** Masonry-style grid of project screenshots, phone mockups, video thumbnails, and UI screens filling the lower portion of the hero
+- **Video autoplay mude** https://youtu.be/dVZVx_XOFrM?si=s7O5PV_xV_ouldT2
 
 #### Section 2: Featured Case Studies (`#projects`)
-
+**Background:** Light gray rounded container
 - **Label badge:** "Case Studies" (purple pill)
 - **Heading:** "High-Impact Projects"
 - **Subtext:** Description of strategic initiatives
-- **CTA link:** "View more projects" (text link)
+- **CTA link:** "View more projects" (black pill/primary)
 - **Layout:** 2-column grid of case study cards (4 cards total)
-- **Card structure** (each card):
+- **Card structure** (each card): 
   - Large thumbnail image (rounded corners)
   - Category label in purple (e.g., "AI Implementation & Rapid Prototyping")
   - Title (bold, black)
   - Description paragraph
   - Metrics line (e.g., "MVP in 1 week | 40% Workflow Efficiency | 100% Functional Logic")
   - Tag pills (e.g., "AI Strategy", "Claude", "Figma", "Product Design", "User Testing")
-  - "View this Project" link with arrow icon
-  - Subtle separator line between metadata and link
+  - CTA: "View this Project" (outlined/secondary/full width)
+
 
 #### Section 3: The Experimental Lab (`#lab`)
 
 - **Label badge:** "The Experimental Lab" (purple pill)
 - **Heading:** "Technical Experimentation & Continuous Innovation"
 - **Subtext:** Description about experimenting with AI and automation
-- **CTA:** "Book a Call" button (outlined, top-right)
+- **CTA:** "Book a Call" button (black pill, primary, top-right)
 - **Layout:** 3-column card grid
 - **Card structure** (each card):
   - Image thumbnail (rounded)
@@ -110,10 +110,11 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
   3. Design Systems & Architecture (Tokens, Component Libraries, Atomic Design, Accessibility WCAG 2.1)
   4. Processes & Strategy (Agile/Scrum/Kanban, Design Thinking, JTBD, User Story Mapping)
   5. Research & Validation (User Research, Usability Testing, A/B Testing, Analytics)
-  6. Soft Skills (Team Work, Emotional Intelligence, Project Management, Creativity)
+  6. Soft Skills (Stakeholder Management & Alignment, Systems Thinking, Technical Empathy, Strategic Problem Solving, Adaptability & Continuous Learning)
 
 #### Section 5: Why Work With Me
 
+**Background:** Light gray rounded container
 - **Heading:** "Why Work With Me?"
 - **Description paragraph:** Positioning statement about approach
 - **Layout:** 3-column card grid
@@ -129,14 +130,14 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
 - **Subtext:** Invitation to connect
 - **CTA buttons** (3 side by side):
   - "Connect on LinkedIn" (purple/filled, with LinkedIn icon)
-  - "Send Email" (purple/filled, with email icon)
+  - "Send Email" (lila/filled, with email icon)
   - "Book a Call" (outlined, with calendar icon)
-- **Secondary links:** "Download Resume (PDF)", "GitHub"
+- **Secondary links:** "Download Resume (PDF) (link text, with download icon)", "GitHub (link text, with github icon)"
 - **Background:** Light gray rounded container
 
 #### Section 7: Footer
 
-- **Logo:** S. logo (dark pill shape)
+- **Logo:** (image link-home.png )
 - **Tagline:** "Ready to accelerate your product?"
 - **Description:** Senior Product Designer specialization summary
 - **Quick Links column:** Case Studies, The Lab, Tech Stack, About Me
@@ -194,23 +195,25 @@ Each case study follows a templated structure with a unique color theme per case
 #### Section 1: Hero (Dark Background)
 
 - **Background:** Full-width dark/colored section (color varies per case study)
-  - Cleaning App: Dark navy
-  - Propelus: Dark green
-  - Continuing Education: Dark navy/blue
-  - Arkose Labs: Dark purple
-- **Tags:** Row of purple pill badges (category tags)
+  - Cleaning App: Dark navy (#02102D)
+  - Propelus: Dark green (#002213)
+  - Continuing Education: Dark navy/blue (#2B3A72)
+  - Arkose Labs: Dark purple (#16023E)
+- **Tags:** Row of lila pill badges (category tags)
 - **Subtitle:** Category label (e.g., "AI Implementation & Rapid Prototyping")
 - **Title:** Case study title (large, white text)
 - **Role label:** Role description (e.g., "Lead Product Designer & AI Orchestrator")
-- **Hero image:** Large screenshot/mockup with rounded corners, overlapping the dark section
+- **Hero image:** Large screenshot/mockup, overlapping the dark section, 0px margin on the bottom
 
 #### Section 2: Overview Bar
 
 - **Layout:** Two-column metadata bar
-  - **Tools:** List of tools used (e.g., "Claude, Figma, ChatGPT v4, Prompt Engineering")
-  - **Timeline:** Project duration (e.g., "3 Weeks: Concept & Functional App")
+  - **(example) Tools:** List of tools used (e.g., "Claude, Figma, ChatGPT v4, Prompt Engineering")
+  - **(example) Timeline:** Project duration (e.g., "3 Weeks: Concept & Functional App")
 
 #### Section 3: Main Content (Repeating Sections)
+
+background: light Gray background with rounded corners
 
 The main body uses a consistent pattern of titled content blocks. Each case study has 2-3 of these:
 
@@ -234,19 +237,19 @@ Specific content sections vary per case:
   - Metric headline (bold, e.g., "60%")
   - Description text
 
-#### Section 5: See Our Work (Related Cases)
+#### Section 5: See my Work (Other Cases)
 
-- **Label badge:** "Other projects" (purple pill)
-- **Heading:** "See our work"
+- **Label badge:** "Learn More" (purple pill)
+- **Heading:** "See my work"
 - **Subtext:** Intro line
-- **CTA:** "View all" button (top-right)
+- **CTA:** "View other case studies" button (black pill/primary/top-right)
 - **Layout:** 3-column horizontal scroll/grid of case study cards
 - **Card structure** (compact version):
   - Thumbnail image
   - Category label (purple)
   - Title
   - Tag pills
-  - "View project" link with arrow
+  - "View project" button (outline pill/secundary)
 
 #### Section 6: CTA / Contact
 
@@ -343,7 +346,7 @@ Specific content sections vary per case:
 ### Interaction Patterns
 
 - **Section badges** appear consistently above every section heading as wayfinding elements
-- **CTA hierarchy:** Primary = purple filled, Secondary = dark filled, Tertiary = outlined
+- **CTA hierarchy:** Primary = black filled, Secondary = purple filled, Tertiary = outlined
 - **Card links:** "View this Project" / "View project" with arrow icon at card bottom
 - **Navigation CTA:** "Get in touch" is the persistent primary action in the navbar
 - **Contact section** repeats on every page as the final content before footer
