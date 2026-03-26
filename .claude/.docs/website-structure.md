@@ -78,6 +78,42 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
   - Metrics line (e.g., "MVP in 1 week | 40% Workflow Efficiency | 100% Functional Logic")
   - Tag pills (e.g., "AI Strategy", "Claude", "Figma", "Product Design", "User Testing")
   - CTA: "View this Project" (outlined/secondary/full width)
+- Content of cards
+  - Card 1: 
+    - Image: card-ai-implementation-rapid-prototyping.png  
+    - Category label in purple: AI Implementation & Rapid Prototyping
+    - Title (bold, black): From Concept to Functional MVP in 21 Days
+    - Description paragraph: Orchestrating a hybrid workflow between generative AI and product design to launch a cleaning services MVP in record time.
+    - Metrics line: MVP in 1 week | 60% Workflow Efficiency | 100% Functional Logic.
+    - Tag pills: AI Strategy, Lovable, Figma, Product Design, Vibe Coding
+    - CTA: "View this Project" (outlined/secondary/full width)
+
+  - Card 2: 
+    - Image: card-design-systems-engineering.png  
+    - Category label in purple: Design Systems & Engineering
+    - Title (bold, black): Scalable Architecture: The Design-to-Code Bridge
+    - Description paragraph: Building a modular design system using Figma Variables to unify the identity of 20+ commercial pages and streamline developer handoff. 
+    - Metrics line: 20+ Pages Impacted | Figma Variables | 0% Handoff Friction.
+    - Tag pills: Design Systems, Tailwind, React, Architecture, Design Engineering
+    - CTA: "View this Project" (outlined/secondary/full width)
+
+  - Card 3: 
+    - Image: card-b2b-cms-design-flexibility.png  
+    - Category label in purple: B2B CMS Design & Flexibility
+    - Title (bold, black): Empowering the End-User: The "Chameleon" Component System
+    - Description paragraph: Redesigning the administrative and public experience of a CMS to allow dynamic content creation without compromising brand integrity.  
+    - Metrics line: 100% Client Autonomy | Modular Flexibility | Multi-Theme Components.
+    - Tag pills: CMS Design, B2B UX, UI Components, User Empowerment
+    - CTA: "View this Project" (outlined/secondary/full width)
+
+   - Card 4: 
+    - Image: card-ux-audit-conversion-rate-optimization.png  
+    - Category label in purple: UX Audit & Conversion Rate Optimization
+    - Title (bold, black): Strategic Storytelling: Shifting from "Technical" to "Decision-Maker"
+    - Description paragraph: A deep-dive UX audit and strategic redesign to transform a technical informational site into a high-converting B2B sales machine. 
+    - Metrics line: Reduced Bounce Rate | Strategic Mega-Menu | CRO-Focused Narrative.
+    - Tag pills: UX Audit, CRO, B2B Strategy, Data-Driven Design
+    - CTA: "View this Project" (outlined/secondary/full width)
 
 
 #### Section 3: The Experimental Lab (`#lab`)
