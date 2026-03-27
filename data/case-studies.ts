@@ -97,23 +97,23 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         image: "/cleaning-app-case-closer-image.png",
-        imageAlt: "Home Harmony app Task Distribution and Monthly Calendar screens showing data visualisation and task management UI",
+        imageAlt: "Home Harmony app Task Distribution and Monthly Calendar screens showing data visualization and task management UI",
         imageContained: true,
       },
     ],
     businessImpact: [
       {
         headline: "60%",
-        description: "Reduction in traditional development costs.",
+        description: "Reduction in traditional development costs",
       },
       {
         headline: "Time-to-Market",
-        description: "3 weeks vs. the industry average of 16 weeks.",
+        description: "3 weeks vs. the industry average of 16 weeks",
       },
       {
         headline: "Result",
         description:
-          "A fully functional, scalable MVP that allowed the client to secure early-stage feedback with zero design debt.",
+          "A fully functional, scalable MVP that allowed the client to secure early-stage feedback with zero design debt",
       },
     ],
     relatedCaseSlugs: ["propelus", "continuing-education", "arkose-labs"],
@@ -205,7 +205,7 @@ export const caseStudies: CaseStudy[] = [
     tools: ["Figma", "React", "Headless CMS", "User Testing"],
     timeline: "12 Weeks: Research, Design & Validation",
     metrics:
-      "100% Client Autonomy | Modular Flexibility | Multi-Theme Components.",
+      "100% Client Autonomy | Modular Flexibility | Multi-Theme Components",
     tags: [
       { label: "CMS Design", variant: "purple" },
       { label: "B2B UX", variant: "neutral" },
@@ -277,7 +277,7 @@ export const caseStudies: CaseStudy[] = [
     heroColor: "#16023E",
     tools: ["Figma", "Hotjar", "Google Analytics", "UserTesting"],
     timeline: "6 Weeks: Audit, Strategy & Redesign",
-    metrics: "Reduced Bounce Rate | Strategic Mega-Menu | CRO-Focused Narrative.",
+    metrics: "Reduced Bounce Rate | Strategic Mega-Menu | CRO-Focused Narrative",
     tags: [
       { label: "UX Audit", variant: "purple" },
       { label: "CRO", variant: "neutral" },
