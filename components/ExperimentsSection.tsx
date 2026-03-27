@@ -61,7 +61,7 @@ export default function ExperimentsSection() {
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
               variants={cardVariants}
-              className="card-hover group overflow-hidden rounded-2xl border border-gray-100 bg-white"
+              className="card-hover group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
@@ -72,7 +72,7 @@ export default function ExperimentsSection() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <h3 className="font-heading text-base font-bold text-text-primary">
                   {exp.title}
                 </h3>
@@ -84,7 +84,7 @@ export default function ExperimentsSection() {
                 <p className="mt-2 text-sm leading-relaxed text-text-secondary">
                   {exp.description}
                 </p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <div className="mt-auto pt-4 flex flex-wrap gap-2">
                   {exp.tags.map((tag) => (
                     <TagPill key={tag} label={tag} />
                   ))}

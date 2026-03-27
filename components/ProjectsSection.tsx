@@ -18,7 +18,7 @@ const cardVariants = {
 
 export default function ProjectsSection() {
   return (
-    <section className="bg-white py-20 md:py-28" id="projects">
+    <section className="bg-white pt-10 pb-20 md:pt-12 md:pb-28" id="projects">
       <div className="mx-auto max-w-container px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,59 +42,61 @@ export default function ProjectsSection() {
           </Link>
         </motion.div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-2">
-          {caseStudies.map((project, i) => (
-            <motion.article
-              key={project.slug}
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              variants={cardVariants}
-              className="card-hover group overflow-hidden rounded-2xl border border-gray-100 bg-white"
-            >
-              <Link href={`/case-studies/${project.slug}`} className="block">
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image
-                    src={project.thumbnailImage}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+        <div className="mt-10 rounded-3xl bg-gray-50 p-6 md:p-8">
+          <div className="grid gap-6 md:grid-cols-2">
+            {caseStudies.map((project, i) => (
+              <motion.article
+                key={project.slug}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-80px" }}
+                variants={cardVariants}
+                className="card-hover group overflow-hidden rounded-2xl border border-gray-100 bg-white"
+              >
+                <Link href={`/case-studies/${project.slug}`} className="block">
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={project.thumbnailImage}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
 
-                <div className="p-6">
-                  <p className="mb-2 text-sm font-medium text-primary">
-                    {project.category}
-                  </p>
-                  <h3 className="font-heading text-lg font-bold text-text-primary">
-                    {project.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-                    {project.description}
-                  </p>
-                  <p className="mt-3 text-xs text-text-secondary">
-                    {project.metrics}
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <TagPill
-                        key={tag.label}
-                        label={tag.label}
-                        variant={tag.variant}
-                      />
-                    ))}
+                  <div className="p-6">
+                    <p className="mb-2 text-sm font-medium text-primary">
+                      {project.category}
+                    </p>
+                    <h3 className="font-heading text-lg font-bold text-text-primary">
+                      {project.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                      {project.description}
+                    </p>
+                    <p className="mt-3 text-xs text-text-secondary">
+                      {project.metrics}
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <TagPill
+                          key={tag.label}
+                          label={tag.label}
+                          variant={tag.variant}
+                        />
+                      ))}
+                    </div>
+                    <div className="mt-4 border-t border-gray-100 pt-4">
+                      <span className="block w-full rounded-full border border-gray-300 py-2.5 text-center text-sm font-semibold text-text-primary transition-all group-hover:border-primary group-hover:text-primary">
+                        View the Project
+                      </span>
+                    </div>
                   </div>
-                  <div className="mt-4 border-t border-gray-100 pt-4">
-                    <span className="block w-full rounded-full border-2 border-gray-300 py-2.5 text-center text-sm font-semibold text-text-primary transition-all group-hover:border-primary group-hover:text-primary">
-                      View this Project
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </motion.article>
-          ))}
+                </Link>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
