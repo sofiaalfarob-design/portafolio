@@ -26,8 +26,8 @@ export default function Footer() {
               <Image
                 src="/link-home.png"
                 alt="Sofia Alfaro"
-                width={40}
-                height={40}
+                width={70}
+                height={70}
                 className="rounded-xl"
               />
             </Link>

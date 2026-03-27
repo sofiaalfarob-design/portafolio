@@ -39,12 +39,12 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="mx-auto flex max-w-container items-center justify-between px-6 py-4">
-        <Link href="/" className="flex h-10 items-center">
+        <Link href="/" className="flex h-12 items-center">
           <Image
             src="/link-home.png"
             alt="Sofia Alfaro"
-            width={40}
-            height={40}
+            width={70}
+            height={70}
             className="rounded-xl"
           />
         </Link>
