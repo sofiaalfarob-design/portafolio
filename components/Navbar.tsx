@@ -4,18 +4,23 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
 
 const navLinks = [
-  { label: "Portfolio", href: "/#projects" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "The Lab", href: "/#lab" },
-  { label: "About Me", href: "/#about" },
+  { label: "Portfolio", href: "/#projects", sectionId: "projects" },
+  { label: "Case Studies", href: "/case-studies", sectionId: "" },
+  { label: "The Lab", href: "/#lab", sectionId: "lab" },
+  { label: "About Me", href: "/#contact", sectionId: "contact" },
 ];
+
+const sectionIds = ["projects", "lab", "tech-stack", "about", "contact"];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const activeSection = useScrollSpy(sectionIds);
 
   function resolveHref(href: string) {
     if (isHome && href.startsWith("/#")) {
@@ -24,14 +29,24 @@ export default function Navbar() {
     return href;
   }
 
+  function isActive(link: { href: string; sectionId: string }) {
+    if (!isHome) {
+      return pathname === link.href;
+    }
+    return link.sectionId !== "" && activeSection === link.sectionId;
+  }
+
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="mx-auto flex max-w-container items-center justify-between px-6 py-4">
-        <Link
-          href="/"
-          className="flex h-10 items-center justify-center rounded-xl bg-dark px-3 text-sm font-bold text-white font-heading"
-        >
-          S.
+        <Link href="/" className="flex h-10 items-center">
+          <Image
+            src="/link-home.png"
+            alt="Sofia Alfaro"
+            width={40}
+            height={40}
+            className="rounded-xl"
+          />
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -39,7 +54,11 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={resolveHref(link.href)}
-              className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+              className={`text-sm font-medium transition-colors hover:text-text-primary ${
+                isActive(link)
+                  ? "text-primary"
+                  : "text-text-secondary"
+              }`}
             >
               {link.label}
             </Link>
@@ -86,7 +105,11 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={resolveHref(link.href)}
-                  className="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+                  className={`text-sm font-medium transition-colors hover:text-text-primary ${
+                    isActive(link)
+                      ? "text-primary"
+                      : "text-text-secondary"
+                  }`}
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}

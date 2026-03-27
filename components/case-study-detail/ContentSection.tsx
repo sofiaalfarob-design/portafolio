@@ -15,7 +15,7 @@ export default function ContentSection({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
-      className="py-12"
+      className="rounded-2xl bg-bg-muted p-8 md:p-12 my-6"
     >
       <h2 className="font-heading text-2xl font-bold text-text-primary md:text-3xl">
         {section.heading}

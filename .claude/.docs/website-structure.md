@@ -36,7 +36,7 @@
 | Quick Links     | Case Studies, The Lab, Tech Stack, About Me |
 | Contact         | LinkedIn, Email, Behance, Resume (PDF)      |
 | Bottom left     | (c) 2026 Sofia Alfaro. All rights reserved. |
-| Bottom right    | "Designed and developed with AI, automation, and lots of coffee" |
+| Bottom right    | "Pixel-perfect, coffee-powered, and 99% user-friendly." |
 
 ---
 
@@ -61,7 +61,7 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
 - **CTAs:** Two buttons side by side
   - "View Case Studies" (Black pill/primary)
   - "Let's Talk" (outlined/secondary)
-- **Video autoplay mude** https://youtu.be/dVZVx_XOFrM?si=s7O5PV_xV_ouldT2
+- **Video:** Autoplay muted YouTube embed (iframe), 16:9 aspect ratio, rounded corners with shadow. URL: https://www.youtube.com/embed/dVZVx_XOFrM?autoplay=1&mute=1&rel=0&loop=1&playlist=dVZVx_XOFrM
 
 #### Section 2: Featured Case Studies (`#projects`)
 **Background:** Light gray rounded container
@@ -157,9 +157,9 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
 - **Subtext:** Hybrid profile description
 - **Layout:** 2-row, 3-column grid of skill category cards (6 total)
 - **Skill cards:**
-  - Purple icon (top-left circle)
+  - Icon image displayed at 40x40px directly (no background wrapper)
   - Category title (bold)
-  - Bulleted list of skills
+  - Bulleted list of skills (bullet text color: #5e5e5e)
 - **Categories:**
   1. Icon (design.png) - Design & Prototyping Tools (Figma, Adobe, Framer, Principle, After Effects)
   2.  Icon (technologies.png) - Technologies & AI Implementation (Prompt Engineering, ChatGPT/Claude API, HTML/CSS/JS, React, Tailwind CSS)
@@ -199,7 +199,7 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
 - **Quick Links column:** Case Studies, The Lab, Tech Stack, About Me
 - **Contact column:** LinkedIn, Email, Behance, Resume (PDF)
 - **Copyright line:** (c) 2026 Sofia Alfaro
-- **Credits line:** "Designed and developed with AI, automation, and lots of coffee"
+- **Credits line:** "Pixel-perfect, coffee-powered, and 99% user-friendly."
 
 ---
 
@@ -256,9 +256,9 @@ Each case study follows a templated structure with a unique color theme per case
   - Propelus: Dark green (#002213)
   - Continuing Education: Dark navy/blue (#2B3A72)
   - Arkose Labs: Dark purple (#16023E)
-- **Tags:** Row of lila pill badges (category tags)
-- **Subtitle:** Category label (e.g., "From Concept to Functional MVP in 21 Days")
-- **Title:** Case study title (large, white text)
+- **Tags:** Row of lilac pill badges displaying the `tools` array (not `tags`). E.g., "Lovable", "Figma", "Claude/GPT-4"
+- **Subtitle:** Category label (e.g., "AI Implementation & Rapid Prototyping")
+- **Title:** Uses `detailTitle` if available, otherwise falls back to `title`. Card title and detail page title can differ (e.g., card: "From Concept to Functional MVP in 21 Days", detail: "AI-Driven Cleaning Ecosystem")
 - **Role label:** Role description (e.g., "Lead Product Designer & AI Orchestrator")
 - **Hero image:** Large screenshot/mockup, overlapping the dark section, 0px margin on the bottom
 
@@ -270,13 +270,13 @@ Each case study follows a templated structure with a unique color theme per case
 
 #### Section 3: Main Content (Repeating Sections)
 
-background: light Gray background with rounded corners
+Each content section block is individually wrapped in light gray background (`bg-muted`) with rounded corners and padding (`rounded-2xl p-8 md:p-12 my-6`).
 
 The main body uses a consistent pattern of titled content blocks. Each case study has 2-3 of these:
 
 - **Heading** (e.g., "The Challenge: Velocity vs. Viability")
 - **Body text** (1-2 paragraphs)
-- **Supporting visual** (full-width image/screenshot placeholder)
+- **Supporting visual** (full-width image/screenshot, optional per section)
 
 Specific content sections vary per case:
 - **Cleaning App:** Challenge, Strategic Approach (60/40 Hybrid Workflow), Technical Deep Dive (3-column cards)
@@ -379,14 +379,14 @@ Specific content sections vary per case:
 | `Navbar`               | All pages                      | Fixed top bar: logo left, nav links + CTA right |
 | `Footer`               | All pages                      | Logo, tagline, quick links, contact links, copyright |
 | `CTASection`           | Home, Case Studies, Case Detail| "Ready to Accelerate Your Product?" with 3 action buttons |
-| `SectionBadge`         | All sections                   | Purple pill label above section headings (e.g., "Case Studies", "Tech Stack") |
+| `SectionBadge`         | All sections                   | Purple pill label above section headings, natural casing (not uppercase). E.g., "Case Studies", "Tech Stack", "The Experimental Lab" |
 | `TagPill`              | Case cards, Case detail hero   | Small rounded badges for categorization (purple-highlighted or neutral) |
 
 ### Home-Specific Components
 
 | Component              | Description |
 |------------------------|-------------|
-| `HeroHome`             | Full hero with stats, CTAs, and visual collage |
+| `HeroHome`             | Full hero with stats, CTAs, and autoplay muted YouTube video embed |
 | `StatItem`             | Individual stat display (number + label) |
 | `CaseStudyCard`        | Large card with image, category, title, description, metrics, tags, link |
 | `LabCard`              | Card with image, title, status badge, description, tags |
@@ -454,9 +454,9 @@ Specific content sections vary per case:
 
 ### Interaction Patterns
 
-- **Section badges** appear consistently above every section heading as wayfinding elements
-- **CTA hierarchy:** Primary = black filled, Secondary = purple filled, Tertiary = outlined
-- **Card links:** "View this Project" / "View project" with arrow icon at card bottom
+- **Section badges** appear consistently above every section heading as wayfinding elements. Natural casing (not uppercase).
+- **CTA hierarchy:** Primary = black filled, Secondary = outlined. Exception: CTA/Contact section uses purple filled (LinkedIn), lilac filled (Email), outlined (Book a Call)
+- **Card links:** "View this Project" / "View project" as full-width outlined button at card bottom
 - **Navigation CTA:** "Get in touch" is the persistent primary action in the navbar
 - **Contact section** repeats on every page as the final content before footer
 - **Related cases** appear at the bottom of every case detail page to encourage continued browsing
@@ -466,8 +466,8 @@ Specific content sections vary per case:
 - Desktop-first layout (screenshots show desktop viewport)
 - 2-column grids likely collapse to single column on mobile
 - 3-column grids likely collapse to single or stacked layout
-- Hero collage likely reorganizes or hides some items on mobile
-- Navbar likely collapses to hamburger menu on mobile
+- Hero video maintains 16:9 aspect ratio on all viewports
+- Navbar collapses to hamburger menu on mobile
 
 ### Naming Conventions (Suggested for Code)
 
@@ -477,3 +477,113 @@ Specific content sections vary per case:
 - Home: `HeroHome`, `FeaturedCaseStudies`, `ExperimentalLab`, `SkillsMethodology`, `WhyWorkWithMe`
 - Case Studies: `HeroCaseStudies`, `CaseStudyGrid`, `StrategicFramework`
 - Case Detail: `HeroCaseDetail`, `OverviewBar`, `ContentSection`, `BusinessImpact`, `RelatedCases`
+
+---
+
+## Image Asset Mapping
+
+### Case Study Images
+
+| Case Study             | Card Thumbnail                              | Hero Image                                       | Challenge Image                                          | Closer Image                                        |
+|------------------------|---------------------------------------------|--------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------|
+| cleaning-app           | card-ai-implementation-rapid-prototyping.png | cleaning-app-case-hero.png                       | cleaning-app-case-the-chalence-image.png                 | cleaning-app-case-closer-image.png                  |
+| propelus               | card-design-systems-engineering.png          | propelus-case-hero.png                           | propelus-case-the-chalence-image.png                     | propelus-case-closer-image.png                      |
+| continuing-education   | card-b2b-cms-design-flexibility.png          | continuing-education-company-case-hero.png       | continuing-education-company-case-the-chalence-image.png | continuing-education-company-case-closer-image.png  |
+| arkose-labs            | card-ux-audit-conversion-rate-optimization.png | arkose-labs-case-hero.png                      | arkose-labs-case-the-chalence-image.png                  | arkose-labs-case-closer-image.png                   |
+
+### Experiment Card Images
+
+| Experiment Card                          | Image File                                                              |
+|------------------------------------------|-------------------------------------------------------------------------|
+| Figma Automation with Custom Scripts     | card-figma-automation-with-custom-scripts.png                           |
+| Interactive Prototyping for Mobile Apps  | card-interactive-orototyping-for-mobile-apps.png                        |
+| Accessibility Audit and Improvements     | images/the-experimental-lab/card-accessibility-audit-and-improvements.png |
+
+### Icon Assets
+
+| Component         | Icon Files                                                                                  |
+|-------------------|---------------------------------------------------------------------------------------------|
+| Skills Section    | design.png, technologies.png, design-systems.png, strategy.png, research.png, soft-skills.png |
+| Why Work With Me  | stard-up.png, icons/cross-functional-leadership.png, continuous-learning-mindset.png         |
+| CTA Section       | linkedin.png, email.png, schedule-a-call.png, download-pdf.png, github.png                  |
+| Logo (Nav/Footer) | link-home.png                                                                                |
+
+---
+
+## Scroll-Spy Behavior
+
+Navbar highlights the active section link in purple as the user scrolls through the home page. Uses `IntersectionObserver` via a custom `useScrollSpy` hook.
+
+**Section IDs tracked:** `projects`, `lab`, `tech-stack`, `about`, `contact`
+
+---
+
+## Data Model (for Dynamic Content)
+
+### Case Study
+
+```typescript
+interface CaseStudy {
+  slug: string;
+  category: string;           // e.g., "AI Implementation & Rapid Prototyping"
+  subtitle: string;           // Category/area label
+  title: string;              // Card title
+  detailTitle?: string;       // Optional: detail page hero title (if different from card title)
+  description: string;        // Card-level summary
+  role: string;               // e.g., "Lead Product Designer & AI Orchestrator"
+  heroImage: string;          // URL for hero image (e.g., "/cleaning-app-case-hero.png")
+  thumbnailImage: string;     // URL for card thumbnail (e.g., "/card-ai-implementation-rapid-prototyping.png")
+  heroColor: string;          // Hero background color (e.g., "#02102D")
+  tools: string[];            // e.g., ["Lovable", "Figma", "Claude/GPT-4"] — also displayed as hero tags
+  timeline: string;           // e.g., "3 Weeks (Concept to Functional App)"
+  metrics: string;            // Summary metrics line for cards
+  tags: Tag[];                // Used on cards only (not on detail hero)
+  contentSections: ContentSection[];
+  businessImpact: MetricCard[];
+  relatedCaseSlugs: string[];
+}
+
+interface ContentSection {
+  heading: string;
+  body: string;               // Plain text with optional \n bullet formatting
+  image?: string;             // Optional visual (e.g., challenge or closer image)
+  subCards?: TechCard[];      // Optional 3-column detail cards
+}
+
+interface MetricCard {
+  headline: string;           // e.g., "60%" or "Time-to-Market" or "Result"
+  description: string;        // e.g., "Reduction in traditional development costs."
+}
+
+interface Tag {
+  label: string;
+  variant?: 'purple' | 'neutral';
+}
+
+interface TechCard {
+  title: string;
+  description: string;
+}
+```
+
+### Lab Project
+
+```typescript
+interface Experiment {
+  title: string;
+  status: 'Completed' | 'In Progress' | 'Planned';
+  description: string;
+  image: string;
+  tags: string[];             // Simple string array (not Tag objects)
+}
+```
+
+### Skill Category
+
+```typescript
+interface SkillCategory {
+  icon: string;               // Key mapping to icon image file (e.g., "design" -> "/design.png")
+  title: string;
+  skills: string[];
+}
+```

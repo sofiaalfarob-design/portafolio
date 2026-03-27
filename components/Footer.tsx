@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const quickLinks = [
   { label: "Case Studies", href: "/case-studies" },
@@ -21,11 +22,14 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link
-              href="/"
-              className="inline-flex h-10 items-center justify-center rounded-xl bg-dark px-3 text-sm font-bold text-white"
-            >
-              S.
+            <Link href="/" className="inline-flex items-center">
+              <Image
+                src="/link-home.png"
+                alt="Sofia Alfaro"
+                width={40}
+                height={40}
+                className="rounded-xl"
+              />
             </Link>
             <p className="mt-4 font-semibold text-text-primary">
               Ready to accelerate your product?
@@ -84,7 +88,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-100 pt-8 text-xs text-text-secondary md:flex-row">
           <p>&copy; 2026 Sofia Alfaro. All rights reserved.</p>
-          <p>Designed and developed with AI, automation, and lots of coffee</p>
+          <p>Pixel-perfect, coffee-powered, and 99% user-friendly.</p>
         </div>
       </div>
     </footer>

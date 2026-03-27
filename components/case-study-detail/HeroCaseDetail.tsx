@@ -17,12 +17,12 @@ export default function HeroCaseDetail({ study }: { study: CaseStudy }) {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-4 flex flex-wrap gap-2">
-            {study.tags.map((tag) => (
+            {study.tools.map((tool) => (
               <span
-                key={tag.label}
+                key={tool}
                 className="rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-medium text-white"
               >
-                {tag.label}
+                {tool}
               </span>
             ))}
           </div>
@@ -30,7 +30,7 @@ export default function HeroCaseDetail({ study }: { study: CaseStudy }) {
             {study.subtitle}
           </p>
           <h1 className="mt-2 max-w-3xl font-heading text-3xl font-bold text-white md:text-4xl lg:text-5xl">
-            {study.title}
+            {study.detailTitle || study.title}
           </h1>
           <p className="mt-4 text-sm text-white/70">{study.role}</p>
         </motion.div>

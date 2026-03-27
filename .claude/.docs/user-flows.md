@@ -178,9 +178,11 @@ Navbar links on Home page use anchor scrolling:
   "Portfolio"    -> Scrolls to #projects (Featured Case Studies)
   "Case Studies" -> Navigates to /case-studies
   "The Lab"      -> Scrolls to #lab (Experimental Lab section)
-  "About Me"     -> Scrolls to #about (Skills / Why Work With Me)
+  "About Me"     -> Scrolls to #contact (CTA / Contact section)
   "Get in touch" -> Scrolls to #contact (CTA section)
 ```
+
+**Scroll-spy behavior:** Navbar highlights the active section link in purple as the user scrolls through the home page. Uses `IntersectionObserver` via a custom `useScrollSpy` hook. Section IDs tracked: `projects`, `lab`, `tech-stack`, `about`, `contact`.
 
 ---
 
@@ -200,7 +202,7 @@ Navbar links on Home page use anchor scrolling:
 1. **No search or filtering:** Case studies page lacks filters (by category, technology, industry) - fine for 4 items but should be planned for scalability
 2. **No breadcrumb navigation:** Case study detail pages lack breadcrumbs for orientation (e.g., "Case Studies > Arkose Labs")
 3. **Back-to-top mechanism:** Long scroll pages would benefit from a floating back-to-top button
-4. **Active nav state:** Unclear if the navbar highlights the current section during scroll on the home page (should implement scroll-spy)
+4. **Active nav state:** ✅ Implemented — navbar highlights the current section in purple during scroll via `useScrollSpy` hook
 5. **Mobile navigation:** No mobile menu design visible - hamburger menu needed
 6. **Case study card hover states:** No visible hover/interaction state in the designs - should add subtle elevation or color shift on hover
 7. **Loading states:** No skeleton or loading patterns visible - plan for image-heavy pages
@@ -210,11 +212,11 @@ Navbar links on Home page use anchor scrolling:
 | Pattern                  | Implementation Notes |
 |--------------------------|---------------------|
 | Smooth scroll (anchors)  | Use `scroll-behavior: smooth` or JS smooth scroll for navbar anchor links |
-| Scroll-spy               | Highlight active nav item based on visible section |
+| Scroll-spy               | ✅ Implemented via `useScrollSpy` hook with `IntersectionObserver`. Tracks: projects, lab, tech-stack, about, contact |
 | Case study theming       | Each case study has a unique hero color; use dynamic theming via data/props |
 | Tag pill filtering       | Tags are display-only now but could support filtering later |
-| CTA button variants      | 3 variants: purple filled, dark filled, outlined - abstract into a Button component |
-| Image lazy loading       | Hero collage and case thumbnails should lazy-load for performance |
+| CTA button variants      | Primary = black filled, Secondary = outlined. CTA section: purple filled (LinkedIn), lilac filled (Email), outlined (Book a Call) |
+| Image lazy loading       | Hero uses YouTube embed (iframe). Case thumbnails use Next.js Image with lazy loading |
 | Section reveal animation | Sections could use intersection observer for fade-in on scroll |
 
 ### Component Reusability Map

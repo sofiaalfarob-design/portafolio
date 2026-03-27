@@ -35,7 +35,6 @@ export const skillCategories: SkillCategory[] = [
       "Component Libraries",
       "Atomic Design",
       "Accessibility (WCAG 2.1)",
-      "Cross-platform Consistency",
     ],
   },
   {
@@ -46,7 +45,6 @@ export const skillCategories: SkillCategory[] = [
       "Design Thinking",
       "Jobs-to-be-Done (JTBD)",
       "User Story Mapping",
-      "Stakeholder Management",
     ],
   },
   {
@@ -57,18 +55,17 @@ export const skillCategories: SkillCategory[] = [
       "Usability Testing",
       "A/B Testing",
       "Analytics & Data",
-      "Competitive Analysis",
     ],
   },
   {
     icon: "soft",
     title: "Soft Skills",
     skills: [
-      "Cross-functional Collaboration",
-      "Emotional Intelligence",
-      "Project Management",
-      "Mentoring & Coaching",
-      "Continuous Learning",
+      "Stakeholder Management & Alignment",
+      "Systems Thinking",
+      "Technical Empathy",
+      "Strategic Problem Solving",
+      "Adaptability & Continuous Learning",
     ],
   },
 ];

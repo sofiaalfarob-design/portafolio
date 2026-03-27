@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import SectionBadge from "./ui/SectionBadge";
 
@@ -10,13 +9,6 @@ const stats = [
   { value: "30+", label: "Projects" },
   { value: "40%", label: "Efficiency Improved", highlighted: true },
   { value: "15+", label: "Design Systems" },
-];
-
-const collageImages = [
-  { src: "/cleaning-app-case.png", alt: "Cleaning App", className: "col-span-2 row-span-2" },
-  { src: "/propelus-case.png", alt: "Propelus", className: "col-span-1 row-span-1" },
-  { src: "/arkose-labs-case.png", alt: "Arkose Labs", className: "col-span-1 row-span-1" },
-  { src: "/continuing-education-company-case.png", alt: "Continuing Education", className: "col-span-2 row-span-1" },
 ];
 
 const fadeUp = {
@@ -101,7 +93,7 @@ export default function Hero() {
         >
           <Link
             href="#projects"
-            className="rounded-full border-2 border-gray-300 px-8 py-3 text-sm font-semibold text-text-primary transition-all hover:border-primary hover:text-primary"
+            className="rounded-full bg-dark px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-gray-800"
           >
             View Case Studies
           </Link>
@@ -113,31 +105,22 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        {/* Visual Collage */}
+        {/* Autoplay Video */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 grid grid-cols-4 gap-4"
+          className="mt-16 overflow-hidden rounded-2xl shadow-lg"
         >
-          {collageImages.map((img, i) => (
-            <motion.div
-              key={img.src}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.7 + i * 0.1, duration: 0.5 }}
-              className={`relative overflow-hidden rounded-2xl ${img.className}`}
-              style={{ minHeight: "180px" }}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 50vw, 25vw"
-              />
-            </motion.div>
-          ))}
+          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/dVZVx_XOFrM?autoplay=1&mute=1&rel=0&loop=1&playlist=dVZVx_XOFrM"
+              title="Portfolio Showreel"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </motion.div>
       </div>
     </section>

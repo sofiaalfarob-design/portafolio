@@ -36,7 +36,7 @@ export default function ProjectsSection() {
           </p>
           <Link
             href="/case-studies"
-            className="mt-6 inline-block rounded-full border-2 border-gray-300 px-6 py-2.5 text-sm font-semibold text-text-primary transition-all hover:border-primary hover:text-primary"
+            className="mt-6 inline-block rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-800"
           >
             View more projects
           </Link>
@@ -88,12 +88,9 @@ export default function ProjectsSection() {
                 <div className="mt-4 border-t border-gray-100 pt-4">
                   <Link
                     href={`/case-studies/${project.slug}`}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary-light"
+                    className="block w-full rounded-full border-2 border-gray-300 py-2.5 text-center text-sm font-semibold text-text-primary transition-all hover:border-primary hover:text-primary"
                   >
                     View this Project
-                    <span className="transition-transform group-hover:translate-x-1">
-                      &rarr;
-                    </span>
                   </Link>
                 </div>
               </div>

@@ -25,6 +25,7 @@ export interface CaseStudy {
   category: string;
   subtitle: string;
   title: string;
+  detailTitle?: string;
   description: string;
   role: string;
   heroImage: string;
@@ -45,18 +46,19 @@ export const caseStudies: CaseStudy[] = [
     category: "AI Implementation & Rapid Prototyping",
     subtitle: "AI Implementation & Rapid Prototyping",
     title: "From Concept to Functional MVP in 21 Days",
+    detailTitle: "AI-Driven Cleaning Ecosystem",
     description:
-      "Orchestrating AI tools and design methodology to deliver a fully functional cleaning service app — from initial research to deployable prototype in record time.",
+      "Orchestrating a hybrid workflow between generative AI and product design to launch a cleaning services MVP in record time.",
     role: "Lead Product Designer & AI Orchestrator",
-    heroImage: "/cleaning-app-case.png",
-    thumbnailImage: "/cleaning-app-case.png",
-    heroColor: "#0F172A",
-    tools: ["Claude", "Figma", "ChatGPT v4", "Prompt Engineering"],
-    timeline: "3 Weeks: Concept & Functional App",
-    metrics: "MVP in 3 weeks | 40% Workflow Efficiency | 100% Functional Logic",
+    heroImage: "/cleaning-app-case-hero.png",
+    thumbnailImage: "/card-ai-implementation-rapid-prototyping.png",
+    heroColor: "#02102D",
+    tools: ["Lovable", "Figma", "Claude/GPT-4", "Prompt Engineering"],
+    timeline: "3 Weeks (Concept to Functional App)",
+    metrics: "MVP in 1 week | 60% Workflow Efficiency | 100% Functional Logic",
     tags: [
       { label: "AI Strategy", variant: "purple" },
-      { label: "Claude", variant: "neutral" },
+      { label: "Lovable", variant: "neutral" },
       { label: "Figma", variant: "neutral" },
       { label: "Product Design", variant: "neutral" },
       { label: "Vibe Coding", variant: "neutral" },
@@ -64,11 +66,12 @@ export const caseStudies: CaseStudy[] = [
     contentSections: [
       {
         heading: "The Challenge: Velocity vs. Viability",
-        body: "The client needed a fully functional MVP for a cleaning service platform — not just wireframes or clickable prototypes, but a working application with real logic, booking flows, and service management. The timeline? Three weeks. Traditional development would have required months of backend development, QA cycles, and iterative design rounds. The challenge was to prove that AI-accelerated workflows could produce production-quality results without sacrificing user experience or business logic integrity.",
+        body: "The objective was to validate a complex cleaning service business model by launching a functional MVP in record time. Traditional development cycles (3-6 months) were not an option. We needed a solution that wasn't just a \"clickable prototype\" but a live, data-driven application capable of handling real booking logic and user management.",
+        image: "/cleaning-app-case-the-chalence-image.png",
       },
       {
-        heading: "Strategic Approach: The 60/40 Hybrid Workflow",
-        body: "Rather than choosing between AI and traditional methods, I developed a hybrid workflow: 60% AI-generated foundations with 40% human refinement. Claude handled prompt-engineered UX copy, user flow logic, and component specifications. Figma was used for high-fidelity design with a systematic component architecture. ChatGPT v4 assisted with technical documentation and edge case analysis.",
+        heading: "The Strategic Approach: The 60/40 Hybrid Workflow",
+        body: "I pioneered a \"Vibe Coding\" methodology, acting as the bridge between generative AI and product excellence.\n\n• AI-First Logic (60%): I utilized Lovable to generate the core back-end logic, database schemas, and initial front-end architecture. This allowed for near-instantaneous deployment of functional features.\n\n• Human-Centric Refinement (40%): I took the raw AI output into Figma to perform \"Surgery on the UX.\" AI often hallucinates over-complicated user flows; my role was to simplify, brand, and optimize for mobile-first constraints.",
       },
       {
         heading: "Technical Deep Dive",
@@ -77,33 +80,35 @@ export const caseStudies: CaseStudy[] = [
           {
             title: "Prompt Engineering for UX",
             description:
-              "Developed structured prompts that generated user flows, microcopy, and interaction patterns aligned with UX best practices.",
+              "I developed complex \"Giga Prompts\" to ensure the AI respected accessibility standards and logical hierarchies.",
           },
           {
             title: "Correcting AI Hallucinations",
             description:
-              "Implemented a verification layer where each AI output was validated against business requirements and usability heuristics.",
+              "The initial AI-generated user flow for \"Recurring Bookings\" was logically flawed. I manually re-architected the logic in Figma and re-prompted the engine to ensure a 0% error rate in the live app.",
           },
           {
-            title: "The 3-Week Sprint",
+            title: "The 7-Day Sprint",
             description:
-              "Week 1: Research & architecture. Week 2: Design system & core flows. Week 3: Integration, testing & refinement.",
+              "We moved from a blank canvas to a verified MVP in 1 week. By week 3, the application was fully functional and ready for market testing.",
           },
         ],
+        image: "/cleaning-app-case-closer-image.png",
       },
     ],
     businessImpact: [
       {
         headline: "60%",
-        description: "Reduction in traditional development costs",
+        description: "Reduction in traditional development costs.",
       },
       {
-        headline: "3 weeks",
-        description: "Time-to-Market vs. 16 weeks traditional",
+        headline: "Time-to-Market",
+        description: "3 weeks vs. the industry average of 16 weeks.",
       },
       {
-        headline: "100%",
-        description: "Functional logic coverage at MVP launch",
+        headline: "Result",
+        description:
+          "A fully functional, scalable MVP that allowed the client to secure early-stage feedback with zero design debt.",
       },
     ],
     relatedCaseSlugs: ["propelus", "continuing-education", "arkose-labs"],
@@ -114,24 +119,26 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "Design Systems & Engineering",
     title: "Scalable Architecture: The Design-to-Code Bridge",
     description:
-      "Building a comprehensive design system that eliminated design debt and created a seamless bridge between design decisions and engineering implementation.",
+      "Building a modular design system using Figma Variables to unify the identity of 20+ commercial pages and streamline developer handoff.",
     role: "Senior Product Designer & Design Systems Lead",
-    heroImage: "/propelus-case.png",
-    thumbnailImage: "/propelus-case.png",
-    heroColor: "#0A2E1C",
+    heroImage: "/propelus-case-hero.png",
+    thumbnailImage: "/card-design-systems-engineering.png",
+    heroColor: "#002213",
     tools: ["Figma", "Tailwind CSS", "React", "Storybook"],
     timeline: "8 Weeks: System Architecture & Implementation",
-    metrics: "20+ Pages Impacted | Figma Variables | 2% Handoff Friction",
+    metrics: "20+ Pages Impacted | Figma Variables | 0% Handoff Friction",
     tags: [
       { label: "Design Systems", variant: "purple" },
       { label: "Tailwind", variant: "neutral" },
       { label: "React", variant: "neutral" },
+      { label: "Architecture", variant: "neutral" },
       { label: "Design Engineering", variant: "neutral" },
     ],
     contentSections: [
       {
         heading: "The Challenge: Eliminating Design Debt",
         body: "Propelus had accumulated significant design debt across 20+ product pages. Inconsistent component usage, undefined spacing rules, and a disconnect between Figma designs and coded components created friction in every sprint. Engineers spent hours interpreting design intent, and designers were rebuilding components that already existed in slightly different forms.",
+        image: "/propelus-case-the-chalence-image.png",
       },
       {
         heading: "Solution: Logic-First System Architecture",
@@ -157,6 +164,7 @@ export const caseStudies: CaseStudy[] = [
               "Storybook-driven documentation with live code examples, usage guidelines, and accessibility annotations.",
           },
         ],
+        image: "/propelus-case-closer-image.png",
       },
     ],
     businessImpact: [
@@ -181,15 +189,15 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "B2B CMS Design & Flexibility",
     title: "Empowering the End-User: The 'Chameleon' Component System",
     description:
-      "Designing a modular component system that gave non-technical users the power to customize their continuing education platform without developer intervention.",
+      "Redesigning the administrative and public experience of a CMS to allow dynamic content creation without compromising brand integrity.",
     role: "Lead Product Designer",
-    heroImage: "/continuing-education-company-case.png",
-    thumbnailImage: "/continuing-education-company-case.png",
-    heroColor: "#0F1729",
+    heroImage: "/continuing-education-company-case-hero.png",
+    thumbnailImage: "/card-b2b-cms-design-flexibility.png",
+    heroColor: "#2B3A72",
     tools: ["Figma", "React", "Headless CMS", "User Testing"],
     timeline: "12 Weeks: Research, Design & Validation",
     metrics:
-      "100% Client Autonomy | Modular Flexibility | Multi-Theme Components",
+      "100% Client Autonomy | Modular Flexibility | Multi-Theme Components.",
     tags: [
       { label: "CMS Design", variant: "purple" },
       { label: "B2B UX", variant: "neutral" },
@@ -200,6 +208,7 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "The Challenge: Breaking the Rigidity",
         body: "The continuing education platform served multiple institutional clients, each with distinct branding, content structures, and user workflows. The existing CMS was rigid — every customization required developer involvement, creating bottlenecks and escalating costs. Clients were frustrated by their inability to manage their own platforms independently.",
+        image: "/continuing-education-company-case-the-chalence-image.png",
       },
       {
         heading: "Solution: The Chameleon Component System",
@@ -225,6 +234,7 @@ export const caseStudies: CaseStudy[] = [
               "Role-based permissions ensuring brand consistency while empowering content editors with appropriate autonomy.",
           },
         ],
+        image: "/continuing-education-company-case-closer-image.png",
       },
     ],
     businessImpact: [
@@ -249,23 +259,25 @@ export const caseStudies: CaseStudy[] = [
     subtitle: "UX Audit & Conversion Rate Optimization",
     title: "Strategic Storytelling: Shifting from 'Technical' to 'Decision-Maker'",
     description:
-      "A comprehensive UX audit and strategic redesign that transformed Arkose Labs' web presence from a technical showcase to a conversion-focused narrative for enterprise decision-makers.",
+      "A deep-dive UX audit and strategic redesign to transform a technical informational site into a high-converting B2B sales machine.",
     role: "Senior Product Designer & UX Strategist",
-    heroImage: "/arkose-labs-case.png",
-    thumbnailImage: "/arkose-labs-case.png",
-    heroColor: "#1A0A2E",
+    heroImage: "/arkose-labs-case-hero.png",
+    thumbnailImage: "/card-ux-audit-conversion-rate-optimization.png",
+    heroColor: "#16023E",
     tools: ["Figma", "Hotjar", "Google Analytics", "UserTesting"],
     timeline: "6 Weeks: Audit, Strategy & Redesign",
-    metrics: "Reduced Bounce Rate | Strategic Mega Menu | CRO-Focused Narratives",
+    metrics: "Reduced Bounce Rate | Strategic Mega-Menu | CRO-Focused Narrative.",
     tags: [
       { label: "UX Audit", variant: "purple" },
       { label: "CRO", variant: "neutral" },
       { label: "B2B Strategy", variant: "neutral" },
+      { label: "Data-Driven Design", variant: "neutral" },
     ],
     contentSections: [
       {
         heading: "The Challenge: High Traffic, Low Intent",
         body: "Arkose Labs had strong organic traffic but poor conversion metrics. Visitors were landing on technically dense pages that spoke to engineers rather than the C-suite decision-makers who controlled purchasing budgets. The website was winning the SEO game but losing the conversion game — a classic case of traffic without intent alignment.",
+        image: "/arkose-labs-case-the-chalence-image.png",
       },
       {
         heading: "Diagnosis: The Persona Mismatch",
@@ -291,6 +303,7 @@ export const caseStudies: CaseStudy[] = [
               "Implemented progressive CTAs aligned with buyer readiness: 'Learn More' → 'See Demo' → 'Talk to Sales' at appropriate content depths.",
           },
         ],
+        image: "/arkose-labs-case-closer-image.png",
       },
     ],
     businessImpact: [
