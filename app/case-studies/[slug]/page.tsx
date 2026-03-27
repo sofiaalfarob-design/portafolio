@@ -43,7 +43,7 @@ export default function CaseStudyDetailPage({
     <main className="min-h-screen">
       <Navbar />
       <HeroCaseDetail study={study} />
-      <div className="mx-auto max-w-container px-6 my-10">
+      <div className="mx-auto max-w-container px-6 mt-10 mb-4">
         <div className="rounded-3xl bg-gray-50 overflow-hidden">
           <OverviewBar study={study} />
           <div className="px-8 py-12 md:px-16 md:py-14 space-y-16">

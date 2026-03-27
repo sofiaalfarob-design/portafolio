@@ -9,7 +9,7 @@ export default function BusinessImpact({
   metrics: MetricCard[];
 }) {
   return (
-    <section className="py-16">
+    <section className="py-6">
       <div className="mx-auto max-w-container px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
