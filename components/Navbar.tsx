@@ -46,7 +46,7 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 right-0 top-4 z-50 px-6">
       {/* Floating pill */}
-      <div className={`mx-auto flex max-w-container items-center justify-between rounded-full px-2 py-2 transition-all duration-300 ${scrolled ? "bg-[#C8CBD0]/80 backdrop-blur-md" : "bg-transparent"}`}>
+      <div className={`mx-auto flex max-w-container items-center justify-between rounded-full px-2 py-2 transition-all duration-300 ${scrolled ? "bg-[#C8CBD0]/60 backdrop-blur-md hover:bg-[#F3F3F3]/60" : "hover:bg-[#F3F3F3]/60 backdrop-blur-md"}`}>
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image

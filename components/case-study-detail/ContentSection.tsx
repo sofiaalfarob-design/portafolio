@@ -23,19 +23,6 @@ export default function ContentSection({
         {section.body}
       </p>
 
-      {section.image && (
-        <div className="mt-8 overflow-hidden rounded-2xl">
-          <Image
-            src={section.image}
-            alt={section.heading}
-            width={1200}
-            height={750}
-            className="w-full object-contain"
-            sizes="(max-width: 1200px) 100vw, 1200px"
-          />
-        </div>
-      )}
-
       {section.subCards && section.subCards.length > 0 && (
         <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {section.subCards.map((card) => (
@@ -51,6 +38,19 @@ export default function ContentSection({
               </p>
             </div>
           ))}
+        </div>
+      )}
+
+      {section.image && (
+        <div className="mt-8 overflow-hidden rounded-2xl">
+          <Image
+            src={section.image}
+            alt={section.heading}
+            width={1200}
+            height={750}
+            className="w-full object-contain"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+          />
         </div>
       )}
     </motion.div>
