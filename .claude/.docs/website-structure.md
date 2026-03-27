@@ -46,7 +46,7 @@
 
 ### 1. Home Page (`/`)
 
-The homepage is a long-scroll single page with distinct sections stacked vertically. It serves as the primary landing experience, showcasing expertise, work, skills, and contact.
+The homepage is a long-scroll single page with distinct sections stacked vertically. It serves as the primary landing experience, showcasing expertise, work, skills, and contact..
 
 #### Section 1: Hero
 
