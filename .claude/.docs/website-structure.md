@@ -129,6 +129,26 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
   - Status label (e.g., "Completed", "In Progress", "Planned")
   - Description paragraph
   - Tag pills at bottom
+- Content of cards:
+  - Card 1 content:
+    - Image thumbnail (rounded): card-figma-automation-with-custom-scripts.png
+    -  Title (bold): Figma Automation with Custom Scripts
+    - Status label: Completed
+    - Description paragraph: Development of plugins and scripts using Figma API that automatically generate component documentation, export design tokens to code, and sync changes with development repositories. 70% reduction in manual handoff work.
+    - Tag pills at bottom: AI Implementation, SaaS UX, Design Systems, Behavioral Analytics
+   - Card 2 content:
+    - Image thumbnail (rounded): card-interactive-orototyping-for-mobile-apps.png
+    -  Title (bold): Interactive Prototyping for Mobile Apps
+    - Status label: In Progress
+    - Description paragraph: Creating high-fidelity prototypes with advanced interactions and animations to simulate real user experiences on mobile devices, enabling faster feedback and iteration cycles.
+    - Tag pills at bottom
+   - Card 3 content:
+    - Image thumbnail (rounded): card-accessibility-audit-and-improvements.png
+    -  Title (bold): Accessibility Audit and Improvements
+    - Status label: Planned
+    - Description paragraph: Comprehensive review of existing design assets to identify accessibility barriers, followed by actionable recommendations and implementation to ensure compliance with WCAG standards.
+    - Tag pills at bottom: UX Design, Mobile Apps, Prototyping, User Engagement
+
 
 #### Section 4: Skills & Methodology (`#tech-stack`)
 
@@ -141,12 +161,12 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
   - Category title (bold)
   - Bulleted list of skills
 - **Categories:**
-  1. Design & Prototyping Tools (Figma, Adobe, Framer, Principle, After Effects)
-  2. Technologies & AI Implementation (Prompt Engineering, ChatGPT/Claude API, HTML/CSS/JS, React, Tailwind CSS)
-  3. Design Systems & Architecture (Tokens, Component Libraries, Atomic Design, Accessibility WCAG 2.1)
-  4. Processes & Strategy (Agile/Scrum/Kanban, Design Thinking, JTBD, User Story Mapping)
-  5. Research & Validation (User Research, Usability Testing, A/B Testing, Analytics)
-  6. Soft Skills (Stakeholder Management & Alignment, Systems Thinking, Technical Empathy, Strategic Problem Solving, Adaptability & Continuous Learning)
+  1. Icon (design.png) - Design & Prototyping Tools (Figma, Adobe, Framer, Principle, After Effects)
+  2.  Icon (technologies.png) - Technologies & AI Implementation (Prompt Engineering, ChatGPT/Claude API, HTML/CSS/JS, React, Tailwind CSS)
+  3. Icon (design-systems.png) - Design Systems & Architecture (Tokens, Component Libraries, Atomic Design, Accessibility WCAG 2.1)
+  4. Icon (strategy.png) - Processes & Strategy (Agile/Scrum/Kanban, Design Thinking, JTBD, User Story Mapping)
+  5. Icon (research.png) - Research & Validation (User Research, Usability Testing, A/B Testing, Analytics)
+  6. Icon (soft-skills.png) - Soft Skills (Stakeholder Management & Alignment, Systems Thinking, Technical Empathy, Strategic Problem Solving, Adaptability & Continuous Learning)
 
 #### Section 5: Why Work With Me
 
@@ -155,9 +175,9 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
 - **Description paragraph:** Positioning statement about approach
 - **Layout:** 3-column card grid
 - **Cards** (each with purple icon):
-  1. Startup & Enterprise Experience
-  2. Cross-Functional Leadership
-  3. Continuous Learning Mindset
+  1. Startup & Enterprise Experience (icon stard-up.png)
+  2. Cross-Functional Leadership (icon cross-functional-leadership.png)
+  3. Continuous Learning Mindset (icon continuous -learning-mindset.png)
 
 #### Section 6: CTA / Contact (`#contact`)
 
@@ -187,7 +207,7 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
 
 #### Section 1: Hero
 
-- **Label badge:** "Case Studies" (purple pill)
+- **Label badge:** "Case Studies" (lila pill)
 - **Heading:** "Selected Case Studies: Solving Business Challenges Through Design."
 - **Subtext:** Description of work across SaaS, B2B, and AI-driven products
 - **CTAs:** Two buttons
@@ -203,6 +223,7 @@ The homepage is a long-scroll single page with distinct sections stacked vertica
   2. Design Systems & Engineering - "Scalable Architecture: The Design-to-Code Bridge" (Propelus)
   3. B2B CMS Design & Flexibility - "Empowering the End-User: The 'Chameleon' Component System" (Continuing Education)
   4. UX Audit & Conversion Rate Optimization - "Strategic Storytelling: Shifting from 'Technical' to 'Decision-Maker'" (Arkose Labs)
+- Lazy loading when you have more that four cards
 
 #### Section 3: Strategic Framework
 
@@ -294,6 +315,58 @@ Specific content sections vary per case:
 #### Section 7: Footer
 
 - Same footer component
+
+###Content for each detail case studies:
+
+- Cleaning App:
+  - Section 1: Hero (Dark Background #02102D)
+    - **Tags:** Row of lila pill badges (category tags): Lovable, Figma, Claude/GPT-4, Prompt Engineering
+    - **Subtitle:** AI Implementation & Rapid Prototyping
+    - **Title:** Case study title (large, white text): AI-Driven Cleaning Ecosystem
+    - **Role label:** Role description: Lead Product Designer & AI Orchestrator 
+    - **Hero image:** Large image 0px margin on the bottom and center: cleaning-app-case/hero.png
+  - Section 2: Overview Bar
+    - **Layout:** Two-column metadata bar
+      - Tools: Lovable, Figma, Claude/GPT-4, Prompt Engineering
+      - Timeline: 3 Weeks (Concept to Functional App)
+  - Section 3: Main Content (Repeating Sections)
+    - background: light Gray background with rounded corners
+    - **Heading**: The Challenge: Velocity vs. Viability
+    - **Body text**: The objective was to validate a complex cleaning service business model by launching a functional MVP in record time. Traditional development cycles (3-6 months) were not an option. We needed a solution that wasn't just a "clickable prototype" but a live, data-driven application capable of handling real booking logic and user management.
+    - **Supporting visual**: cleaning-app-case/the-chalence-image.png
+    - **Heading**: The Strategic Approach: The 60/40 Hybrid Workflow
+    - **Body text**: I pioneered a "Vibe Coding" methodology, acting as the bridge between generative AI and product excellence.
+      - Bullet: AI-First Logic (60%): I utilized Lovable to generate the core back-end logic, database schemas, and initial front-end architecture. This allowed for near-instantaneous deployment of functional features.
+      - Bullet: Human-Centric Refinement (40%): I took the raw AI output into Figma to perform "Surgery on the UX." AI often hallucinates over-complicated user flows; my role was to simplify, brand, and optimize for mobile-first constraints.
+    - **Heading**: Technical Deep Dive:
+      - (3-column cards):
+        - Card 1: Title (Prompt Engineering for UX) text (I developed complex "Giga Prompts" to ensure the AI respected accessibility standards and logical hierarchies.)
+         - Card 2: Title (Correcting AI Hallucinations) text (The initial AI-generated user flow for "Recurring Bookings" was logically flawed. I manually re-architected the logic in Figma and re-prompted the engine to ensure a 0% error rate in the live app.)
+         - Card 3: Title (The 7-Day Sprint) text (We moved from a blank canvas to a verified MVP in 1 week. By week 3, the application was fully functional and ready for market testing.)
+    - image: cleaning-app-case/closer-image.png
+  - Section 4: Business Impact
+     **Background:** Light gray rounded container
+     - **Heading:** "Business Impact"
+     - **Layout:** 3-column grid of metric cards
+     - **Card structure:**
+      - Card 1: 
+        Purple/lilac background with rounded corners
+        - Metric headline: 60%
+        - Description text: Reduction in traditional development costs.
+      - Card 2: 
+        Purple/lilac background with rounded corners
+        - Metric headline: Time-to-Market
+        - Description text: 3 weeks vs. the industry average of 16 weeks.
+      - Card 3: 
+        Purple/lilac background with rounded corners
+        - Metric headline: Result
+        - Description text: A fully functional, scalable MVP that allowed the client to secure early-stage feedback with zero design debt.
+  - Section 5 See my Work (Other Cases)
+    - Same "See my work (other cases)" section
+  - Section 6 CTA / Contact
+    - Same "Ready to Accelerate Your Product?" section
+  - Section 7 CTA / Contact
+    - Same "Ready to Accelerate Your Product?" section
 
 ---
 
