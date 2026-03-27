@@ -19,7 +19,7 @@ export default function ContentSection({
       <h2 className="font-['Inter'] text-[48px] not-italic font-normal leading-[57.6px] text-[#171717]">
         {section.heading}
       </h2>
-      <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-secondary">
+      <p className="mt-4 w-full font-['Inter'] text-[16px] not-italic font-normal leading-[24px] text-[#171717]">
         {section.body}
       </p>
 
