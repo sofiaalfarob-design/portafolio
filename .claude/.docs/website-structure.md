@@ -26,7 +26,7 @@
 | Right    | Portfolio                        | `/#projects` (anchor)|
 | Right    | Case Studies                     | `/case-studies`      |
 | Right    | The Lab                          | `/#lab` (anchor)     |
-| Right    | About Me                         | `/#about` (anchor)   |
+| Right    | About Me                         | `/#contact` (anchor)   |
 | Right    | **Get in touch** (CTA button)    | `/#contact` or modal |
 
 ### Footer Navigation
@@ -257,7 +257,7 @@ Each case study follows a templated structure with a unique color theme per case
   - Continuing Education: Dark navy/blue (#2B3A72)
   - Arkose Labs: Dark purple (#16023E)
 - **Tags:** Row of lila pill badges (category tags)
-- **Subtitle:** Category label (e.g., "AI Implementation & Rapid Prototyping")
+- **Subtitle:** Category label (e.g., "From Concept to Functional MVP in 21 Days")
 - **Title:** Case study title (large, white text)
 - **Role label:** Role description (e.g., "Lead Product Designer & AI Orchestrator")
 - **Hero image:** Large screenshot/mockup, overlapping the dark section, 0px margin on the bottom
@@ -324,7 +324,7 @@ Specific content sections vary per case:
     - **Subtitle:** AI Implementation & Rapid Prototyping
     - **Title:** Case study title (large, white text): AI-Driven Cleaning Ecosystem
     - **Role label:** Role description: Lead Product Designer & AI Orchestrator 
-    - **Hero image:** Large image 0px margin on the bottom and center: cleaning-app-case/hero.png
+    - **Hero image:** Large image 0px margin on the bottom and center: cleaning-app-case-hero.png
   - Section 2: Overview Bar
     - **Layout:** Two-column metadata bar
       - Tools: Lovable, Figma, Claude/GPT-4, Prompt Engineering
@@ -333,7 +333,7 @@ Specific content sections vary per case:
     - background: light Gray background with rounded corners
     - **Heading**: The Challenge: Velocity vs. Viability
     - **Body text**: The objective was to validate a complex cleaning service business model by launching a functional MVP in record time. Traditional development cycles (3-6 months) were not an option. We needed a solution that wasn't just a "clickable prototype" but a live, data-driven application capable of handling real booking logic and user management.
-    - **Supporting visual**: cleaning-app-case/the-chalence-image.png
+    - **Supporting visual**: cleaning-app-case-the-chalence-image.png
     - **Heading**: The Strategic Approach: The 60/40 Hybrid Workflow
     - **Body text**: I pioneered a "Vibe Coding" methodology, acting as the bridge between generative AI and product excellence.
       - Bullet: AI-First Logic (60%): I utilized Lovable to generate the core back-end logic, database schemas, and initial front-end architecture. This allowed for near-instantaneous deployment of functional features.
@@ -343,7 +343,7 @@ Specific content sections vary per case:
         - Card 1: Title (Prompt Engineering for UX) text (I developed complex "Giga Prompts" to ensure the AI respected accessibility standards and logical hierarchies.)
          - Card 2: Title (Correcting AI Hallucinations) text (The initial AI-generated user flow for "Recurring Bookings" was logically flawed. I manually re-architected the logic in Figma and re-prompted the engine to ensure a 0% error rate in the live app.)
          - Card 3: Title (The 7-Day Sprint) text (We moved from a blank canvas to a verified MVP in 1 week. By week 3, the application was fully functional and ready for market testing.)
-    - image: cleaning-app-case/closer-image.png
+    - image: cleaning-app-case-closer-image.png
   - Section 4: Business Impact
      **Background:** Light gray rounded container
      - **Heading:** "Business Impact"
@@ -365,7 +365,7 @@ Specific content sections vary per case:
     - Same "See my work (other cases)" section
   - Section 6 CTA / Contact
     - Same "Ready to Accelerate Your Product?" section
-  - Section 7 CTA / Contact
+  - Section 7 Footer
     - Same "Ready to Accelerate Your Product?" section
 
 ---

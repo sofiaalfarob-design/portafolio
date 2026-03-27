@@ -36,7 +36,7 @@ Step 3: Scan Featured Case Studies (2x2 Grid)
 Step 4: View Experimental Lab section
   - Proyectos de innovación con badges de estado dinámicos (Live/WIP/Planned).
   |
-  +---> Click "Book a Call" -> Calendly/Booking.
+  +---> Click "Book a Call" ->  https://calendly.com/
   |
   v
 Step 5: Trust Signals & Technical Breadth
