@@ -13,7 +13,7 @@ const contactLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sofia-alfaro-designer" },
   { label: "Email", href: "mailto:sofia.alfablan@gmail.com" },
   { label: "Behance", href: "https://www.behance.net/sofiaalfaro9" },
-  { label: "Resume (PDF)", href: "Curriculum-Sofia-Alfaro.pdf" },
+  { label: "Resume (PDF)", href: "/Curriculum-Sofia-Alfaro.pdf" },
 ];
 
 export default function Footer() {
@@ -69,9 +69,9 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    target={link.href.startsWith("http") || link.href.endsWith(".pdf") ? "_blank" : undefined}
                     rel={
-                      link.href.startsWith("http")
+                      link.href.startsWith("http") || link.href.endsWith(".pdf")
                         ? "noopener noreferrer"
                         : undefined
                     }

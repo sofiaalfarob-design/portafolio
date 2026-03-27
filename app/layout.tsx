@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ScrollHashHandler from "@/components/ScrollHashHandler";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -93,7 +94,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="font-body antialiased">{children}</body>
+      <body className="font-body antialiased">
+        <ScrollHashHandler />
+        {children}
+      </body>
     </html>
   );
 }

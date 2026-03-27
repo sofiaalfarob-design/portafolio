@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import type { CaseStudy } from "@/data/case-studies";
 import { getRelatedCaseStudies } from "@/data/case-studies";
 import SectionBadge from "@/components/ui/SectionBadge";
 import CompactCaseCard from "./CompactCaseCard";
@@ -37,7 +36,7 @@ export default function RelatedCases({
           </div>
           <Link
             href="/case-studies"
-            className="rounded-full border-2 border-gray-300 px-5 py-2 text-sm font-semibold text-text-primary transition-all hover:border-primary-hover hover:text-primary-hover"
+            className="flex-shrink-0 whitespace-nowrap rounded-full border-2 border-gray-300 px-5 py-2 text-sm font-semibold text-text-primary transition-all hover:border-primary-hover hover:text-primary-hover"
           >
             View all
           </Link>
