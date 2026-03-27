@@ -16,7 +16,7 @@ export default function ContentSection({
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="font-heading text-2xl font-bold text-text-primary md:text-3xl">
+      <h2 className="font-['Inter'] text-[48px] not-italic font-normal leading-[57.6px] text-[#171717]">
         {section.heading}
       </h2>
       <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-secondary">
@@ -37,14 +37,21 @@ export default function ContentSection({
       )}
 
       {section.subCards && section.subCards.length > 0 && (
-        <ul className="mt-6 space-y-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {section.subCards.map((card) => (
-            <li key={card.title} className="text-base leading-relaxed text-text-secondary">
-              <span className="font-semibold text-text-primary">{card.title}:</span>{" "}
-              {card.description}
-            </li>
+            <div
+              key={card.title}
+              className="rounded-2xl border border-gray-200 bg-white p-6"
+            >
+              <h3 className="font-heading text-base font-bold text-text-primary">
+                {card.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                {card.description}
+              </p>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </motion.div>
   );
