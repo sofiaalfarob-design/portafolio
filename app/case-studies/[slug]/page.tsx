@@ -73,7 +73,7 @@ export default function CaseStudyDetailPage({
 
   return (
     <main className="min-h-screen">
-      <Navbar />
+      <Navbar darkHero />
       <HeroCaseDetail study={study} />
       <div className="mx-auto max-w-container px-6 mt-10 mb-4">
         <div className="rounded-3xl bg-gray-50 overflow-hidden">
