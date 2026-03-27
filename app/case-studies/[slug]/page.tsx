@@ -22,9 +22,41 @@ export function generateMetadata({
   const study = getCaseStudyBySlug(params.slug);
   if (!study) return { title: "Case Study Not Found" };
 
+  const url = `https://sofiaalfarodesign.com/case-studies/${study.slug}`;
+  const ogImage = study.thumbnailImage;
+
   return {
-    title: `${study.title} — Sofia Alfaro`,
+    title: `${study.detailTitle || study.title} — Sofia Alfaro`,
     description: study.description,
+    keywords: [
+      study.category,
+      ...study.tools,
+      ...study.tags.map((t) => t.label),
+      "Product Design",
+      "UX Case Study",
+      "Sofia Alfaro",
+    ],
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: `${study.detailTitle || study.title} — Sofia Alfaro`,
+      description: study.description,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: study.detailTitle || study.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${study.detailTitle || study.title} — Sofia Alfaro`,
+      description: study.description,
+      images: [ogImage],
+    },
   };
 }
 
