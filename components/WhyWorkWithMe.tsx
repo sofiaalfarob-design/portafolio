@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: "/stard-up.png",
+    icon: "/stard-up.svg",
     title: "Startup & Enterprise Experience",
     description:
       "Navigated from 5-person early-stage teams to 500+ employee organizations, adapting methodologies based on context and required velocity.",
   },
   {
-    icon: "/icons/cross-functional-leadership.png",
+    icon: "/cross-functional-leadership.svg",
     title: "Cross-Functional Leadership",
     description:
       "Works fluidly across design, engineering, product, and data. Ensures alignment from ideation through launch with clear communication and shared ownership.",
   },
   {
-    icon: "/continuous-learning-mindset.png",
+    icon: "/continuous-learning-mindset.svg",
     title: "Continuous Learning Mindset",
     description:
       "Stays on the cutting edge of design and AI tools, constantly experimenting with new technologies and integrating them into practical workflows.",

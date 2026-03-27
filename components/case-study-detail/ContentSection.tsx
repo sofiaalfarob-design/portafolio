@@ -42,14 +42,19 @@ export default function ContentSection({
       )}
 
       {section.image && (
-        <div className="mt-8 overflow-hidden rounded-2xl">
+        <div
+          className={`mt-8 overflow-hidden rounded-2xl ${
+            section.imageContained ? "mx-auto max-w-2xl" : "-mx-8 md:-mx-16 rounded-none"
+          }`}
+        >
           <Image
             src={section.image}
             alt={section.heading}
             width={1200}
             height={750}
             className="w-full object-contain"
-            sizes="(max-width: 1200px) 100vw, 1200px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+            quality={90}
           />
         </div>
       )}

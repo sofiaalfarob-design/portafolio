@@ -24,11 +24,10 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center">
               <Image
-                src="/link-home.png"
+                src="/link-home.svg"
                 alt="Sofia Alfaro"
-                width={70}
-                height={70}
-                className="rounded-xl"
+                width={120}
+                height={44}
               />
             </Link>
             <p className="mt-4 font-semibold text-text-primary">

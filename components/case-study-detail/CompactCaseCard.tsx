@@ -29,6 +29,7 @@ export default function CompactCaseCard({
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 33vw"
+            quality={85}
           />
         </div>
         <div className="p-5">

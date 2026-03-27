@@ -6,12 +6,12 @@ import { skillCategories } from "@/data/skills";
 import SectionBadge from "./ui/SectionBadge";
 
 const iconMap: Record<string, string> = {
-  design: "/design.png",
-  tech: "/technologies.png",
-  systems: "/design-systems.png",
-  strategy: "/strategy.png",
-  research: "/research.png",
-  soft: "/soft-skills.png",
+  design: "/design.svg",
+  tech: "/technologies.svg",
+  systems: "/design-systems.svg",
+  strategy: "/strategy.svg",
+  research: "/research.svg",
+  soft: "/soft-skills.svg",
 };
 
 const cardVariants = {
@@ -60,8 +60,8 @@ export default function SkillsSection() {
                 <Image
                   src={iconMap[category.icon]}
                   alt={category.title}
-                  width={40}
-                  height={40}
+                  width={48}
+                  height={48}
                 />
               </div>
               <h3 className="font-heading text-base font-bold text-text-primary">

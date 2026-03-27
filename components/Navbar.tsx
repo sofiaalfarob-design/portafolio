@@ -60,11 +60,10 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/link-home.png"
+            src="/link-home.svg"
             alt="Sofia Alfaro"
-            width={70}
-            height={70}
-            className="rounded-full"
+            width={120}
+            height={44}
           />
         </Link>
 

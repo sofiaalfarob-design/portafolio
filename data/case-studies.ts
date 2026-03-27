@@ -12,6 +12,7 @@ export interface ContentSection {
   heading: string;
   body: string;
   image?: string;
+  imageContained?: boolean;
   subCards?: TechCard[];
 }
 
@@ -94,6 +95,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         image: "/cleaning-app-case-closer-image.png",
+        imageContained: true,
       },
     ],
     businessImpact: [
@@ -165,6 +167,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         image: "/propelus-case-closer-image.png",
+        imageContained: true,
       },
     ],
     businessImpact: [
@@ -235,6 +238,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         image: "/continuing-education-company-case-closer-image.png",
+        imageContained: true,
       },
     ],
     businessImpact: [
@@ -304,6 +308,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         image: "/arkose-labs-case-closer-image.png",
+        imageContained: true,
       },
     ],
     businessImpact: [

@@ -57,7 +57,8 @@ export default function HeroCaseDetail({ study }: { study: CaseStudy }) {
             width={1200}
             height={800}
             className="w-full object-contain drop-shadow-2xl"
-            sizes="(max-width: 1200px) 100vw, 1200px"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+            quality={90}
             priority
           />
         </motion.div>
