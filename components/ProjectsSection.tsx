@@ -54,7 +54,7 @@ export default function ProjectsSection() {
                 variants={cardVariants}
                 className="card-hover group overflow-hidden rounded-2xl border border-gray-100 bg-white"
               >
-                <Link href={`/case-studies/${project.slug}`} className="block">
+                <Link href={`/case-studies/${project.slug}`} className="flex h-full flex-col">
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
                       src={project.thumbnailImage}
@@ -66,7 +66,7 @@ export default function ProjectsSection() {
                     />
                   </div>
 
-                  <div className="p-6">
+                  <div className="flex flex-1 flex-col p-6">
                     <p className="mb-2 text-sm font-medium text-primary">
                       {project.category}
                     </p>
@@ -88,7 +88,7 @@ export default function ProjectsSection() {
                         />
                       ))}
                     </div>
-                    <div className="mt-4 border-t border-gray-100 pt-4">
+                    <div className="mt-auto border-t border-gray-100 pt-4">
                       <span className="block w-full rounded-full border border-gray-300 py-2.5 text-center text-sm font-semibold text-text-primary transition-all group-hover:border-primary-hover group-hover:text-primary-hover">
                         View the Project
                       </span>

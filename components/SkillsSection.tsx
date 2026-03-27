@@ -4,14 +4,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { skillCategories } from "@/data/skills";
 import SectionBadge from "./ui/SectionBadge";
+import basePath from "@/lib/basePath";
 
 const iconMap: Record<string, string> = {
-  design: "/design.svg",
-  tech: "/technologies.svg",
-  systems: "/design-systems.svg",
-  strategy: "/strategy.svg",
-  research: "/research.svg",
-  soft: "/soft-skills.svg",
+  design: `${basePath}/design.svg`,
+  tech: `${basePath}/technologies.svg`,
+  systems: `${basePath}/design-systems.svg`,
+  strategy: `${basePath}/strategy.svg`,
+  research: `${basePath}/research.svg`,
+  soft: `${basePath}/soft-skills.svg`,
 };
 
 const cardVariants = {

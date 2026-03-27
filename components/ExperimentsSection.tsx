@@ -80,7 +80,7 @@ export default function ExperimentsSection() {
                   {exp.title}
                 </h3>
                 <span
-                  className={`mt-1 inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${statusStyles[exp.status]}`}
+                  className={`mt-1 inline-block self-start rounded-full px-2.5 py-0.5 text-xs font-medium ${statusStyles[exp.status]}`}
                 >
                   {exp.status}
                 </span>

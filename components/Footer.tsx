@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import basePath from "@/lib/basePath";
 
 const quickLinks = [
   { label: "Case Studies", href: "/case-studies" },
   { label: "The Lab", href: "/#lab" },
   { label: "Tech Stack", href: "/#tech-stack" },
-  { label: "About Me", href: "/#about" },
+  { label: "About Me", href: "/#tech-stack" },
 ];
 
 const contactLinks = [
@@ -24,7 +25,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center">
               <Image
-                src="/link-home.svg"
+                src={`${basePath}/link-home.svg`}
                 alt="Sofia Alfaro — Senior Product Designer logo"
                 width={120}
                 height={44}

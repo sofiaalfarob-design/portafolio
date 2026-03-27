@@ -5,13 +5,14 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import basePath from "@/lib/basePath";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 
 const navLinks = [
   { label: "Portfolio", href: "/#projects", sectionId: "projects" },
   { label: "Case Studies", href: "/case-studies", sectionId: "" },
   { label: "The Lab", href: "/#lab", sectionId: "lab" },
-  { label: "About Me", href: "/#contact", sectionId: "contact" },
+  { label: "About Me", href: "/#tech-stack", sectionId: "tech-stack" },
 ];
 
 const sectionIds = ["projects", "lab", "tech-stack", "about", "contact"];
@@ -60,7 +61,7 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/link-home.svg"
+            src={`${basePath}/link-home.svg`}
             alt="Sofia Alfaro — return to homepage"
             width={120}
             height={44}

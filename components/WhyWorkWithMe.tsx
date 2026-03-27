@@ -2,22 +2,23 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import basePath from "@/lib/basePath";
 
 const features = [
   {
-    icon: "/stard-up.svg",
+    icon: `${basePath}/stard-up.svg`,
     title: "Startup & Enterprise Experience",
     description:
       "Navigated from 5-person early-stage teams to 500+ employee organizations, adapting methodologies based on context and required velocity.",
   },
   {
-    icon: "/cross-functional-leadership.svg",
+    icon: `${basePath}/cross-functional-leadership.svg`,
     title: "Cross-Functional Leadership",
     description:
       "Works fluidly across design, engineering, product, and data. Ensures alignment from ideation through launch with clear communication and shared ownership.",
   },
   {
-    icon: "/continuous-learning-mindset.svg",
+    icon: `${basePath}/continuous-learning-mindset.svg`,
     title: "Continuous Learning Mindset",
     description:
       "Stays on the cutting edge of design and AI tools, constantly experimenting with new technologies and integrating them into practical workflows.",

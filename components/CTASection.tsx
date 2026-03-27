@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import basePath from "@/lib/basePath";
 import SectionBadge from "./ui/SectionBadge";
 
 export default function CTASection() {
@@ -67,7 +68,7 @@ export default function CTASection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 underline transition-colors hover:text-text-primary"
           >
-            <Image src="/download-pdf.png" alt="" width={14} height={14} />
+            <Image src={`${basePath}/download-pdf.png`} alt="" width={14} height={14} />
             Download Resume (PDF)
           </a>
           <a
@@ -76,7 +77,7 @@ export default function CTASection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 underline transition-colors hover:text-text-primary"
           >
-            <Image src="/github.png" alt="" width={14} height={14} />
+            <Image src={`${basePath}/github.png`} alt="" width={14} height={14} />
             GitHub
           </a>
         </div>
