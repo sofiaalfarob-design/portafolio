@@ -43,11 +43,15 @@ export default function CaseStudyDetailPage({
     <main className="min-h-screen">
       <Navbar />
       <HeroCaseDetail study={study} />
-      <OverviewBar study={study} />
-      <div className="mx-auto max-w-container px-6">
-        {study.contentSections.map((section) => (
-          <ContentSection key={section.heading} section={section} />
-        ))}
+      <div className="mx-auto max-w-container px-6 my-10">
+        <div className="rounded-3xl bg-gray-50 overflow-hidden">
+          <OverviewBar study={study} />
+          <div className="px-8 py-12 md:px-16 md:py-14 space-y-16">
+            {study.contentSections.map((section) => (
+              <ContentSection key={section.heading} section={section} />
+            ))}
+          </div>
+        </div>
       </div>
       <BusinessImpact metrics={study.businessImpact} />
       <RelatedCases relatedSlugs={study.relatedCaseSlugs} />
