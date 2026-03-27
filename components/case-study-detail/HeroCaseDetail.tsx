@@ -53,7 +53,7 @@ export default function HeroCaseDetail({ study }: { study: CaseStudy }) {
         >
           <Image
             src={study.heroImage}
-            alt={study.title}
+            alt={`${study.detailTitle || study.title} — product design showcase`}
             width={1200}
             height={800}
             className="w-full object-contain drop-shadow-2xl"

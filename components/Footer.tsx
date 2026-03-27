@@ -25,7 +25,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center">
               <Image
                 src="/link-home.svg"
-                alt="Sofia Alfaro"
+                alt="Sofia Alfaro — Senior Product Designer logo"
                 width={120}
                 height={44}
               />

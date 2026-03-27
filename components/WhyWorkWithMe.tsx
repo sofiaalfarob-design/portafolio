@@ -68,7 +68,7 @@ export default function WhyWorkWithMe() {
               <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-light/20">
                 <Image
                   src={feature.icon}
-                  alt={feature.title}
+                  alt=""
                   width={32}
                   height={32}
                 />

@@ -49,7 +49,7 @@ export default function ContentSection({
         >
           <Image
             src={section.image}
-            alt={section.heading}
+            alt={section.imageAlt || section.heading}
             width={1200}
             height={750}
             className="w-full object-contain"

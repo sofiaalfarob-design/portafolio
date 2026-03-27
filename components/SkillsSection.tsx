@@ -59,7 +59,7 @@ export default function SkillsSection() {
               <div className="mb-3">
                 <Image
                   src={iconMap[category.icon]}
-                  alt={category.title}
+                  alt=""
                   width={48}
                   height={48}
                 />

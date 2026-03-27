@@ -12,6 +12,7 @@ export interface ContentSection {
   heading: string;
   body: string;
   image?: string;
+  imageAlt?: string;
   imageContained?: boolean;
   subCards?: TechCard[];
 }
@@ -69,6 +70,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "The Challenge: Velocity vs. Viability",
         body: "The objective was to validate a complex cleaning service business model by launching a functional MVP in record time. Traditional development cycles (3-6 months) were not an option. We needed a solution that wasn't just a \"clickable prototype\" but a live, data-driven application capable of handling real booking logic and user management.",
         image: "/cleaning-app-case-the-chalence-image.png",
+        imageAlt: "Four Home Harmony app screens showing the Daily View, Weekly View, Home dashboard, and New Task creation flow on mobile",
       },
       {
         heading: "The Strategic Approach: The 60/40 Hybrid Workflow",
@@ -95,6 +97,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         image: "/cleaning-app-case-closer-image.png",
+        imageAlt: "Home Harmony app Task Distribution and Monthly Calendar screens showing data visualisation and task management UI",
         imageContained: true,
       },
     ],
@@ -141,6 +144,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "The Challenge: Eliminating Design Debt",
         body: "Propelus had accumulated significant design debt across 20+ product pages. Inconsistent component usage, undefined spacing rules, and a disconnect between Figma designs and coded components created friction in every sprint. Engineers spent hours interpreting design intent, and designers were rebuilding components that already existed in slightly different forms.",
         image: "/propelus-case-the-chalence-image.png",
+        imageAlt: "Propelus product pages before the redesign, showing inconsistent component usage, mismatched spacing, and visual fragmentation across views",
       },
       {
         heading: "Solution: Logic-First System Architecture",
@@ -167,6 +171,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         image: "/propelus-case-closer-image.png",
+        imageAlt: "Figma variables panel and Tailwind CSS config side by side, demonstrating the 1-to-1 token mapping that eliminated design-to-code handoff friction",
         imageContained: true,
       },
     ],
@@ -212,6 +217,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "The Challenge: Breaking the Rigidity",
         body: "The continuing education platform served multiple institutional clients, each with distinct branding, content structures, and user workflows. The existing CMS was rigid — every customization required developer involvement, creating bottlenecks and escalating costs. Clients were frustrated by their inability to manage their own platforms independently.",
         image: "/continuing-education-company-case-the-chalence-image.png",
+        imageAlt: "Continuing Education Company CMS admin panel and public-facing conference listing pages showing the rigid, developer-dependent content workflow",
       },
       {
         heading: "Solution: The Chameleon Component System",
@@ -238,6 +244,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         image: "/continuing-education-company-case-closer-image.png",
+        imageAlt: "Chameleon component system showing the drag-and-drop layout builder alongside the live public-facing conference detail page with multi-theme configuration",
         imageContained: true,
       },
     ],
@@ -282,6 +289,7 @@ export const caseStudies: CaseStudy[] = [
         heading: "The Challenge: High Traffic, Low Intent",
         body: "Arkose Labs had strong organic traffic but poor conversion metrics. Visitors were landing on technically dense pages that spoke to engineers rather than the C-suite decision-makers who controlled purchasing budgets. The website was winning the SEO game but losing the conversion game — a classic case of traffic without intent alignment.",
         image: "/arkose-labs-case-the-chalence-image.png",
+        imageAlt: "Arkose Labs desktop website with mega-menu open and mobile views showing information architecture before and after the strategic redesign",
       },
       {
         heading: "Diagnosis: The Persona Mismatch",
@@ -308,6 +316,7 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
         image: "/arkose-labs-case-closer-image.png",
+        imageAlt: "Redesigned Arkose Labs mega-menu with buyer-journey navigation organized into Discover, Evaluate, and Implement stages for executive decision-makers",
         imageContained: true,
       },
     ],

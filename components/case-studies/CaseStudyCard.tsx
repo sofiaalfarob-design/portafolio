@@ -26,7 +26,7 @@ export default function CaseStudyCard({
         <div className="relative aspect-[16/10] overflow-hidden">
           <Image
             src={study.thumbnailImage}
-            alt={study.title}
+            alt={`${study.title} — ${study.category} case study preview`}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 50vw"

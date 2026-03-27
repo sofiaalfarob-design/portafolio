@@ -61,7 +61,7 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
         <Link href="/" className="flex items-center">
           <Image
             src="/link-home.svg"
-            alt="Sofia Alfaro"
+            alt="Sofia Alfaro — return to homepage"
             width={120}
             height={44}
           />

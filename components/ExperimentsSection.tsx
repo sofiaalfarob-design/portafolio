@@ -68,7 +68,7 @@ export default function ExperimentsSection() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={exp.image}
-                  alt={exp.title}
+                  alt={`${exp.title} — experiment preview`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

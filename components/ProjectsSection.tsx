@@ -58,7 +58,7 @@ export default function ProjectsSection() {
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
                       src={project.thumbnailImage}
-                      alt={project.title}
+                      alt={`${project.title} — ${project.category} case study preview`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
