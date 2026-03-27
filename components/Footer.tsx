@@ -9,10 +9,10 @@ const quickLinks = [
 ];
 
 const contactLinks = [
-  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/sofia-alfaro-designer" },
   { label: "Email", href: "mailto:sofia.alfablan@gmail.com" },
-  { label: "Behance", href: "https://behance.net" },
-  { label: "Resume (PDF)", href: "#" },
+  { label: "Behance", href: "https://www.behance.net/sofiaalfaro9" },
+  { label: "Resume (PDF)", href: "Curriculum-Sofia-Alfaro.pdf" },
 ];
 
 export default function Footer() {

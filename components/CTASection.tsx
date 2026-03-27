@@ -26,7 +26,7 @@ export default function CTASection() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/sofia-alfaro-designer"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-hover"
@@ -47,7 +47,9 @@ export default function CTASection() {
             Send Email
           </a>
           <a
-            href="#"
+            href="https://calendly.com/sofia-alfablan/let-s-talk"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border-2 border-text-primary px-6 py-3 text-sm font-semibold text-text-primary transition-all hover:bg-dark-hover hover:text-white"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -60,14 +62,18 @@ export default function CTASection() {
 
         <div className="mt-6 flex items-center justify-center gap-6 text-sm text-text-secondary">
           <a
-            href="#"
+            href="Curriculum-Sofia-Alfaro.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 underline transition-colors hover:text-text-primary"
           >
             <Image src="/download-pdf.png" alt="" width={14} height={14} />
             Download Resume (PDF)
           </a>
           <a
-            href="#"
+            href="https://github.com/sofiaalfarob-design"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 underline transition-colors hover:text-text-primary"
           >
             <Image src="/github.png" alt="" width={14} height={14} />

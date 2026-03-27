@@ -14,7 +14,7 @@ const features = [
     icon: "/icons/cross-functional-leadership.png",
     title: "Cross-Functional Leadership",
     description:
-      "Works fluently across design, engineering, product, and data. Ensures alignment from ideation through launch with clear communication and shared ownership.",
+      "Works fluidly across design, engineering, product, and data. Ensures alignment from ideation through launch with clear communication and shared ownership.",
   },
   {
     icon: "/continuous-learning-mindset.png",

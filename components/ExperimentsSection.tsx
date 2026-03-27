@@ -45,7 +45,9 @@ export default function ExperimentsSection() {
           </div>
 
           <a
-            href="#contact"
+            href="https://calendly.com/sofia-alfablan/let-s-talk"
+            target="_blank"
+            rel="noopener noreferrer"
             className="self-start rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-dark-hover"
           >
             Book a Call

@@ -11,7 +11,7 @@ export const experiments: Experiment[] = [
     title: "Figma Automation with Custom Scripts",
     status: "Completed",
     description:
-      "Development of plugins and scripts using Figma API that automatically generate component documentation, export design tokens to code, and sync changes with development repositories. 70% reduction in manual handoff work.",
+      "Developed plugins and scripts using the Figma API that automatically generate component documentation, export design tokens to code, and sync changes with development repositories. 70% reduction in manual handoff work.",
     image: "/card-figma-automation-with-custom-scripts.png",
     tags: ["AI Implementation", "SaaS UX", "Design Systems", "Behavioral Analytics"],
   },

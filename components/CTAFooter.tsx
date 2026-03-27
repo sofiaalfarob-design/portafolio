@@ -35,7 +35,9 @@ export default function CTAFooter() {
             className="mt-10 flex flex-wrap items-center justify-center gap-4"
           >
             <a
-              href="mailto:sofia.alfablan@gmail.com"
+              href="https://calendly.com/sofia-alfablan/let-s-talk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-primary-hover"
             >
               Schedule a Call
@@ -47,7 +49,9 @@ export default function CTAFooter() {
               See Portfolio
             </a>
             <a
-              href="#"
+              href="Curriculum-Sofia-Alfaro.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border-2 border-gray-600 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:border-white"
             >
               Download Resume
@@ -60,7 +64,7 @@ export default function CTAFooter() {
       <div className="border-t border-gray-800">
         <div className="mx-auto flex max-w-container flex-col items-center justify-between gap-4 px-6 py-6 md:flex-row">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Design Labs. All rights reserved.
+            &copy; {new Date().getFullYear()} Sofia Alfaro. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {/* Twitter / X */}
@@ -75,7 +79,9 @@ export default function CTAFooter() {
             </a>
             {/* LinkedIn */}
             <a
-              href="#"
+              href="https://www.linkedin.com/in/sofia-alfaro-designer"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="text-gray-500 transition-colors hover:text-white"
             >

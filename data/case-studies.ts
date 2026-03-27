@@ -71,7 +71,7 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         heading: "The Strategic Approach: The 60/40 Hybrid Workflow",
-        body: "I pioneered a \"Vibe Coding\" methodology, acting as the bridge between generative AI and product excellence.\n\n• AI-First Logic (60%): I utilized Lovable to generate the core back-end logic, database schemas, and initial front-end architecture. This allowed for near-instantaneous deployment of functional features.\n\n• Human-Centric Refinement (40%): I took the raw AI output into Figma to perform \"Surgery on the UX.\" AI often hallucinates over-complicated user flows; my role was to simplify, brand, and optimize for mobile-first constraints.",
+        body: "I pioneered a \"Vibe Coding\" methodology, acting as the bridge between generative AI and product excellence.\n\n• AI-First Logic (60%): I utilized Lovable to generate the core back-end logic, database schemas, and initial front-end architecture. This allowed for near-instantaneous deployment of functional features.\n\n• Human-Centric Refinement (40%): I took the raw AI output into Figma to perform \"Surgery on the UX.\" AI often generates overly complicated user flows; my role was to simplify, brand, and optimize for mobile-first constraints.",
       },
       {
         heading: "Technical Deep Dive",

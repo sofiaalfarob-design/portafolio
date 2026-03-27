@@ -30,10 +30,12 @@ export default function HeroCaseStudies() {
               Get in touch
             </a>
             <a
-              href="#"
+              href="https://calendly.com/sofia-alfablan/let-s-talk"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border-2 border-gray-300 px-6 py-2.5 text-sm font-semibold text-text-primary transition-all hover:border-primary-hover hover:text-primary-hover"
             >
-              Book a call
+              Book a Call
             </a>
           </div>
         </motion.div>
