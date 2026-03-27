@@ -36,7 +36,7 @@ export default function ProjectsSection() {
           </p>
           <Link
             href="/case-studies"
-            className="mt-6 inline-block rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-800"
+            className="mt-6 inline-block rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-dark-hover"
           >
             View more projects
           </Link>
@@ -88,7 +88,7 @@ export default function ProjectsSection() {
                       ))}
                     </div>
                     <div className="mt-4 border-t border-gray-100 pt-4">
-                      <span className="block w-full rounded-full border border-gray-300 py-2.5 text-center text-sm font-semibold text-text-primary transition-all group-hover:border-primary group-hover:text-primary">
+                      <span className="block w-full rounded-full border border-gray-300 py-2.5 text-center text-sm font-semibold text-text-primary transition-all group-hover:border-primary-hover group-hover:text-primary-hover">
                         View the Project
                       </span>
                     </div>

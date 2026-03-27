@@ -36,7 +36,7 @@ export default function CTAFooter() {
           >
             <a
               href="mailto:sofia.alfablan@gmail.com"
-              className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-primary-light hover:shadow-lg hover:shadow-primary/25"
+              className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-primary-hover"
             >
               Schedule a Call
             </a>

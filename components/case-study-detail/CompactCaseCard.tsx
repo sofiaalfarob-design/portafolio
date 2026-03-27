@@ -43,7 +43,7 @@ export default function CompactCaseCard({
               <TagPill key={tag.label} label={tag.label} variant={tag.variant} />
             ))}
           </div>
-          <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary transition-colors group-hover:text-primary-light">
+          <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary transition-colors group-hover:text-primary-hover">
             View project
             <span className="transition-transform group-hover:translate-x-1">
               &rarr;

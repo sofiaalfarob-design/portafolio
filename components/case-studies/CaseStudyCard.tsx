@@ -49,7 +49,7 @@ export default function CaseStudyCard({
             ))}
           </div>
           <div className="mt-4 border-t border-gray-100 pt-4">
-            <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors group-hover:text-primary-light">
+            <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors group-hover:text-primary-hover">
               View this Project
               <span className="transition-transform group-hover:translate-x-1">
                 &rarr;

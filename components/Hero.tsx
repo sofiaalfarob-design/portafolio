@@ -93,13 +93,13 @@ export default function Hero() {
         >
           <Link
             href="#projects"
-            className="rounded-full bg-dark px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-gray-800"
+            className="rounded-full bg-dark px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-dark-hover"
           >
             View Case Studies
           </Link>
           <Link
             href="#contact"
-            className="rounded-full border-2 border-gray-300 px-8 py-3 text-sm font-semibold text-text-primary transition-all hover:border-primary hover:text-primary"
+            className="rounded-full border-2 border-gray-300 px-8 py-3 text-sm font-semibold text-text-primary transition-all hover:border-primary-hover hover:text-primary-hover"
           >
             Let&apos;s Talk
           </Link>

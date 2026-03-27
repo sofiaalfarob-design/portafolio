@@ -37,7 +37,7 @@ export default function RelatedCases({
           </div>
           <Link
             href="/case-studies"
-            className="rounded-full border-2 border-gray-300 px-5 py-2 text-sm font-semibold text-text-primary transition-all hover:border-primary hover:text-primary"
+            className="rounded-full border-2 border-gray-300 px-5 py-2 text-sm font-semibold text-text-primary transition-all hover:border-primary-hover hover:text-primary-hover"
           >
             View all
           </Link>

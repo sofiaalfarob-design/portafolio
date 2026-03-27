@@ -29,21 +29,21 @@ export default function CTASection() {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-all hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-hover"
           >
             <Image src="/linkedin.png" alt="" width={16} height={16} />
             Connect on LinkedIn
           </a>
           <a
             href="mailto:sofia.alfablan@gmail.com"
-            className="inline-flex items-center gap-2 rounded-full bg-primary-light px-6 py-3 text-sm font-semibold text-text-primary transition-all hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-full bg-primary-light px-6 py-3 text-sm font-semibold text-text-primary transition-all hover:bg-primary-light-hover"
           >
             <Image src="/email.png" alt="" width={16} height={16} />
             Send Email
           </a>
           <a
             href="#"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-text-primary px-6 py-3 text-sm font-semibold text-text-primary transition-all hover:bg-text-primary hover:text-white"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-text-primary px-6 py-3 text-sm font-semibold text-text-primary transition-all hover:bg-dark-hover hover:text-white"
           >
             <Image src="/schedule-a-call.png" alt="" width={16} height={16} />
             Book a Call

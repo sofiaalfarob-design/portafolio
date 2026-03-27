@@ -11,7 +11,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/case-studies"
-        className="mt-8 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-all hover:opacity-90"
+        className="mt-8 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-hover"
       >
         View All Case Studies
       </Link>

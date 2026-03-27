@@ -46,7 +46,7 @@ export default function ExperimentsSection() {
 
           <a
             href="#contact"
-            className="self-start rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-800"
+            className="self-start rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-dark-hover"
           >
             Book a Call
           </a>

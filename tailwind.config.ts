@@ -9,9 +9,12 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#9810FA",
+        "primary-hover": "#B045FB",
         "primary-light": "#D6AFFF",
+        "primary-light-hover": "#E8D5FF",
         "primary-bg": "#F2F2F2",
         dark: "#0a0a0a",
+        "dark-hover": "#555555",
         "card-bg": "#F8F8F8",
         "bg-muted": "#F8F8F8",
         "bg-muted-alt": "#F2F2F2",

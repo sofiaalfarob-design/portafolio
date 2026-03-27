@@ -25,13 +25,13 @@ export default function HeroCaseStudies() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href="#contact"
-              className="rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-800"
+              className="rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-dark-hover"
             >
               Get in touch
             </a>
             <a
               href="#"
-              className="rounded-full border-2 border-gray-300 px-6 py-2.5 text-sm font-semibold text-text-primary transition-all hover:border-primary hover:text-primary"
+              className="rounded-full border-2 border-gray-300 px-6 py-2.5 text-sm font-semibold text-text-primary transition-all hover:border-primary-hover hover:text-primary-hover"
             >
               Book a call
             </a>

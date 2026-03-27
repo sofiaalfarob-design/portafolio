@@ -73,7 +73,7 @@ export default function Navbar() {
           ))}
           <Link
             href={resolveHref("/#contact")}
-            className="rounded-full bg-[#1a1a1a] px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-gray-800"
+            className="rounded-full bg-[#1a1a1a] px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-dark-hover"
           >
             Get in touch
           </Link>
