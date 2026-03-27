@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -18,6 +18,13 @@ const sectionIds = ["projects", "lab", "tech-stack", "about", "contact"];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const pathname = usePathname();
   const isHome = pathname === "/";
   const activeSection = useScrollSpy(sectionIds);
@@ -39,7 +46,7 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 right-0 top-4 z-50 px-6">
       {/* Floating pill */}
-      <div className="mx-auto flex max-w-container items-center justify-between rounded-full bg-[#C8CBD0]/80 backdrop-blur-md px-2 py-2">
+      <div className={`mx-auto flex max-w-container items-center justify-between rounded-full px-2 py-2 transition-all duration-300 ${scrolled ? "bg-[#C8CBD0]/80 backdrop-blur-md" : "bg-transparent"}`}>
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
