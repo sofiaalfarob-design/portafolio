@@ -16,7 +16,7 @@ export default function ContentSection({
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="font-['Inter'] text-[48px] not-italic font-normal leading-[57.6px] text-[#171717]">
+      <h2 className="font-['Inter'] text-[28px] leading-[36px] md:text-[48px] not-italic font-normal md:leading-[57.6px] text-[#171717]">
         {section.heading}
       </h2>
       <p className="mt-4 w-full font-['Inter'] text-[16px] not-italic font-normal leading-[24px] text-[#171717]">
