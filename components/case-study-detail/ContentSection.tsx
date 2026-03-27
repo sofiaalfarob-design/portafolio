@@ -24,17 +24,15 @@ export default function ContentSection({
       </p>
 
       {section.image && (
-        <div className="mt-8 rounded-2xl bg-white p-4 md:p-6 shadow-sm">
-          <div className="relative overflow-hidden rounded-xl">
-            <Image
-              src={section.image}
-              alt={section.heading}
-              width={1200}
-              height={750}
-              className="w-full object-contain"
-              sizes="(max-width: 1200px) 100vw, 1200px"
-            />
-          </div>
+        <div className="mt-8 overflow-hidden rounded-2xl">
+          <Image
+            src={section.image}
+            alt={section.heading}
+            width={1200}
+            height={750}
+            className="w-full object-contain"
+            sizes="(max-width: 1200px) 100vw, 1200px"
+          />
         </div>
       )}
 
