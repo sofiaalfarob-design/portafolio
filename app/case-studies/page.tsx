@@ -5,7 +5,7 @@ import CaseStudyGrid from "@/components/case-studies/CaseStudyGrid";
 import StrategicFramework from "@/components/case-studies/StrategicFramework";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { caseStudies } from "@/data/case-studies";
+import { getOrderedCaseStudies } from "@/data/case-studies";
 
 export const metadata: Metadata = {
   title: "Case Studies — Sofia Alfaro",
@@ -45,7 +45,7 @@ export default function CaseStudiesPage() {
     <main className="min-h-screen">
       <Navbar />
       <HeroCaseStudies />
-      <CaseStudyGrid caseStudies={caseStudies} />
+      <CaseStudyGrid caseStudies={getOrderedCaseStudies()} />
       <StrategicFramework />
       <CTASection />
       <Footer />

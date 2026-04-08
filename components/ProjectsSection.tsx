@@ -3,9 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { caseStudies } from "@/data/case-studies";
+import { getOrderedCaseStudies } from "@/data/case-studies";
 import SectionBadge from "./ui/SectionBadge";
 import TagPill from "./ui/TagPill";
+
+const caseStudies = getOrderedCaseStudies(4);
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },

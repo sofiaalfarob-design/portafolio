@@ -416,6 +416,22 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
+// Controls display order across all pages
+export const displayOrder = [
+  "cleaning-app",
+  "urban-bites",
+  "propelus",
+  "continuing-education",
+  "arkose-labs",
+];
+
+export function getOrderedCaseStudies(limit?: number): CaseStudy[] {
+  const ordered = displayOrder
+    .map((slug) => caseStudies.find((cs) => cs.slug === slug))
+    .filter((cs): cs is CaseStudy => cs !== undefined);
+  return limit ? ordered.slice(0, limit) : ordered;
+}
+
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
   return caseStudies.find((cs) => cs.slug === slug);
 }
