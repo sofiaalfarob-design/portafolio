@@ -118,7 +118,7 @@ export const caseStudies: CaseStudy[] = [
           "A fully functional, scalable MVP that allowed the client to secure early-stage feedback with zero design debt",
       },
     ],
-    relatedCaseSlugs: ["propelus", "continuing-education", "arkose-labs"],
+    relatedCaseSlugs: ["propelus", "continuing-education", "urban-bites"],
   },
   {
     slug: "propelus",
@@ -191,7 +191,7 @@ export const caseStudies: CaseStudy[] = [
         description: "Faster feature development with reusable components",
       },
     ],
-    relatedCaseSlugs: ["cleaning-app", "continuing-education", "arkose-labs"],
+    relatedCaseSlugs: ["cleaning-app", "continuing-education", "urban-bites"],
   },
   {
     slug: "continuing-education",
@@ -264,7 +264,7 @@ export const caseStudies: CaseStudy[] = [
         description: "Faster client onboarding with self-service configuration",
       },
     ],
-    relatedCaseSlugs: ["cleaning-app", "propelus", "arkose-labs"],
+    relatedCaseSlugs: ["cleaning-app", "propelus", "urban-bites"],
   },
   {
     slug: "arkose-labs",
@@ -337,7 +337,82 @@ export const caseStudies: CaseStudy[] = [
         description: "More time spent on solution pages by target personas",
       },
     ],
-    relatedCaseSlugs: ["cleaning-app", "propelus", "continuing-education"],
+    relatedCaseSlugs: ["cleaning-app", "propelus", "urban-bites"],
+  },
+  {
+    slug: "urban-bites",
+    category: "Brand Strategy & B2B UX Design",
+    subtitle: "Brand Strategy & B2B UX Design",
+    title: "Urban Bites: Scaling Street Food into a Corporate Catering Powerhouse",
+    description:
+      "Bridging the gap between 'street cred' and 'corporate trust' to unlock high-ticket catering contracts for a fast-growing Mexican street food brand.",
+    role: "Lead UI/UX Designer",
+    heroImage: `${basePath}/urban-bites-case-hero.png`,
+    thumbnailImage: `${basePath}/card-urban-bites.png`,
+    heroColor: "#1C1300",
+    tools: ["Figma", "Adobe Creative Cloud", "Midjourney", "VI Visual Assets"],
+    timeline: "3-Week Sprint (Discovery to High-Fidelity Prototype)",
+    metrics: "26% Booking Increase | 40% Support Efficiency | B2B Brand Authority",
+    tags: [
+      { label: "Brand Strategy", variant: "purple" },
+      { label: "B2B UX", variant: "neutral" },
+      { label: "Figma", variant: "neutral" },
+      { label: "Adobe CC", variant: "neutral" },
+      { label: "Midjourney", variant: "neutral" },
+    ],
+    contentSections: [
+      {
+        heading: "The Challenge: Street Cred vs. Corporate Trust",
+        body: "The client, an emerging street food brand on Upwork, was a victim of their own success. With a massive following on Instagram and TikTok, they were perfectly speaking the 'foodie' market, but their brand was scaring away B2B clients.\n\nThe Problem: They were losing high-value corporate contracts and wedding bookings because they lacked a formal, trustworthy platform. Potential B2B clients found it difficult to book services through DMs, leading to a 'perception gap' — they looked like a great taco stand, but not like a professional catering partner.",
+        image: `${basePath}/urban-bites-case-the-chalence-image.png`,
+        imageAlt: "Urban Bites website mockup screens showing the brand transformation from street food aesthetics to a professional catering platform, including menu, event booking, and location tracker sections",
+        imageContained: true,
+      },
+      {
+        heading: "The Strategic Approach: Dual-Intent Architecture",
+        body: "Instead of a simple landing page, I engineered a 80/20 Hybrid Strategy designed to serve two distinct masters:\n\n1. The Street Consumer (B2C): Needs instant gratification — live location, today's menu, and social proof.\n\n2. The Event Planner (B2B): Needs reliability, logistics, scalable menus, and a frictionless 'Request a Quote' flow.",
+      },
+      {
+        heading: "Tactical Deep Dive",
+        body: "Turning strategy into a high-fidelity reality meant deconstructing the user journey into its most critical touchpoints. By merging data-driven research with experiential UI, I developed a framework that eliminates the friction of traditional catering bookings while amplifying the brand's authentic street-food energy.",
+        subCards: [
+          {
+            title: "01. Competitive Benchmarking",
+            description:
+              "I analyzed leaders like Los Tacos No. 1 and local caterers. Most competitors were too 'messy' or too 'corporate'. Urban Bites needed to be edgy to stand out.",
+          },
+          {
+            title: "02. User Personas & Flow",
+            description:
+              "I mapped the journey of 'The Busy HR Manager' and 'The Weekend Foodie.' This created a Dual-Path Navigation, ensuring corporate leads find menus easily and hungry customers avoid booking frustrations.",
+          },
+          {
+            title: "03. Storytelling & 'Gritty' Copy",
+            description:
+              "We used a bold, rhythmic tone to let users 'smell the smoke' of the grill. This high-impact storytelling justifies their premium positioning.",
+          },
+        ],
+        image: `${basePath}/urban-bites-case-closer-image.png`,
+        imageAlt: "Urban Bites 'Cath the Truck' section displayed on a laptop mockup, showing the live GPS tracker and weekly route schedule with location and time slots",
+        imageContained: true,
+      },
+    ],
+    businessImpact: [
+      {
+        headline: "26% Increase",
+        description: "Total event bookings within the first 30 days post-launch.",
+      },
+      {
+        headline: "40% Efficiency Gain",
+        description: "Reduction in manual customer support via DMs regarding catering logistics.",
+      },
+      {
+        headline: "Brand Authority",
+        description:
+          "Successfully secured three major corporate contracts in the first month, marking a clear market differentiator.",
+      },
+    ],
+    relatedCaseSlugs: ["cleaning-app", "arkose-labs", "continuing-education"],
   },
 ];
 
