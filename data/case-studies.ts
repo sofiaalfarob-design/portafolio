@@ -412,7 +412,84 @@ export const caseStudies: CaseStudy[] = [
           "Successfully secured three major corporate contracts in the first month, marking a clear market differentiator.",
       },
     ],
-    relatedCaseSlugs: ["cleaning-app", "arkose-labs", "continuing-education"],
+    relatedCaseSlugs: ["cleaning-app", "arkose-labs", "fine-raw"],
+  },
+  {
+    slug: "fine-raw",
+    category: "E-Commerce & Brand Experience Design",
+    subtitle: "E-Commerce & Brand Experience Design",
+    title: "Fine & Raw: Elevating Artisanal Chocolate through Digital Artistry",
+    detailTitle: "Fine & Raw — Digital Boutique Experience",
+    description:
+      "Redesigning a premium chocolate brand's e-commerce experience to close the 'Premium Gap' — transforming a generic template into an immersive digital boutique that justifies a luxury price point.",
+    role: "Lead Product Designer (UI/UX, Brand Strategy)",
+    heroImage: `${basePath}/fine-raw-case-hero.png`,
+    thumbnailImage: `${basePath}/card-fine-raw.png`,
+    heroColor: "#0D0D0D",
+    tools: ["Figma", "Lovable", "Prototyping", "Adobe Illustrator"],
+    timeline: "6 Weeks",
+    metrics: "Elevated Market Positioning | Reduced Funnel Friction | AOV Growth",
+    tags: [
+      { label: "E-Commerce UX", variant: "purple" },
+      { label: "Brand Strategy", variant: "neutral" },
+      { label: "Figma", variant: "neutral" },
+      { label: "UI Design", variant: "neutral" },
+    ],
+    contentSections: [
+      {
+        heading: "The Challenge: The \"Premium Gap\"",
+        body: "The original site was functional but generic. It failed to justify the premium price point of the products because the unique 'hand-drawn' essence of the brand was buried under a standard e-commerce template.\n\n• Pain Point: Low engagement with the brand story.\n\n• Visual Friction: The illustrations (the brand's biggest asset) weren't integrated into the UI.",
+        image: `${basePath}/fine-raw-case-the-chalence-image.png`,
+        imageAlt: "Fine & Raw original e-commerce site showing generic template layout with disconnected brand illustrations and low visual hierarchy across product pages",
+        imageContained: true,
+      },
+      {
+        heading: "Design Strategy & Concept: The \"Artistic Rawness\" Framework",
+        body: "I established a design system based on \"Structured Luxury.\" This involved a neutral, paper-like palette to ground the brand, high-contrast black for the hand-drawn elements, and \"Old Gold\" accents to denote quality and prestige.\n\n• Minimalism as a Canvas: Using generous white space to let the intricate illustrations breathe.\n\n• Sensory UX: Implementing micro-interactions and skeleton loaders to ensure the high-res photography felt fast and fluid, mimicking the smooth texture of the chocolate.",
+      },
+      {
+        heading: "Key Solutions",
+        body: "Executing the \"Artistic Rawness\" vision required rethinking every major touchpoint — from the first impression to the final checkout step.",
+        subCards: [
+          {
+            title: "A. The Immersive Home",
+            description:
+              "I replaced the static banners with a mixed-media Hero section. By blending macro product photography with parallax-driven illustrations, I created a sensory entry point that communicates the brand's dual nature: Raw Ingredients + Fine Art.",
+          },
+          {
+            title: "B. Curated Catalog (PLP)",
+            description:
+              "Rather than a standard grid, I designed an asymmetric layout that feels like browsing a gallery. Hover States reveal the ingredient profile and the artist's story behind each wrapper.",
+          },
+          {
+            title: "C. The \"Masterpiece\" Product Page",
+            description:
+              "The new PDP focuses on the Unboxing Experience. I gave the illustration its own dedicated section and optimized the mobile checkout flow, incorporating a Quick-Add feature for returning customers.",
+          },
+        ],
+        image: `${basePath}/fine-raw-case-closer-image.png`,
+        imageAlt: "Fine & Raw redesigned product catalog on a laptop mockup, showcasing the asymmetric gallery-style grid layout with curated collections and luxury visual hierarchy",
+        imageContained: true,
+      },
+    ],
+    businessImpact: [
+      {
+        headline: "Elevated Market Positioning",
+        description:
+          "The 'Artistic Rawness' framework aligns digital aesthetics with artisanal quality for a luxury experience.",
+      },
+      {
+        headline: "Conversion & Funnel Efficiency",
+        description:
+          "The 'Masterpiece' PDP and mobile checkout reduce friction, boosting conversion rates.",
+      },
+      {
+        headline: "AOV & Brand Scalability",
+        description:
+          "Curated Collections boost product discovery and order value. The Design System offers a scalable visual language.",
+      },
+    ],
+    relatedCaseSlugs: ["urban-bites", "propelus", "arkose-labs"],
   },
 ];
 
@@ -420,6 +497,7 @@ export const caseStudies: CaseStudy[] = [
 export const displayOrder = [
   "cleaning-app",
   "urban-bites",
+  "fine-raw",
   "propelus",
   "continuing-education",
   "arkose-labs",
