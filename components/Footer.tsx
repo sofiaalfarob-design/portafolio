@@ -20,9 +20,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-gray-100 bg-white px-6 py-16">
       <div className="mx-auto max-w-container">
-        <div className="grid gap-12 md:grid-cols-3">
+        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
           {/* Brand */}
-          <div>
+          <div className="lg:max-w-sm">
             <Link href="/" className="inline-flex items-center">
               <Image
                 src={`${basePath}/link-home.svg`}
@@ -40,48 +40,51 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-primary">
-              Quick Links
-            </h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-text-secondary transition-colors hover:text-text-primary"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Links and Contact */}
+          <div className="flex flex-col gap-8 sm:flex-row sm:gap-12">
+            {/* Quick Links */}
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-primary">
+                Quick Links
+              </h4>
+              <ul className="space-y-3">
+                {quickLinks.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-text-secondary transition-colors hover:text-text-primary"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Contact */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-primary">
-              Contact
-            </h4>
-            <ul className="space-y-3">
-              {contactLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    target={link.href.startsWith("http") || link.href.endsWith(".pdf") ? "_blank" : undefined}
-                    rel={
-                      link.href.startsWith("http") || link.href.endsWith(".pdf")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="text-sm text-text-secondary transition-colors hover:text-text-primary"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            {/* Contact */}
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-text-primary">
+                Contact
+              </h4>
+              <ul className="space-y-3">
+                {contactLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      target={link.href.startsWith("http") || link.href.endsWith(".pdf") ? "_blank" : undefined}
+                      rel={
+                        link.href.startsWith("http") || link.href.endsWith(".pdf")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      className="text-sm text-text-secondary transition-colors hover:text-text-primary"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
