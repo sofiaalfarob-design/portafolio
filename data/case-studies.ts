@@ -415,6 +415,96 @@ export const caseStudies: CaseStudy[] = [
     relatedCaseSlugs: ["cleaning-app", "arkose-labs", "fine-raw"],
   },
   {
+    slug: "audivia",
+    category: "Healthcare UX & Brand Strategy",
+    subtitle: "Healthcare UX & Brand Strategy",
+    title: "Building Trust Through Design: A Full Digital Presence for an Audiology Clinic",
+    detailTitle: "Building Trust Through Design",
+    description:
+      "Designing a complete digital identity for a newly established audiology clinic — from zero brand presence to top-3 Google Local Pack within 2–3 months of launch.",
+    role: "Lead Designer (UX/UI, Brand Strategy, Copywriting, SEO, Implementation)",
+    heroImage: `${basePath}/audivia-hero.png`,
+    thumbnailImage: `${basePath}/audivia-case-study-card.png`,
+    heroColor: "#0A1F3D",
+    tools: ["UX/UI Design", "Branding", "Healthcare", "SEO"],
+    timeline: "Full Brand Build — Concept to Launch",
+    metrics: "Top 3 Google Local Pack | 30% Task Completion Lift | Day-One SEO",
+    tags: [
+      { label: "Healthcare UX", variant: "purple" },
+      { label: "Branding", variant: "neutral" },
+      { label: "SEO", variant: "neutral" },
+      { label: "Copywriting", variant: "neutral" },
+    ],
+    contentSections: [
+      {
+        heading: "The Challenge: The Trust Gap",
+        body: "The client — a newly established audiology practice — had zero digital presence. No website, no brand identity, no online discoverability. In the healthcare space, this isn't just a visibility problem: it's a credibility problem.\n\nPatients seeking audiological care make high-stakes decisions. They're trusting a specialist with something as intimate as their hearing. Without a professional digital presence, the clinic couldn't compete against established practices — regardless of the quality of its clinical care.\n\nThree core friction points emerged from initial discovery:\n\n• No brand language: The clinic had no visual identity, tone of voice, or narrative to communicate expertise and warmth simultaneously.\n\n• No patient pathway: There was no clear journey from \"I have a concern\" to \"I'm booking an appointment.\"\n\n• No search presence: A new practice in a specialized field is invisible without deliberate SEO strategy from day one.",
+        image: `${basePath}/audivia-case-study-1.png`,
+        imageAlt:
+          "Multiple screens of the Audivia website showing the complete digital presence built for the audiology clinic, from hero to services, process, FAQ, and footer sections",
+      },
+      {
+        heading: "Design Strategy & Concept: \"Clinical Warmth\"",
+        body: "Healthcare design lives in a tension: it must signal clinical authority while remaining emotionally approachable for patients who are often anxious or vulnerable. I built the entire visual and verbal system around what I called the \"Clinical Warmth\" framework.\n\n• Visual language: A palette rooted in calm, trust-signaling tones — soft neutrals anchored by a confident primary color that communicates expertise without coldness.\n\n• Typography: Clean, legible hierarchy that reads as professional on first glance but never intimidating — designed for patients of all ages, including older adults who are a core demographic for audiology.\n\n• Tone of voice: Copy written to be warm, clear, and jargon-free. Patients don't speak in audiological terms — the site shouldn't either.",
+      },
+      {
+        heading: "Key Solutions",
+        body: "Three design pillars addressed the core friction points and built a complete patient experience from first awareness to booking confirmation.",
+        subCards: [
+          {
+            title: "A. Patient-First Information Architecture",
+            description:
+              "I mapped the full patient journey — from first symptom awareness to booking — and structured the site's navigation around it. Every page answers the question the patient has at that moment, not the question the clinic wants to answer.",
+          },
+          {
+            title: "B. Trust-Building Homepage",
+            description:
+              "The homepage was designed to resolve the three biggest patient hesitations in the first scroll: Is this clinic legitimate? Do they understand my problem? Can I easily contact them? Hero copy, social proof placement, and CTA positioning were all informed by this framework.",
+          },
+          {
+            title: "C. Local SEO from Day One",
+            description:
+              "Rather than treating SEO as a post-launch layer, I embedded it into the content strategy from the start — keyword-informed copy, semantic HTML structure, Google Business alignment, and location-specific page architecture to capture local search intent.",
+          },
+        ],
+        image: `${basePath}/audivia-case-study-2.png`,
+        imageAlt:
+          "Detailed views of the Audivia website showing the services section and patient process steps, illustrating the patient-first information architecture and trust-building design decisions",
+        imageContained: true,
+      },
+      {
+        heading: "The Design System",
+        body: "Elegance in the details.\n\n• Typography: A dual-type system — a trustworthy serif for headings that signals clinical authority, paired with a highly legible sans-serif for body copy optimized for readability across age groups.\n\n• Iconography & Visual Assets: Custom-directed visual language that avoids generic stock photography. Imagery was curated to show real human connection — not clinical coldness — consistent with the \"Clinical Warmth\" framework.",
+        image: `${basePath}/audivia-case-study-3.png`,
+        imageAlt:
+          "Audivia FAQ section on a laptop mockup showing the design system in action — clean typographic hierarchy, accessible color usage, and structured content layout",
+        imageContained: true,
+      },
+      {
+        heading: "What Made This Complex",
+        body: "Designing for healthcare isn't just a visual challenge. It requires understanding regulatory sensitivities around medical claims, the emotional state of the end user, and the trust signals specific to clinical environments. Every copy decision, color choice, and interaction pattern was evaluated through that lens — the same rigor required when designing digital experiences for pharmaceutical and life sciences clients.\n\nOne of the most critical discoveries came directly from user testing. Our primary audience — older adults — revealed an accessibility gap that wasn't visible in design review. The original brand palette included an orange that failed WCAG AA contrast standards when tested with actual users in that demographic. Participants consistently struggled to read text and CTAs rendered in that color, and engagement with key touchpoints dropped as a result.\n\nRather than overriding the brand color entirely, I made a targeted recommendation: introduce a darkened variant of the orange exclusively for web — dark enough to pass AA contrast thresholds, while preserving the brand's warmth and visual identity across other touchpoints like print and social.\n\nWe re-tested with the same user group. The adjusted palette produced a 30% improvement in task completion and positive reception — a direct, measurable result of letting real users, not assumptions, drive design decisions.\n\nAccessibility as a clinical imperative, not a checkbox. For a healthcare audience, WCAG compliance isn't a technical formality — it's the difference between a patient finding the help they need or abandoning the site entirely. This project reinforced that inclusive design and effective healthcare design are the same thing.",
+      },
+    ],
+    businessImpact: [
+      {
+        headline: "Top 3",
+        description:
+          "Google Local Pack ranking for audiology searches within 2–3 months of launch — competing against practices with years of established presence. New patients consistently mentioned finding the clinic through Google.",
+      },
+      {
+        headline: "30%",
+        description:
+          "Improvement in task completion after the accessibility-driven palette iteration. User testers described the site as \"easy to understand\" and \"professional but not intimidating\" — validating the Clinical Warmth framework.",
+      },
+      {
+        headline: "Day-One SEO",
+        description:
+          "The brand identity gave the practice a visual presence on par with established clinics from day one, removing the credibility gap — while semantic HTML and keyword copy meant the site ranked without any post-launch sprint.",
+      },
+    ],
+    relatedCaseSlugs: ["urban-bites", "fine-raw", "arkose-labs"],
+  },
+  {
     slug: "fine-raw",
     category: "E-Commerce & Brand Experience Design",
     subtitle: "E-Commerce & Brand Experience Design",
@@ -496,6 +586,7 @@ export const caseStudies: CaseStudy[] = [
 // Controls display order across all pages
 export const displayOrder = [
   "cleaning-app",
+  "audivia",
   "urban-bites",
   "fine-raw",
   "propelus",
