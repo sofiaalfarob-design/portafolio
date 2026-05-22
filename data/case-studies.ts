@@ -585,13 +585,13 @@ export const caseStudies: CaseStudy[] = [
 
 // Controls display order across all pages
 export const displayOrder = [
-  "cleaning-app",
-  "audivia",
-  "urban-bites",
-  "fine-raw",
   "propelus",
+  "audivia",
   "continuing-education",
   "arkose-labs",
+  "cleaning-app",
+  "fine-raw",
+  "urban-bites",
 ];
 
 export function getOrderedCaseStudies(limit?: number): CaseStudy[] {

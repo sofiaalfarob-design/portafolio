@@ -4,33 +4,37 @@ export interface Experiment {
   description: string;
   image: string;
   tags: string[];
+  link?: string;
+  linkLabel?: string;
 }
 
 import basePath from "@/lib/basePath";
 
 export const experiments: Experiment[] = [
   {
-    title: "Figma Automation with Custom Scripts",
+    title: "Designing a Full SaaS with Claude Design → Claude Code",
     status: "Completed",
     description:
-      "Developed plugins and scripts using the Figma API that automatically generate component documentation, export design tokens to code, and sync changes with development repositories. 70% reduction in manual handoff work.",
-    image: `${basePath}/card-figma-automation-with-custom-scripts.png`,
-    tags: ["AI Implementation", "SaaS UX", "Design Systems", "Behavioral Analytics"],
+      "End-to-end experiment designing a complex SaaS product using AI-native workflows. Started with full UX research — market analysis, user interviews, functionality mapping, and detailed user flows structured as AI context documents. Built a complete design system to feed Claude Design, then used it to generate a full, complex SaaS product. Final output exported to Claude Code for functional implementation. A fully AI-orchestrated design-to-code pipeline.",
+    image: `${basePath}/card-saas-claude-design-code.png`,
+    tags: ["Claude Design", "Claude Code", "Design Systems", "UX Research", "AI Workflow"],
   },
   {
-    title: "Interactive Prototyping for Mobile Apps",
-    status: "In Progress",
+    title: "Figma MCP + Claude Code — 35-Page Document Generation",
+    status: "Completed",
     description:
-      "Creating high-fidelity prototypes with advanced interactions and animations to simulate real user experiences on mobile devices, enabling faster feedback and iteration cycles.",
-    image: `${basePath}/card-interactive-orototyping-for-mobile-apps.png`,
-    tags: ["Prototyping", "Mobile", "Figma"],
+      "Used Claude Code with the Figma MCP to generate a complete 35+ page Figma document from scratch. Provided full context: user flows, required pages with breakpoints and modes, and a detailed guide on how to use the existing design system tokens and atomic components. Claude Code built each page gradually using the correct tokens, components, and layout rules — producing a production-ready file without manual screen-by-screen design.",
+    image: `${basePath}/card-figma-mcp-claude-code.png`,
+    tags: ["MCP", "Claude Code", "Figma", "Atomic Design", "Design Tokens", "AI Automation"],
   },
   {
     title: "Accessibility Audit and Improvements",
-    status: "Planned",
+    status: "Completed",
     description:
-      "Comprehensive review of existing design assets to identify accessibility barriers, followed by actionable recommendations and implementation to ensure compliance with WCAG standards.",
+      "Conducted a full WCAG AA accessibility audit for a healthcare client, identifying critical contrast failures with older adult users. Iterated the brand color system to pass AA standards while preserving visual identity — resulting in a 30% improvement in task completion on re-test. See the Audivia case study for full details.",
     image: `${basePath}/images/the-experimental-lab/card-accessibility-audit-and-improvements.png`,
-    tags: ["UX Design", "Mobile Apps", "Prototyping", "User Engagement"],
+    tags: ["Healthcare UX", "WCAG 2.1", "Accessibility", "User Testing"],
+    link: "/case-studies/audivia",
+    linkLabel: "View Audivia case study →",
   },
 ];

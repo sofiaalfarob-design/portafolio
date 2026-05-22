@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { experiments } from "@/data/experiments";
+import { experiments, type Experiment } from "@/data/experiments";
 import SectionBadge from "./ui/SectionBadge";
 import TagPill from "./ui/TagPill";
 
@@ -20,6 +22,76 @@ const cardVariants = {
     transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
   }),
 };
+
+function LabCard({ exp, index }: { exp: Experiment; index: number }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <motion.article
+      layout
+      key={exp.title}
+      custom={index}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-80px" }}
+      variants={cardVariants}
+      className="card-hover group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white"
+    >
+      <div className="relative aspect-[4/3] overflow-hidden">
+        <Image
+          src={exp.image}
+          alt={`${exp.title} — experiment preview`}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          quality={85}
+        />
+      </div>
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="font-heading text-base font-bold text-text-primary">
+          {exp.title}
+        </h3>
+        <span
+          className={`mt-1 inline-block self-start rounded-full px-2.5 py-0.5 text-xs font-medium ${statusStyles[exp.status]}`}
+        >
+          {exp.status}
+        </span>
+
+        <div className="mt-2">
+          <p
+            className={`text-sm leading-relaxed text-text-secondary transition-all duration-300 ${
+              expanded ? "" : "line-clamp-3"
+            }`}
+          >
+            {exp.description}
+          </p>
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mt-1.5 text-xs font-medium text-purple-600 hover:text-purple-800 transition-colors"
+          >
+            {expanded ? "Read less ↑" : "Read more ↓"}
+          </button>
+          {exp.link && expanded && (
+            <div className="mt-1">
+              <Link
+                href={exp.link}
+                className="text-sm font-medium text-purple-600 hover:text-purple-800 transition-colors"
+              >
+                {exp.linkLabel ?? "View details →"}
+              </Link>
+            </div>
+          )}
+        </div>
+
+        <div className="mt-auto pt-4 flex flex-wrap gap-2">
+          {exp.tags.map((tag) => (
+            <TagPill key={tag} label={tag} />
+          ))}
+        </div>
+      </div>
+    </motion.article>
+  );
+}
 
 export default function ExperimentsSection() {
   return (
@@ -56,44 +128,7 @@ export default function ExperimentsSection() {
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {experiments.map((exp, i) => (
-            <motion.article
-              key={exp.title}
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              variants={cardVariants}
-              className="card-hover group flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white"
-            >
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src={exp.image}
-                  alt={`${exp.title} — experiment preview`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  quality={85}
-                />
-              </div>
-              <div className="flex flex-1 flex-col p-5">
-                <h3 className="font-heading text-base font-bold text-text-primary">
-                  {exp.title}
-                </h3>
-                <span
-                  className={`mt-1 inline-block self-start rounded-full px-2.5 py-0.5 text-xs font-medium ${statusStyles[exp.status]}`}
-                >
-                  {exp.status}
-                </span>
-                <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-                  {exp.description}
-                </p>
-                <div className="mt-auto pt-4 flex flex-wrap gap-2">
-                  {exp.tags.map((tag) => (
-                    <TagPill key={tag} label={tag} />
-                  ))}
-                </div>
-              </div>
-            </motion.article>
+            <LabCard key={exp.title} exp={exp} index={i} />
           ))}
         </div>
       </div>
