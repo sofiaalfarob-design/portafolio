@@ -21,7 +21,7 @@ export default function BusinessImpact({
           <h2 className="mb-8 text-center font-heading text-2xl font-bold text-text-primary md:text-3xl">
             Business Impact
           </h2>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className={`grid gap-6 ${metrics.length === 4 ? "sm:grid-cols-2 md:grid-cols-4" : "md:grid-cols-3"}`}>
             {metrics.map((metric, i) => (
               <motion.div
                 key={metric.headline}

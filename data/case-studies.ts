@@ -14,6 +14,7 @@ export interface ContentSection {
   image?: string;
   imageAlt?: string;
   imageContained?: boolean;
+  imageContainedLg?: boolean;
   subCards?: TechCard[];
 }
 
@@ -45,6 +46,146 @@ export interface CaseStudy {
 import basePath from "@/lib/basePath";
 
 export const caseStudies: CaseStudy[] = [
+  {
+    slug: "civitas",
+    category: "SaaS UX Design & GovTech",
+    subtitle: "SaaS UX Design & GovTech",
+    title: "Civitas: Designing the Missing Layer Between Construction Professionals and Government",
+    detailTitle: "Civitas: Bureaucracy Made Legible",
+    description:
+      "Designing a full SaaS platform to digitize Costa Rica's construction permit workflow — bridging construction professionals, property owners, and municipal authorities for the first time.",
+    role: "Lead Product Designer (UX Research, Interaction Design, Design Systems, AI-Assisted Prototyping)",
+    heroImage: `${basePath}/civitas-hero.png`,
+    thumbnailImage: `${basePath}/civitas-card-image.jpg`,
+    heroColor: "#0B1628",
+    tools: ["Figma", "Claude Code", "Figma Make", "Adobe Creative Suite", "Claude", "ChatGPT", "Gemini", "Perplexity"],
+    timeline: "Full Product Cycle — Research to Prototype",
+    metrics: "80% Prototype Satisfaction | 44,600+ Addressable Projects | 5 Core User Flows",
+    tags: [
+      { label: "SaaS UX", variant: "purple" },
+      { label: "GovTech", variant: "neutral" },
+      { label: "UX Research", variant: "neutral" },
+      { label: "AI-Assisted", variant: "neutral" },
+    ],
+    contentSections: [
+      {
+        heading: "The Challenge: The Permit Wall",
+        body: "Costa Rica has no digital infrastructure connecting construction professionals, property owners, and municipal authorities. Every building permit — and there are dozens per project — requires navigating fragmented, analog government processes that consume weeks of a professional's time and create unpredictable delays for property owners.\n\nThe scale of the problem is not small. In 2025 alone, over 44,600 construction projects were initiated in the country. There are more than 40,286 professionals registered with the CFIA (Costa Rica's professional architecture and engineering board). And across owner interviews, one pattern emerged consistently: dealing with municipal and government paperwork is cited as one of the hardest parts of building — not the construction itself.\n\nNo platform existed to solve this. Not in Costa Rica. Civitas was built to be that platform.",
+        image: `${basePath}/civitas-image-2.jpg`,
+        imageAlt:
+          "Multiple Civitas dashboard screens showing the permit management interface, project detail view, and professional workflow across overlapping browser windows",
+      },
+      {
+        heading: "Research: Understanding the Market and the Users",
+        body: "Before designing a single screen, we validated the problem from three directions.\n\nMarket research confirmed there was no local equivalent — the only government-adjacent tool was the CFIA's own registry, which handles professional credentials, not project workflows. International platforms existed in other markets but none mapped to Costa Rica's specific municipal and regulatory structure.\n\nUser research went deeper. We conducted 10–15 in-depth interviews with construction professionals across different experience levels and age ranges, mapping their current permit-request process step by step. What emerged was a picture of fragmentation: professionals using WhatsApp to follow up on permits, printing documents that could be digital, making in-person trips that could be eliminated, and losing track of status across dozens of simultaneous projects.\n\nFrom this research we built two distinct user personas — the professional (architect or engineer managing the process) and the owner (who needs visibility without needing to understand the bureaucracy). Both had fundamentally different needs, mental models, and levels of technical comfort — and the platform had to serve both without compromise.",
+        image: `${basePath}/civitas-image-user-flow.jpg`,
+        imageAlt:
+          "Civitas user flow diagram showing all 5 critical platform flows: Administrator onboarding with AI-assisted project creation, Guest document upload and AI validation, end-of-cycle review and approval, new project creation stepper, and project settings panel with Stripe integration",
+        imageContainedLg: true,
+      },
+      {
+        heading: "Design Strategy & Concept: \"Bureaucracy Made Legible\"",
+        body: "The core design challenge wasn't visual — it was cognitive. Municipal permit processes are genuinely complex, with multiple entities, interdependencies, and status states that professionals track manually today. The system needed to make that complexity navigable without oversimplifying it into uselessness for the professionals who live in it daily.\n\nThe design framework I called \"Bureaucracy Made Legible\" operated on three principles:",
+        subCards: [
+          {
+            title: "Progressive Disclosure",
+            description:
+              "Owners see a simplified status view. Professionals see the full complexity — but structured, not raw. Each user type gets exactly the information density they need.",
+          },
+          {
+            title: "Process Fidelity",
+            description:
+              "The platform mirrors the real permit process closely enough that professionals can onboard without relearning their workflow. It digitizes the process; it doesn't reinvent it.",
+          },
+          {
+            title: "Trust Through Clarity",
+            description:
+              "In a domain where errors have legal and financial consequences, the UI must communicate certainty. Every status, every required document, every deadline must be unambiguous.",
+          },
+        ],
+        image: `${basePath}/civitas-image-1.png`,
+        imageAlt:
+          "Civitas app screens showing the new project creation stepper and the login screen — illustrating the end-to-end onboarding and access flow for construction professionals",
+      },
+      {
+        heading: "The Design System",
+        body: "Structure that scales with complexity.",
+        subCards: [
+          {
+            title: "Typography & Hierarchy",
+            description:
+              "A functional typographic system designed for data-dense screens — clear hierarchy between project names, status labels, dates, and actions, readable across the age range of our user base.",
+          },
+          {
+            title: "Component Architecture",
+            description:
+              "Components built to handle the platform's state complexity: permits in draft, submitted, in review, approved, rejected, and expired states — each requiring distinct visual treatment while maintaining system coherence.",
+          },
+          {
+            title: "AI-Assisted Design Process",
+            description:
+              "The design system was built to feed directly into Claude Design's generation pipeline, enabling rapid page generation while maintaining token fidelity and component consistency across 40+ screens.",
+          },
+        ],
+        image: `${basePath}/civitas-card-image.jpg`,
+        imageAlt:
+          "Civitas project card interface showing permit status, timeline, and professional assignment — a core repeating component of the design system applied across the platform",
+        imageContained: true,
+      },
+      {
+        heading: "What Made This Complex",
+        body: "GovTech products operate at the intersection of regulatory accuracy and user experience — two things that are often in tension. A permit tracker that simplifies too aggressively becomes misleading; one that exposes full complexity becomes unusable for the owner persona.\n\nThe user research revealed a wide spread in technical literacy. Professionals ranged from recent graduates comfortable with digital tools to experienced architects in their 50s and 60s who had managed permits manually for decades. Designing for both without creating two separate products was a core constraint that shaped every information architecture decision.\n\nThe AI-assisted workflow added another layer: designing with Claude Design required structuring the design system and user flows as machine-readable context documents — forcing a level of documentation rigor that ultimately made the developer handoff cleaner than on any previous project.",
+      },
+      {
+        heading: "Key Solutions",
+        body: "Three design interventions addressed the platform's core challenges across both user types.",
+        subCards: [
+          {
+            title: "A. Dual-Role Architecture",
+            description:
+              "Rather than building one interface that tried to serve both user types, Civitas uses a role-based system where professionals and owners see different views of the same project data. Owners get clarity; professionals get control.",
+          },
+          {
+            title: "B. 5 Core User Flows",
+            description:
+              "From the research and epics we defined, I designed 5 complete user flows covering the platform's critical paths — permit initiation, document management, municipal communication, project status tracking, and professional-to-owner reporting. Each flow was validated against real professional workflows from the interviews.",
+          },
+          {
+            title: "C. Functional Prototype for Validation",
+            description:
+              "Before committing to full development, I built a complete working prototype using Claude Code. This prototype was tested with 10 additional professionals spanning different age groups and experience levels, achieving an 80% satisfaction rate — the threshold we set to greenlight development.",
+          },
+        ],
+        image: `${basePath}/civitas-closer-image.png`,
+        imageAlt:
+          "Civitas 'Nuevo Proyecto' onboarding screen on a laptop mockup showing the 3-step stepper form — demonstrating the design system's component architecture applied to a complex multi-step professional workflow",
+        imageContained: true,
+      },
+    ],
+    businessImpact: [
+      {
+        headline: "44,600+",
+        description:
+          "Construction projects initiated in Costa Rica in 2025 — the addressable market Civitas is built for.",
+      },
+      {
+        headline: "80%",
+        description:
+          "Satisfaction rate on prototype validation with 10 professionals across age groups and experience levels — the threshold set to approve development and move to launch.",
+      },
+      {
+        headline: "40,286",
+        description:
+          "Registered CFIA professionals in Costa Rica — Civitas's core user base, none of whom have a purpose-built tool for this workflow today.",
+      },
+      {
+        headline: "5 Flows",
+        description:
+          "Complete user flows covering every critical platform path — validated against real workflows from 10–15 professional interviews before a single production screen was designed.",
+      },
+    ],
+    relatedCaseSlugs: ["cleaning-app", "audivia", "arkose-labs"],
+  },
   {
     slug: "cleaning-app",
     category: "AI Implementation & Rapid Prototyping",
@@ -585,6 +726,7 @@ export const caseStudies: CaseStudy[] = [
 
 // Controls display order across all pages
 export const displayOrder = [
+  "civitas",
   "propelus",
   "audivia",
   "continuing-education",
