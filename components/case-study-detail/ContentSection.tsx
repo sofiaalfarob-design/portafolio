@@ -65,7 +65,11 @@ export default function ContentSection({
       {renderBody(section.body)}
 
       {section.subCards && section.subCards.length > 0 && (
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div className={`mt-8 grid ${
+          section.subCards.length === 4
+            ? "gap-6 sm:grid-cols-2"
+            : "gap-4 sm:grid-cols-2 md:grid-cols-3"
+        }`}>
           {section.subCards.map((card) => (
             <div
               key={card.title}

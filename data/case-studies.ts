@@ -279,71 +279,115 @@ export const caseStudies: CaseStudy[] = [
     slug: "propelus",
     category: "Design Systems & Engineering",
     subtitle: "Design Systems & Engineering",
-    title: "Scalable Architecture: The Design-to-Code Bridge",
+    title: "Scalable Architecture: Translating a Bold Brand Rebrand into a Living Design System",
+    detailTitle: "Propelus: From Rebrand to Living System",
     description:
-      "Building a modular design system using Figma Variables to unify the identity of 20+ commercial pages and streamline developer handoff.",
-    role: "Senior Product Designer & Design Systems Lead",
+      "Translating a bold healthcare tech rebrand into a living design system — 20+ commercial pages unified under a token-based architecture delivered ahead of a US government compliance audit.",
+    role: "Lead Designer — Marketing Site (Design Systems Architecture, Brand Adaptation, Stakeholder Management, Developer Handoff)",
     heroImage: `${basePath}/propelus-case-hero.png`,
     thumbnailImage: `${basePath}/card-design-systems-engineering.png`,
     heroColor: "#002213",
-    tools: ["Figma", "Tailwind CSS", "React", "Storybook"],
-    timeline: "8 Weeks: System Architecture & Implementation",
-    metrics: "20+ Pages Impacted | Figma Variables | 0% Handoff Friction",
+    tools: ["Figma", "Figma Variables", "Tailwind CSS", "React", "Storybook"],
+    timeline: "8 Weeks: Brand Adaptation, System Architecture & Implementation",
+    metrics: "20+ Pages Unified | 2% Handoff Friction | 40% Faster Dev | 6 Breakpoints | 100% Client Autonomy",
     tags: [
       { label: "Design Systems", variant: "purple" },
-      { label: "Tailwind", variant: "neutral" },
-      { label: "React", variant: "neutral" },
-      { label: "Architecture", variant: "neutral" },
+      { label: "Healthcare Tech", variant: "neutral" },
+      { label: "Brand Adaptation", variant: "neutral" },
       { label: "Design Engineering", variant: "neutral" },
     ],
     contentSections: [
       {
-        heading: "The Challenge: Eliminating Design Debt",
-        body: "Propelus had accumulated significant design debt across 20+ product pages. Inconsistent component usage, undefined spacing rules, and a disconnect between Figma designs and coded components created friction in every sprint. Engineers spent hours interpreting design intent, and designers were rebuilding components that already existed in slightly different forms.",
+        heading: "The Challenge: The Rebrand Bottleneck",
+        body: "Propelus sits at the intersection of healthcare and compliance technology — connecting medical professionals across the United States with the accreditation bodies, hospitals, and regulatory entities that manage their credentials. When a medical professional's certification is due for renewal, Propelus handles the communication, the tracking, and the notification. It's infrastructure that the US healthcare system depends on, but rarely sees.\n\nThe company had made a deliberate decision to stand apart. The healthcare technology space is visually homogeneous — the same blues, the same stock imagery of doctors in white coats, the same corporate language. Propelus had invested in a bold brand rebrand designed to break from that pattern entirely.\n\nThe rebrand existed internally. The challenge was getting it onto the web — and doing it fast. A US government compliance audit was scheduled for April. The marketing site needed to reflect the new brand before that date, without exceptions.\n\nThree compounding factors made this harder than a typical redesign:\n\n• A complex new brand: The rebrand was deliberately unconventional for healthcare tech. Translating it to web without diluting it or making it inaccessible required careful judgment at every decision point.\n\n• 20+ pages with no system: Each page had been built independently over time, with inconsistent components, undefined spacing rules, and no shared foundation. There was no design system to extend — one had to be built from scratch.\n\n• 7+ stakeholders with different agendas: Marketing, brand, development, leadership — each with a legitimate stake in how the new brand appeared publicly, and each with a different definition of \"done.\"",
         image: `${basePath}/propelus-case-the-chalence-image.png`,
-        imageAlt: "Propelus product pages before the redesign, showing inconsistent component usage, mismatched spacing, and visual fragmentation across views",
+        imageAlt: "Propelus marketing site pages showing the visual fragmentation before the design system — inconsistent components, undefined spacing, and no shared brand foundation across 20+ pages",
       },
       {
-        heading: "Solution: Logic-First System Architecture",
-        body: "I designed a token-based system architecture that created a 1:1 mapping between Figma variables and Tailwind CSS utilities. Every design decision — from spacing scales to color variants — was encoded as a token that could be directly referenced in code. This eliminated the interpretation layer that caused most handoff friction.",
+        heading: "Strategy: The First Page as the Foundation",
+        body: "Rather than attempting to redesign all 20+ pages simultaneously — which would have paralyzed the approval process — I proposed a different approach: design one page first, and design it perfectly.\n\nThe homepage became the proving ground. I worked through multiple iterations, balancing the visual ambition of the new brand against the practical requirements of the site's commercial audiences: potential enterprise clients, healthcare administrators, and regulatory bodies who needed to trust what they were reading.\n\nThe key insight from working with the 7+ stakeholder group was that Marketing and Brand were the hardest to align — not because they were difficult, but because their standards were highest. Once the homepage cleared their bar, the approval logic for every subsequent page was already established. The first page became the visual contract for everything that followed.\n\nWith a fully approved homepage in hand, I built the design system — not the other way around.",
       },
       {
-        heading: "Technical Implementation",
-        body: "The system was built around three architectural layers that ensured scalability and maintainability.",
+        heading: "Technical Implementation: A System Built to Scale Without Its Author",
+        body: "The design system was architected around one principle: the client's designers should be able to build any new page without involving me. Every component, every token, every layout decision was made with that constraint in mind.",
         subCards: [
           {
             title: "Token Architecture",
             description:
-              "Semantic tokens mapped to Figma variables and Tailwind config, enabling one-click theme updates across the entire product.",
+              "The system starts at the primitive layer — raw values for color, spacing, typography, and elevation — mapped directly as Figma Variables. Those primitives feed into semantic tokens that carry meaning: color-button-primary, spacing-section-gap, text-heading-large. Every semantic token maps 1:1 to a Tailwind CSS utility class, meaning a change made in Figma propagates directly into the codebase with no manual translation required.",
           },
           {
-            title: "Component Library",
+            title: "Component Library: 40+ at 6 Breakpoints",
             description:
-              "40+ components built with compound component patterns, supporting variants, sizes, and states through a unified API.",
+              "Every component was built with Figma Auto Layout and auto-constraints configured for 6 responsive breakpoints — covering mobile through large desktop. Components are not just visually complete — they're behaviorally specified. Variants, states, sizes, and content flexibility are all built in. A developer receiving a handoff file sees exactly what to build, at every screen size, in every state.",
           },
           {
-            title: "Documentation System",
+            title: "Sections as Composable Units",
             description:
-              "Storybook-driven documentation with live code examples, usage guidelines, and accessibility annotations.",
+              "Above the component layer, the system includes full section templates — hero variants, feature grids, testimonial layouts, CTAs — each assembled from the component library and pre-validated for brand compliance. The client's designers can drop a section into any page, swap the copy and imagery, and publish without breaking the visual system or creating accessibility issues.",
+          },
+          {
+            title: "Documentation via Storybook",
+            description:
+              "Every component is documented in Storybook with live code examples, usage guidelines, do/don't specifications, and accessibility annotations. This wasn't an afterthought — it was the handoff mechanism that made the system self-sufficient after my engagement ended.",
           },
         ],
         image: `${basePath}/propelus-case-closer-image.png`,
         imageAlt: "Figma variables panel and Tailwind CSS config side by side, demonstrating the 1-to-1 token mapping that eliminated design-to-code handoff friction",
         imageContained: true,
       },
+      {
+        heading: "What Made This Complex",
+        body: "Four compounding challenges shaped every decision on this project.",
+        subCards: [
+          {
+            title: "Designing for an audience that doesn't trust \"different.\"",
+            description:
+              "Healthcare technology buyers — hospital administrators, compliance officers, credentialing departments — are trained to be skeptical of anything that looks unconventional. The rebrand was bold by design, but bold in a regulated industry context carries risk. Every visual decision had to be calibrated: distinctive enough to differentiate Propelus, credible enough not to trigger doubt in the people making procurement decisions.",
+          },
+          {
+            title: "Stakeholder alignment across seven people with different definitions of success.",
+            description:
+              "Marketing wanted brand expression. Development wanted implementation clarity. Leadership wanted something that would withstand scrutiny in a government audit. Aligning those perspectives around a single visual system — without designing by committee — required establishing the homepage as a shared reference point that everyone had approved before the system was built. That sequencing was as important as the design itself.",
+          },
+          {
+            title: "Building a system for designers who weren't in the room.",
+            description:
+              "The end users of this design system weren't developers — they were the client's own design team, who would use it to build pages independently after handoff. That meant every component had to be self-explanatory, every constraint had to be enforced by the system rather than by documentation, and every edge case had to be handled before it became someone else's problem.",
+          },
+          {
+            title: "A hard deadline with no flexibility.",
+            description:
+              "The US government compliance audit in April wasn't a soft target. The site needed to reflect the new brand — completely, consistently — before that date. Eight weeks, 20+ pages, a new design system, and a complex brand. The sequencing strategy — one approved page first, system second, pages third — was what made it possible.",
+          },
+        ],
+      },
     ],
     businessImpact: [
       {
         headline: "20+",
-        description: "Product pages updated with consistent design language",
+        description:
+          "Commercial pages unified under a single design system, delivered ahead of a US government compliance audit deadline.",
       },
       {
         headline: "2%",
-        description: "Handoff friction rate (down from 35%)",
+        description:
+          "Handoff friction rate at project close — down from 35% at project start. Developers went from interpreting design intent to implementing it directly.",
       },
       {
         headline: "40%",
-        description: "Faster feature development with reusable components",
+        description:
+          "Faster feature development for the client's internal team post-handoff, enabled by reusable section templates and a self-documenting component library.",
+      },
+      {
+        headline: "6 Breakpoints",
+        description:
+          "Every component fully specified across mobile to large desktop — zero responsive ambiguity for the development team.",
+      },
+      {
+        headline: "100%",
+        description:
+          "Client autonomy — the client's design team can build and publish new pages independently using the design system, with no external design support required.",
       },
     ],
     relatedCaseSlugs: ["cleaning-app", "continuing-education", "urban-bites"],
@@ -604,6 +648,7 @@ export const caseStudies: CaseStudy[] = [
         image: `${basePath}/audivia-case-study-1.png`,
         imageAlt:
           "Multiple screens of the Audivia website showing the complete digital presence built for the audiology clinic, from hero to services, process, FAQ, and footer sections",
+        imageAlmostFull: true,
       },
       {
         heading: "Key Solutions",
