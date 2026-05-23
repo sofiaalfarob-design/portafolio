@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import type { ContentSection as ContentSectionType } from "@/data/case-studies";
+import LightboxImage from "@/components/ui/LightboxImage";
 
 export default function ContentSection({
   section,
@@ -41,6 +42,30 @@ export default function ContentSection({
         </div>
       )}
 
+      {section.topImage && (
+        <div
+          className={`mt-8 overflow-hidden rounded-2xl ${
+            section.topImageContained
+              ? "mx-auto max-w-2xl"
+              : section.topImageContainedLg
+              ? "mx-auto max-w-3xl"
+              : section.topImageAlmostFull
+              ? "mx-auto w-[85%]"
+              : "-mx-8 md:-mx-16 rounded-none"
+          }`}
+        >
+          <Image
+            src={section.topImage}
+            alt={section.topImageAlt || section.heading}
+            width={1200}
+            height={750}
+            className="w-full object-contain"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+            quality={90}
+          />
+        </div>
+      )}
+
       {section.image && (
         <div
           className={`mt-8 overflow-hidden rounded-2xl ${
@@ -48,18 +73,31 @@ export default function ContentSection({
               ? "mx-auto max-w-2xl"
               : section.imageContainedLg
               ? "mx-auto max-w-3xl"
+              : section.imageAlmostFull
+              ? "mx-auto w-[85%]"
               : "-mx-8 md:-mx-16 rounded-none"
           }`}
         >
-          <Image
-            src={section.image}
-            alt={section.imageAlt || section.heading}
-            width={1200}
-            height={750}
-            className="w-full object-contain"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-            quality={90}
-          />
+          {section.imageLightbox ? (
+            <LightboxImage
+              src={section.image}
+              alt={section.imageAlt || section.heading}
+              className="w-full object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+              quality={90}
+              zoom={section.imageLightboxZoom}
+            />
+          ) : (
+            <Image
+              src={section.image}
+              alt={section.imageAlt || section.heading}
+              width={1200}
+              height={750}
+              className="w-full object-contain"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+              quality={90}
+            />
+          )}
         </div>
       )}
     </motion.div>

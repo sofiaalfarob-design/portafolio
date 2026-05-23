@@ -15,6 +15,14 @@ export interface ContentSection {
   imageAlt?: string;
   imageContained?: boolean;
   imageContainedLg?: boolean;
+  imageAlmostFull?: boolean;
+  imageLightbox?: boolean;
+  imageLightboxZoom?: number;
+  topImage?: string;
+  topImageAlt?: string;
+  topImageContained?: boolean;
+  topImageContainedLg?: boolean;
+  topImageAlmostFull?: boolean;
   subCards?: TechCard[];
 }
 
@@ -59,7 +67,7 @@ export const caseStudies: CaseStudy[] = [
     thumbnailImage: `${basePath}/civitas-card-image.jpg`,
     heroColor: "#0B1628",
     tools: ["Figma", "Claude Code", "Figma Make", "Adobe Creative Suite", "Claude", "ChatGPT", "Gemini", "Perplexity"],
-    timeline: "Full Product Cycle — Research to Prototype",
+    timeline: "2 Months — Research to Prototype",
     metrics: "80% Prototype Satisfaction | 44,600+ Addressable Projects | 5 Core User Flows",
     tags: [
       { label: "SaaS UX", variant: "purple" },
@@ -78,10 +86,16 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Research: Understanding the Market and the Users",
         body: "Before designing a single screen, we validated the problem from three directions.\n\nMarket research confirmed there was no local equivalent — the only government-adjacent tool was the CFIA's own registry, which handles professional credentials, not project workflows. International platforms existed in other markets but none mapped to Costa Rica's specific municipal and regulatory structure.\n\nUser research went deeper. We conducted 10–15 in-depth interviews with construction professionals across different experience levels and age ranges, mapping their current permit-request process step by step. What emerged was a picture of fragmentation: professionals using WhatsApp to follow up on permits, printing documents that could be digital, making in-person trips that could be eliminated, and losing track of status across dozens of simultaneous projects.\n\nFrom this research we built two distinct user personas — the professional (architect or engineer managing the process) and the owner (who needs visibility without needing to understand the bureaucracy). Both had fundamentally different needs, mental models, and levels of technical comfort — and the platform had to serve both without compromise.",
+        topImage: `${basePath}/civitas-user-persona.png`,
+        topImageAlt:
+          "User personas: Esteban Solano (The Busy Architect, age 38, independent architect managing 4 projects simultaneously) and Lucía Méndez (Owner of the Construction, age 42, building her first home with savings and a bank loan)",
+        topImageAlmostFull: true,
         image: `${basePath}/civitas-image-user-flow.jpg`,
         imageAlt:
           "Civitas user flow diagram showing all 5 critical platform flows: Administrator onboarding with AI-assisted project creation, Guest document upload and AI validation, end-of-cycle review and approval, new project creation stepper, and project settings panel with Stripe integration",
         imageContainedLg: true,
+        imageLightbox: true,
+        imageLightboxZoom: 1.5,
       },
       {
         heading: "Design Strategy & Concept: \"Bureaucracy Made Legible\"",
@@ -127,10 +141,10 @@ export const caseStudies: CaseStudy[] = [
               "The design system was built to feed directly into Claude Design's generation pipeline, enabling rapid page generation while maintaining token fidelity and component consistency across 40+ screens.",
           },
         ],
-        image: `${basePath}/civitas-card-image.jpg`,
+        image: `${basePath}/civitas-design-system.png`,
         imageAlt:
-          "Civitas project card interface showing permit status, timeline, and professional assignment — a core repeating component of the design system applied across the platform",
-        imageContained: true,
+          "Civitas design system documentation showing the color system with navy and warm orange palettes, typography pairing of Sora and Inter, and spacing & radius scale",
+        imageAlmostFull: true,
       },
       {
         heading: "What Made This Complex",
@@ -184,7 +198,7 @@ export const caseStudies: CaseStudy[] = [
           "Complete user flows covering every critical platform path — validated against real workflows from 10–15 professional interviews before a single production screen was designed.",
       },
     ],
-    relatedCaseSlugs: ["cleaning-app", "audivia", "arkose-labs"],
+    relatedCaseSlugs: ["audivia", "propelus", "arkose-labs"],
   },
   {
     slug: "cleaning-app",
