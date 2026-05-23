@@ -9,7 +9,7 @@ export interface TechCard {
 }
 
 export interface ContentSection {
-  heading: string;
+  heading?: string;
   body: string;
   image?: string;
   imageAlt?: string;
@@ -581,8 +581,8 @@ export const caseStudies: CaseStudy[] = [
     heroImage: `${basePath}/audivia-hero.png`,
     thumbnailImage: `${basePath}/audivia-case-study-card.png`,
     heroColor: "#0A1F3D",
-    tools: ["UX/UI Design", "Branding", "Healthcare", "SEO"],
-    timeline: "Full Brand Build — Concept to Launch",
+    tools: ["Google Analytics", "Gemini Deep Research", "Figma", "Claude Design", "Cursor", "Figma Make"],
+    timeline: "1 Month — Brand Creation to Digital Launch",
     metrics: "Top 3 Google Local Pack | 30% Task Completion Lift | Day-One SEO",
     tags: [
       { label: "Healthcare UX", variant: "purple" },
@@ -594,13 +594,16 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "The Challenge: The Trust Gap",
         body: "The client — a newly established audiology practice — had zero digital presence. No website, no brand identity, no online discoverability. In the healthcare space, this isn't just a visibility problem: it's a credibility problem.\n\nPatients seeking audiological care make high-stakes decisions. They're trusting a specialist with something as intimate as their hearing. Without a professional digital presence, the clinic couldn't compete against established practices — regardless of the quality of its clinical care.\n\nThree core friction points emerged from initial discovery:\n\n• No brand language: The clinic had no visual identity, tone of voice, or narrative to communicate expertise and warmth simultaneously.\n\n• No patient pathway: There was no clear journey from \"I have a concern\" to \"I'm booking an appointment.\"\n\n• No search presence: A new practice in a specialized field is invisible without deliberate SEO strategy from day one.",
-        image: `${basePath}/audivia-case-study-1.png`,
+        image: `${basePath}/Audivia-progress-wireframes.png`,
         imageAlt:
-          "Multiple screens of the Audivia website showing the complete digital presence built for the audiology clinic, from hero to services, process, FAQ, and footer sections",
+          "Audivia design progression showing wireframes alongside the mid-fidelity and final high-fidelity website screens — illustrating the evolution from structure to the finished Clinical Warmth visual system",
       },
       {
         heading: "Design Strategy & Concept: \"Clinical Warmth\"",
         body: "Healthcare design lives in a tension: it must signal clinical authority while remaining emotionally approachable for patients who are often anxious or vulnerable. I built the entire visual and verbal system around what I called the \"Clinical Warmth\" framework.\n\n• Visual language: A palette rooted in calm, trust-signaling tones — soft neutrals anchored by a confident primary color that communicates expertise without coldness.\n\n• Typography: Clean, legible hierarchy that reads as professional on first glance but never intimidating — designed for patients of all ages, including older adults who are a core demographic for audiology.\n\n• Tone of voice: Copy written to be warm, clear, and jargon-free. Patients don't speak in audiological terms — the site shouldn't either.",
+        image: `${basePath}/audivia-case-study-1.png`,
+        imageAlt:
+          "Multiple screens of the Audivia website showing the complete digital presence built for the audiology clinic, from hero to services, process, FAQ, and footer sections",
       },
       {
         heading: "Key Solutions",
@@ -637,7 +640,14 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         heading: "What Made This Complex",
-        body: "Designing for healthcare isn't just a visual challenge. It requires understanding regulatory sensitivities around medical claims, the emotional state of the end user, and the trust signals specific to clinical environments. Every copy decision, color choice, and interaction pattern was evaluated through that lens — the same rigor required when designing digital experiences for pharmaceutical and life sciences clients.\n\nOne of the most critical discoveries came directly from user testing. Our primary audience — older adults — revealed an accessibility gap that wasn't visible in design review. The original brand palette included an orange that failed WCAG AA contrast standards when tested with actual users in that demographic. Participants consistently struggled to read text and CTAs rendered in that color, and engagement with key touchpoints dropped as a result.\n\nRather than overriding the brand color entirely, I made a targeted recommendation: introduce a darkened variant of the orange exclusively for web — dark enough to pass AA contrast thresholds, while preserving the brand's warmth and visual identity across other touchpoints like print and social.\n\nWe re-tested with the same user group. The adjusted palette produced a 30% improvement in task completion and positive reception — a direct, measurable result of letting real users, not assumptions, drive design decisions.\n\nAccessibility as a clinical imperative, not a checkbox. For a healthcare audience, WCAG compliance isn't a technical formality — it's the difference between a patient finding the help they need or abandoning the site entirely. This project reinforced that inclusive design and effective healthcare design are the same thing.",
+        body: "Designing for healthcare isn't just a visual challenge. It requires understanding regulatory sensitivities around medical claims, the emotional state of the end user, and the trust signals specific to clinical environments. Every copy decision, color choice, and interaction pattern was evaluated through that lens — the same rigor required when designing digital experiences for pharmaceutical and life sciences clients.\n\nOne of the most critical discoveries came directly from user testing. Our primary audience — older adults — revealed an accessibility gap that wasn't visible in design review. The original brand palette included an orange that failed WCAG AA contrast standards when tested with actual users in that demographic. Participants consistently struggled to read text and CTAs rendered in that color, and engagement with key touchpoints dropped as a result.\n\nRather than overriding the brand color entirely, I made a targeted recommendation: introduce a darkened variant of the orange exclusively for web — dark enough to pass AA contrast thresholds, while preserving the brand's warmth and visual identity across other touchpoints like print and social.",
+        image: `${basePath}/audivia-WCAG.png`,
+        imageAlt:
+          "WCAG AA contrast comparison showing the original #F46931 orange (FAIL, 2.79:1) versus the adjusted #E75C24 (AA, 3.23:1) — illustrating the targeted accessibility fix that preserved brand warmth while passing contrast standards",
+        imageContained: true,
+      },
+      {
+        body: "We re-tested with the same user group. The adjusted palette produced a 30% improvement in task completion and positive reception — a direct, measurable result of letting real users, not assumptions, drive design decisions.\n\nAccessibility as a clinical imperative, not a checkbox. For a healthcare audience, WCAG compliance isn't a technical formality — it's the difference between a patient finding the help they need or abandoning the site entirely. This project reinforced that inclusive design and effective healthcare design are the same thing.",
       },
     ],
     businessImpact: [
@@ -657,7 +667,7 @@ export const caseStudies: CaseStudy[] = [
           "The brand identity gave the practice a visual presence on par with established clinics from day one, removing the credibility gap — while semantic HTML and keyword copy meant the site ranked without any post-launch sprint.",
       },
     ],
-    relatedCaseSlugs: ["urban-bites", "fine-raw", "arkose-labs"],
+    relatedCaseSlugs: ["propelus", "civitas", "arkose-labs"],
   },
   {
     slug: "fine-raw",

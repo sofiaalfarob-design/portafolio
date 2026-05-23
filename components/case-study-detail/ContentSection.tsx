@@ -5,6 +5,46 @@ import { motion } from "framer-motion";
 import type { ContentSection as ContentSectionType } from "@/data/case-studies";
 import LightboxImage from "@/components/ui/LightboxImage";
 
+const bodyClass = "w-full font-['Inter'] text-[16px] not-italic font-normal leading-[24px] text-[#171717]";
+
+function renderBody(body: string) {
+  const chunks = body.split(/\n\n/).filter(Boolean);
+  const elements: React.ReactNode[] = [];
+  let bullets: string[] = [];
+
+  const flushBullets = (key: string) => {
+    if (bullets.length === 0) return;
+    elements.push(
+      <ul key={key} className="mt-4 space-y-2 list-none pl-0">
+        {bullets.map((b, i) => (
+          <li key={i} className={`flex gap-2 ${bodyClass}`}>
+            <span className="shrink-0 mt-px">•</span>
+            <span>{b.replace(/^•\s*/, "")}</span>
+          </li>
+        ))}
+      </ul>
+    );
+    bullets = [];
+  };
+
+  chunks.forEach((chunk, i) => {
+    const text = chunk.trim();
+    if (text.startsWith("•")) {
+      bullets.push(text);
+    } else {
+      flushBullets(`ul-${i}`);
+      elements.push(
+        <p key={i} className={`mt-4 ${bodyClass}`}>
+          {text}
+        </p>
+      );
+    }
+  });
+
+  flushBullets("ul-end");
+  return <>{elements}</>;
+}
+
 export default function ContentSection({
   section,
 }: {
@@ -17,12 +57,12 @@ export default function ContentSection({
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.6 }}
     >
-      <h2 className="font-body text-[28px] leading-[36px] md:text-[48px] not-italic font-normal md:leading-[57.6px] text-[#171717]">
-        {section.heading}
-      </h2>
-      <p className="mt-4 w-full font-['Inter'] text-[16px] not-italic font-normal leading-[24px] text-[#171717]">
-        {section.body}
-      </p>
+      {section.heading && (
+        <h2 className="font-body text-[28px] leading-[36px] md:text-[48px] not-italic font-normal md:leading-[57.6px] text-[#171717]">
+          {section.heading}
+        </h2>
+      )}
+      {renderBody(section.body)}
 
       {section.subCards && section.subCards.length > 0 && (
         <div className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
@@ -56,7 +96,7 @@ export default function ContentSection({
         >
           <Image
             src={section.topImage}
-            alt={section.topImageAlt || section.heading}
+            alt={section.topImageAlt || section.heading || ""}
             width={1200}
             height={750}
             className="w-full object-contain"
@@ -81,7 +121,7 @@ export default function ContentSection({
           {section.imageLightbox ? (
             <LightboxImage
               src={section.image}
-              alt={section.imageAlt || section.heading}
+              alt={section.imageAlt || section.heading || ""}
               className="w-full object-contain"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
               quality={90}
@@ -90,7 +130,7 @@ export default function ContentSection({
           ) : (
             <Image
               src={section.image}
-              alt={section.imageAlt || section.heading}
+              alt={section.imageAlt || section.heading || ""}
               width={1200}
               height={750}
               className="w-full object-contain"
