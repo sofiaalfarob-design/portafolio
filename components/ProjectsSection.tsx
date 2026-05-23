@@ -90,7 +90,7 @@ export default function ProjectsSection() {
                         />
                       ))}
                     </div>
-                    <div className="mt-auto border-t border-gray-100 pt-4">
+                    <div className="mt-auto pt-4">
                       <span className="block w-full rounded-full border border-gray-300 py-2.5 text-center text-sm font-semibold text-text-primary transition-all group-hover:border-primary-hover group-hover:text-primary-hover">
                         View the Project
                       </span>

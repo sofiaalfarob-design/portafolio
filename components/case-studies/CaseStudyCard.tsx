@@ -49,7 +49,7 @@ export default function CaseStudyCard({
               <TagPill key={tag.label} label={tag.label} variant={tag.variant} />
             ))}
           </div>
-          <div className="mt-4 border-t border-gray-100 pt-4">
+          <div className="mt-4">
             <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors group-hover:text-primary-hover">
               View this Project
               <span className="transition-transform group-hover:translate-x-1">

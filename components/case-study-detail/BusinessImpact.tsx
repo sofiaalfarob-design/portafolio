@@ -21,31 +21,59 @@ export default function BusinessImpact({
           <h2 className="mb-8 text-center font-heading text-2xl font-bold text-text-primary md:text-3xl">
             Business Impact
           </h2>
-          <div className={`grid gap-6 ${
-            metrics.length === 5
-              ? "sm:grid-cols-2 md:grid-cols-3"
-              : metrics.length === 4
-              ? "sm:grid-cols-2 md:grid-cols-4"
-              : "md:grid-cols-3"
-          }`}>
-            {metrics.map((metric, i) => (
-              <motion.div
-                key={metric.headline}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="rounded-xl bg-metric-card p-6 text-center"
-              >
-                <div className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
-                  {metric.headline}
-                </div>
-                <p className="mt-2 text-sm text-text-primary/80">
-                  {metric.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+          {metrics.length === 5 ? (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-6">
+              {metrics.map((metric, i) => (
+                <motion.div
+                  key={metric.headline}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  className={`rounded-xl bg-metric-card p-6 text-center ${
+                    i < 3
+                      ? "sm:col-span-2"
+                      : i === 3
+                      ? "sm:col-span-2 sm:col-start-2"
+                      : "sm:col-span-2 sm:col-start-4"
+                  }`}
+                >
+                  <div className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
+                    {metric.headline}
+                  </div>
+                  <p className="mt-2 text-sm text-text-primary/80">
+                    {metric.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className={`grid gap-6 ${
+              metrics.length === 6
+                ? "sm:grid-cols-2 md:grid-cols-3"
+                : metrics.length === 4
+                ? "sm:grid-cols-2 md:grid-cols-4"
+                : "md:grid-cols-3"
+            }`}>
+              {metrics.map((metric, i) => (
+                <motion.div
+                  key={metric.headline}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  className="rounded-xl bg-metric-card p-6 text-center"
+                >
+                  <div className="font-heading text-3xl font-bold text-text-primary md:text-4xl">
+                    {metric.headline}
+                  </div>
+                  <p className="mt-2 text-sm text-text-primary/80">
+                    {metric.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

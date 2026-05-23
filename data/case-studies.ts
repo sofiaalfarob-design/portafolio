@@ -390,80 +390,111 @@ export const caseStudies: CaseStudy[] = [
           "Client autonomy — the client's design team can build and publish new pages independently using the design system, with no external design support required.",
       },
     ],
-    relatedCaseSlugs: ["cleaning-app", "continuing-education", "urban-bites"],
+    relatedCaseSlugs: ["civitas", "audivia", "continuing-education"],
   },
   {
     slug: "continuing-education",
-    category: "B2B CMS Design & Flexibility",
-    subtitle: "B2B CMS Design & Flexibility",
-    title: "Empowering the End-User: The 'Chameleon' Component System",
+    category: "UX/UI Design · Medical Education · CMS Architecture",
+    subtitle: "UX/UI Design · Medical Education · CMS Architecture",
+    title: "CME: Modernizing a Medical Education Platform Across Three Evolutionary Stages",
+    detailTitle: "CME: Three Stages, Two Years, One Platform",
     description:
-      "Redesigning the administrative and public experience of a CMS to allow dynamic content creation without compromising brand integrity.",
-    role: "Lead Product Designer",
+      "A two-year platform transformation of a medical education company — from an unmaintainable 15-year-old site to a fully documented, autonomously operated headless CMS with complete responsive design.",
+    role: "Lead Designer — Solo Design (UX/UI, Design Systems, CMS Architecture, Content Migration, Team Training)",
     heroImage: `${basePath}/continuing-education-company-case-hero.png`,
     thumbnailImage: `${basePath}/card-b2b-cms-design-flexibility.png`,
     heroColor: "#2B3A72",
-    tools: ["Figma", "React", "Headless CMS", "User Testing"],
-    timeline: "12 Weeks: Research, Design & Validation",
-    metrics:
-      "100% Client Autonomy | Modular Flexibility | Multi-Theme Components",
+    tools: ["Figma", "React", "Agility CMS", "Headless CMS", "User Testing"],
+    timeline: "2+ Years: Redesign → Migration & QA → Maintenance",
+    metrics: "2+ Years | 70% Fewer Dev Tickets | 5× Faster Onboarding | 6 Docs",
     tags: [
-      { label: "CMS Design", variant: "purple" },
-      { label: "B2B UX", variant: "neutral" },
-      { label: "UI Components", variant: "neutral" },
-      { label: "User Empowerment", variant: "neutral" },
+      { label: "UX/UI Design", variant: "purple" },
+      { label: "Medical Education", variant: "neutral" },
+      { label: "CMS Architecture", variant: "neutral" },
+      { label: "Design Systems", variant: "neutral" },
+      { label: "Content Strategy", variant: "neutral" },
     ],
     contentSections: [
       {
-        heading: "The Challenge: Breaking the Rigidity",
-        body: "The continuing education platform served multiple institutional clients, each with distinct branding, content structures, and user workflows. The existing CMS was rigid — every customization required developer involvement, creating bottlenecks and escalating costs. Clients were frustrated by their inability to manage their own platforms independently.",
+        heading: "The Challenge: Fifteen Years of Standing Still",
+        body: "CME — Continuing Medical Education Company — operates at the intersection of professional development and lifestyle. Their flagship offering is uniquely positioned: organized educational travel experiences that let medical professionals bring their families, explore destinations across the US, and receive accredited training in the mornings while experiencing the destination in the afternoons. Alongside this, they run a full virtual course platform for ongoing credential maintenance.\n\nThe product worked. The platform didn't.\n\nWhen I joined the engagement, CME's digital presence hadn't meaningfully evolved in over 15 years. The site reflected the personal aesthetic preferences of the owner rather than the needs and expectations of its actual users. More critically, it had been built entirely without mobile in mind — a significant problem for medical professionals who consume content on the go, between patients, from airports and hotel lobbies.\n\nThe challenge wasn't just visual. It was organizational: the owner had strong opinions about the existing design, the platform was running on aging technology with real functional limitations, and the team maintaining it lacked the technical confidence to manage it independently. This wasn't a redesign project. It was a platform transformation — and it would take two years and three distinct phases to complete.",
         image: `${basePath}/continuing-education-company-case-the-chalence-image.png`,
-        imageAlt: "Continuing Education Company CMS admin panel and public-facing conference listing pages showing the rigid, developer-dependent content workflow",
+        imageAlt: "CME platform before the redesign showing the 15-year-old site with no mobile responsiveness, outdated visual design, and fragmented content structure",
       },
       {
-        heading: "Solution: The Chameleon Component System",
-        body: "I designed a component system that could adapt to any brand context while maintaining structural integrity. Each component was built with configurable 'slots' — areas where clients could inject their own content, colors, and imagery without breaking the layout or accessibility standards. The system used constraint-based flexibility: freedom within guardrails.",
+        heading: "Phase 1 — The Redesign: Replacing Preference with Evidence",
+        body: "The first challenge was convincing the client that change was necessary — and doing it with data, not opinion.\n\nRather than presenting a new design and asking for approval, I started by building the case. I compiled user data showing who CME's actual users were: their demographics, their devices, their behavior patterns on the existing site. I set this against the profile of who CME's users could be if the platform met modern expectations. The data made the business case that subjective conversation couldn't.\n\nWith that foundation established, I began the redesign process — knowing that the owner's aesthetic preferences were a real constraint that had to be respected, not overridden. The process required multiple iterations, each one balancing contemporary UX standards against the client's vision for their brand. This wasn't design by committee — it was stakeholder management as a design skill.\n\nThe single most impactful change was mobile. The previous site had no responsive behavior whatsoever. Building a fully mobile-responsive experience from the ground up opened the platform to the way medical professionals actually consume content — and the client's reception to this change was immediate and positive.\n\nKey design decisions:\n\n• Rebuilt information architecture around two distinct user journeys: professionals evaluating the travel programs and professionals managing their virtual course catalog\n\n• Created a visual system that balanced the warmth of the travel experience with the credibility required for accredited medical education\n\n• Established full responsive behavior across all device sizes for the first time in the platform's history",
       },
       {
-        heading: "Key Strategic Features",
-        body: "The Chameleon system was built on three principles that balanced flexibility with consistency.",
+        heading: "Phase 2 — Migration & QA: Moving Without Breaking",
+        body: "With the redesign approved and live, the next challenge was the platform itself. CME was running on aging CMS technology that limited what was possible — content couldn't be automated, images weren't optimized, and editorial workflows required technical intervention for basic updates.\n\nThe solution was a migration to Agility CMS, a headless architecture that gave the team significantly more control over content operations. My role in this phase went beyond design.\n\nI learned the Agility CMS architecture alongside the development team, which gave me the ability to contribute meaningfully to decisions about how content should be structured — not just how it should look. As content migrated from the old system to the new one, I performed systematic design QA across every page, every component, and every device breakpoint — verifying that the UX and UI standards established in the redesign were preserved through the technical transition.\n\nThe phase concluded with something that doesn't appear on most design portfolios but matters enormously to a client: I led the training for CME's internal team. The employees who would maintain the platform going forward weren't developers — they were content editors and administrators. I designed and delivered training that gave them a non-technical mental model of how Agility worked, so they could operate the platform confidently without needing developer support for routine tasks.",
+        image: `${basePath}/continuing-education-company-case-closer-image.png`,
+        imageAlt: "Agility CMS content management interface showing the new headless architecture used after migration — component configuration panels and editorial workflow for CME content editors",
+        imageContained: true,
+      },
+      {
+        heading: "Phase 3 — Maintenance: Designing the System From the Inside",
+        body: "The third phase was where the work became most nuanced — and most directly relevant to the platform's long-term success.\n\nMaintenance, in this context, didn't mean fixing bugs. It meant continuously improving how the platform worked for the people operating it. I had two very different user types to design for simultaneously:\n\n• Medical professionals — the external users browsing courses and travel programs. Generally non-technical, time-constrained, accessing the platform between clinical responsibilities. Every friction point in their experience was a potential dropout.\n\n• Content editors within Agility CMS — internal CME employees managing the platform day-to-day. Technically literate enough to use a CMS, but not developers. Their frustrations were different: components that were confusing to configure, workflows that required more steps than necessary, edge cases that produced broken layouts.\n\nWorking closely with the development team, I analyzed usage patterns and collected feedback from the editorial team. I used this to redesign the internal component logic within Agility — making configuration interfaces more intuitive, reducing the cognitive load of routine publishing tasks, and building new components that were designed simultaneously for how they appeared to end users and how they behaved for the editors creating them.\n\nThis dual-perspective design thinking — external UX and internal tooling UX as a unified problem — became the defining characteristic of the maintenance phase.",
+      },
+      {
+        heading: "Documentation: Building Institutional Memory",
+        body: "Across all three phases, I produced a documentation suite that gave CME something more durable than a well-designed platform — it gave them the knowledge to own it.\n\n• Design System — component library, token architecture, usage guidelines\n\n• CME Digital Brand Guide — visual standards, typography, color system for digital contexts\n\n• Agility CMS Architecture Document — how the content model was structured and why\n\n• Editorial Tutorials — step-by-step guides for content editors, written for non-technical audiences\n\n• Content Standards & Brand Voice Document — tone, style, and content guidelines for editors maintaining the platform\n\n• Basic Code Tutorials — foundational references for editors who needed to make minor technical adjustments\n\nThis documentation wasn't a project deliverable — it was a deliberate investment in the client's independence. A platform that requires its original designer to function is a liability. A platform with complete institutional documentation is an asset.",
+      },
+      {
+        heading: "What Made This Complex",
+        body: "Three compounding factors defined the complexity of this engagement.",
         subCards: [
           {
-            title: "Theme Engine",
+            title: "Designing for a client who knew what they liked — and had been right for 15 years.",
             description:
-              "Token-based theming that allowed full brand customization through a simple configuration panel, no code required.",
+              "The owner's aesthetic preferences weren't irrational — they had built a successful business with them. The challenge was introducing evidence-based design thinking without dismissing the judgment that had gotten CME to where it was. Using data to reframe the conversation from \"your design vs. my design\" to \"what your users need\" was the key that made the redesign possible.",
           },
           {
-            title: "Modular Layouts",
+            title: "Two years means the project never stops changing.",
             description:
-              "Drag-and-drop layout system with pre-validated component combinations that prevented broken layouts.",
+              "A single-sprint project has a clear end state. A two-year engagement means the product evolves, the team changes, the technology shifts, and the design decisions you made in month three get recontextualized by what you learn in month eighteen. Maintaining design coherence across that timeline — without a large team or formal governance structure — required documentation as a continuous practice, not a closing deliverable.",
           },
           {
-            title: "Content Governance",
+            title: "The internal user is a user too.",
             description:
-              "Role-based permissions ensuring brand consistency while empowering content editors with appropriate autonomy.",
+              "Most design work focuses on the end consumer. The maintenance phase of this project required equal attention to the people operating the platform — content editors whose daily friction with confusing CMS components had real downstream effects on publishing quality and speed. Treating the editorial interface as a UX problem, not a technical one, was what made the platform genuinely sustainable after handoff.",
           },
         ],
-        image: `${basePath}/continuing-education-company-case-closer-image.png`,
-        imageAlt: "Chameleon component system showing the drag-and-drop layout builder alongside the live public-facing conference detail page with multi-theme configuration",
-        imageContained: true,
       },
     ],
     businessImpact: [
       {
+        headline: "2+ Years",
+        description:
+          "Continuous engagement across three distinct phases — redesign, migration, and maintenance — making CME one of the most comprehensive platform transformations in this portfolio.",
+      },
+      {
+        headline: "Mobile",
+        description:
+          "The platform launched with full responsive design for the first time in its history, opening the platform to medical professionals accessing content from mobile devices.",
+      },
+      {
         headline: "100%",
-        description: "Client autonomy for content and brand management",
+        description:
+          "Client autonomy — CME's internal team can now create, publish, and maintain all platform content independently, without design or development support for routine operations.",
       },
       {
         headline: "70%",
-        description: "Reduction in developer support tickets",
+        description:
+          "Reduction in developer support tickets. Internal editors handle content operations that previously required developer involvement, enabled by redesigned component logic and editorial documentation.",
       },
       {
-        headline: "5x",
-        description: "Faster client onboarding with self-service configuration",
+        headline: "5×",
+        description:
+          "Faster client onboarding. New content editors reach operational proficiency significantly faster through the training program and documentation suite developed during the engagement.",
+      },
+      {
+        headline: "6 Docs",
+        description:
+          "A complete institutional knowledge base — design system, brand guide, CMS architecture, tutorials, content standards, and code references — ensuring the platform remains manageable long after the engagement closed.",
       },
     ],
-    relatedCaseSlugs: ["cleaning-app", "propelus", "urban-bites"],
+    relatedCaseSlugs: ["civitas", "audivia", "propelus"],
   },
   {
     slug: "arkose-labs",
