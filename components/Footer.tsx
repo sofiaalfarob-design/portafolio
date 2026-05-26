@@ -13,7 +13,7 @@ const contactLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/sofia-alfaro-designer" },
   { label: "Email", href: "mailto:sofia.alfablan@gmail.com" },
   { label: "Behance", href: "https://www.behance.net/sofiaalfaro9" },
-  { label: "Resume (PDF)", href: "/Curriculum-Sofia-Alfaro.pdf" },
+  { label: "Resume (PDF)", href: "/Sofia_Alfaro_Senior_UX_Designer.pdf" },
 ];
 
 export default function Footer() {

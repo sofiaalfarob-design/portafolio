@@ -63,7 +63,7 @@ export default function CTASection() {
 
         <div className="mt-6 flex items-center justify-center gap-6 text-sm text-text-secondary">
           <a
-            href="Curriculum-Sofia-Alfaro.pdf"
+            href="Sofia_Alfaro_Senior_UX_Designer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 underline transition-colors hover:text-text-primary"

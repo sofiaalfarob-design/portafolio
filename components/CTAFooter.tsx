@@ -49,7 +49,7 @@ export default function CTAFooter() {
               See Portfolio
             </a>
             <a
-              href="Curriculum-Sofia-Alfaro.pdf"
+              href="Sofia_Alfaro_Senior_UX_Designer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border-2 border-gray-600 px-8 py-3.5 text-sm font-semibold text-white transition-all hover:border-white"
