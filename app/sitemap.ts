@@ -1,6 +1,8 @@
 import { MetadataRoute } from "next";
 import { showCases } from "@/data/show-cases";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://sofiaalfarodesign.com";
 
