@@ -3,14 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import type { CaseStudy } from "@/data/case-studies";
+import type { ShowCase } from "@/data/show-cases";
 import TagPill from "@/components/ui/TagPill";
 
 export default function CompactCaseCard({
   study,
   index,
 }: {
-  study: CaseStudy;
+  study: ShowCase;
   index: number;
 }) {
   return (
@@ -21,11 +21,11 @@ export default function CompactCaseCard({
       transition={{ delay: index * 0.1, duration: 0.5 }}
       className="card-hover group overflow-hidden rounded-2xl border border-gray-100 bg-white"
     >
-      <Link href={`/case-studies/${study.slug}`} className="block">
+      <Link href={`/showcases/${study.slug}`} className="block">
         <div className="relative aspect-[16/10] overflow-hidden">
           <Image
             src={study.thumbnailImage}
-            alt={`${study.title} — ${study.category} case study preview`}
+            alt={`${study.title} — ${study.category} showcase preview`}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 33vw"

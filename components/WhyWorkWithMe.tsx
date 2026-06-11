@@ -1,88 +1,88 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
-import basePath from "@/lib/basePath";
+import SectionBadge from "./ui/SectionBadge";
 
-const features = [
+const items = [
   {
-    icon: `${basePath}/stard-up.svg`,
+    number: "01",
     title: "Startup & Enterprise Experience",
     description:
       "Navigated from 5-person early-stage teams to 500+ employee organizations, adapting methodologies based on context and required velocity.",
   },
   {
-    icon: `${basePath}/cross-functional-leadership.svg`,
+    number: "02",
     title: "Cross-Functional Leadership",
     description:
       "Works fluidly across design, engineering, product, and data. Ensures alignment from ideation through launch with clear communication and shared ownership.",
   },
   {
-    icon: `${basePath}/continuous-learning-mindset.svg`,
+    number: "03",
     title: "Continuous Learning Mindset",
     description:
       "Stays on the cutting edge of design and AI tools, constantly experimenting with new technologies and integrating them into practical workflows.",
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
-  }),
-};
-
 export default function WhyWorkWithMe() {
   return (
     <section className="bg-card-bg py-20 md:py-28" id="about">
       <div className="mx-auto max-w-container px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <h2 className="font-heading text-3xl font-bold text-text-primary md:text-4xl lg:text-5xl">
-            Why Work With Me?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-text-secondary md:text-lg">
-            I don&apos;t just design screens — I architect digital ecosystems. Pairing
-            deep product design expertise with hands-on AI implementation skills,
-            delivering end-to-end solutions that move fast without sacrificing craft.
-          </p>
-        </motion.div>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
-          {features.map((feature, i) => (
+        {/* Asymmetric header: title left, prose right */}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-16 md:items-end">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="md:col-span-5"
+          >
+            <SectionBadge label="About Me" />
+            <h2 className="mt-4 font-heading text-3xl font-bold text-text-primary md:text-4xl lg:text-5xl">
+              Why Work<br className="hidden md:block" /> With Me?
+            </h2>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-base leading-relaxed text-text-secondary md:col-span-7 md:text-lg md:pb-1"
+          >
+            I don&apos;t just design screens — I architect digital ecosystems.
+            Pairing deep product design expertise with hands-on AI
+            implementation skills, delivering end-to-end solutions that move
+            fast without sacrificing craft.
+          </motion.p>
+        </div>
+
+        {/* Editorial numbered list */}
+        <div className="mt-16 md:mt-20">
+          {items.map((item, i) => (
             <motion.div
-              key={feature.title}
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
+              key={item.number}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              variants={cardVariants}
-              className="text-center"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="grid grid-cols-1 gap-3 border-t border-gray-200 py-8 md:grid-cols-12 md:gap-8 md:py-10"
             >
-              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-light/20">
-                <Image
-                  src={feature.icon}
-                  alt=""
-                  width={32}
-                  height={32}
-                />
-              </div>
-              <h3 className="font-heading text-lg font-bold text-text-primary">
-                {feature.title}
+              <span className="font-heading text-5xl font-bold text-primary md:col-span-1">
+                {item.number}
+              </span>
+              <h3 className="font-heading text-xl font-bold text-text-primary md:col-span-4">
+                {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-                {feature.description}
+              <p className="text-base leading-relaxed text-text-secondary md:col-span-7">
+                {item.description}
               </p>
             </motion.div>
           ))}
+          <div className="border-t border-gray-200" />
         </div>
+
       </div>
     </section>
   );

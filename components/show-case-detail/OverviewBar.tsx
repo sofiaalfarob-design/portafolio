@@ -1,6 +1,6 @@
-import type { CaseStudy } from "@/data/case-studies";
+import type { ShowCase } from "@/data/show-cases";
 
-export default function OverviewBar({ study }: { study: CaseStudy }) {
+export default function OverviewBar({ study }: { study: ShowCase }) {
   return (
     <div className="flex items-start gap-0 border-b border-gray-200 px-8 py-8 md:px-16">
       <div className="flex-1 pr-10 md:pr-16">

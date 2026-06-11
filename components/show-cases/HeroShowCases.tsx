@@ -12,9 +12,9 @@ export default function HeroCaseStudies() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <SectionBadge label="Case Studies" />
+          <SectionBadge label="Showcases" />
           <h1 className="mt-4 font-heading text-3xl font-bold text-text-primary md:text-4xl lg:text-5xl">
-            Selected Case Studies: Solving Business
+            Selected Showcases: Solving Business
             <br />
             Challenges Through Design.
           </h1>

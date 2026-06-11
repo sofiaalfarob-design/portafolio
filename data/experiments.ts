@@ -31,10 +31,10 @@ export const experiments: Experiment[] = [
     title: "Accessibility Audit and Improvements",
     status: "Completed",
     description:
-      "Conducted a full WCAG AA accessibility audit for a healthcare client, identifying critical contrast failures with older adult users. Iterated the brand color system to pass AA standards while preserving visual identity — resulting in a 30% improvement in task completion on re-test. See the Audivia case study for full details.",
+      "Conducted a full WCAG AA accessibility audit for a healthcare client, identifying critical contrast failures with older adult users. Iterated the brand color system to pass AA standards while preserving visual identity — resulting in a 30% improvement in task completion on re-test. See the Audivia showcase for full details.",
     image: `${basePath}/images/the-experimental-lab/card-accessibility-audit-and-improvements.png`,
     tags: ["Healthcare UX", "WCAG 2.1", "Accessibility", "User Testing"],
-    link: "/case-studies/audivia",
-    linkLabel: "View Audivia case study →",
+    link: "/showcases/audivia",
+    linkLabel: "View Audivia showcase →",
   },
 ];

@@ -6,6 +6,7 @@ const nextConfig = {
   basePath: isProd ? "/portafolio" : "",
   images: {
     unoptimized: true,
+    qualities: [75, 85, 90],
   },
 };
 

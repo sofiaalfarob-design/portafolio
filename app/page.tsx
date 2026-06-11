@@ -36,8 +36,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
         alt: "Sofia Alfaro — Product Designer Portfolio",
       },
     ],
@@ -46,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Navbar />
       <Hero />
       <ProjectsSection />

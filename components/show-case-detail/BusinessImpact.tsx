@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { MetricCard } from "@/data/case-studies";
+import type { MetricCard } from "@/data/show-cases";
 
 export default function BusinessImpact({
   metrics,

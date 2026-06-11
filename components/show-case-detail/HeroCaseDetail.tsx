@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { CaseStudy } from "@/data/case-studies";
+import type { ShowCase } from "@/data/show-cases";
 
 
-export default function HeroCaseDetail({ study }: { study: CaseStudy }) {
+export default function HeroCaseDetail({ study }: { study: ShowCase }) {
   return (
     <section
       className="relative overflow-hidden pt-32 pb-0"

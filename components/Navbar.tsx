@@ -10,9 +10,10 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 
 const navLinks = [
   { label: "Portfolio", href: "/#projects", sectionId: "projects" },
-  { label: "Case Studies", href: "/case-studies", sectionId: "" },
+  { label: "Showcases", href: "/showcases", sectionId: "" },
   { label: "The Lab", href: "/#lab", sectionId: "lab" },
-  { label: "About Me", href: "/#tech-stack", sectionId: "tech-stack" },
+  { label: "Tech Stack", href: "/#tech-stack", sectionId: "tech-stack" },
+  { label: "About Me", href: "/#about", sectionId: "about" },
 ];
 
 const sectionIds = ["projects", "lab", "tech-stack", "about", "contact"];
@@ -36,9 +37,27 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
 
   function resolveHref(href: string) {
     if (isHome && href.startsWith("/#")) {
-      return href.replace("/", "");
+      return href.slice(1); // "/#projects" → "#projects"
     }
     return href;
+  }
+
+  function handleNavClick(
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+    closeMobile = false
+  ) {
+    const resolved = resolveHref(href);
+    if (resolved.startsWith("#")) {
+      e.preventDefault();
+      const id = resolved.slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", resolved);
+      }
+    }
+    if (closeMobile) setMobileOpen(false);
   }
 
   function isActive(link: { href: string; sectionId: string }) {
@@ -74,6 +93,7 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
             <Link
               key={link.label}
               href={resolveHref(link.href)}
+              onClick={(e) => handleNavClick(e, link.href)}
               className={`text-sm font-medium transition-colors ${
                 useLightText
                   ? isActive(link)
@@ -89,6 +109,7 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
           ))}
           <Link
             href={resolveHref("/#contact")}
+            onClick={(e) => handleNavClick(e, "/#contact")}
             className={`rounded-full px-6 py-2.5 text-sm font-semibold transition-all ${
               useLightText
                 ? "bg-white text-gray-900 hover:bg-white/80"
@@ -104,6 +125,8 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
           className="flex flex-col gap-1.5 md:hidden mr-4"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
         >
           <motion.span
             animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
@@ -124,6 +147,7 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -138,7 +162,7 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
                   className={`text-sm font-medium transition-colors hover:text-gray-900 ${
                     isActive(link) ? "text-gray-900" : "text-gray-600"
                   }`}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href, true)}
                 >
                   {link.label}
                 </Link>
@@ -146,7 +170,7 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
               <Link
                 href={resolveHref("/#contact")}
                 className="inline-block rounded-full bg-[#1a1a1a] px-6 py-2.5 text-center text-sm font-semibold text-white"
-                onClick={() => setMobileOpen(false)}
+                onClick={(e) => handleNavClick(e, "/#contact", true)}
               >
                 Get in touch
               </Link>

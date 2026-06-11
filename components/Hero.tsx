@@ -1,29 +1,33 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import SectionBadge from "./ui/SectionBadge";
 
-const stats = [
-  { value: "8+", label: "Years of Experience" },
-  { value: "30+", label: "Projects" },
-  { value: "40%", label: "Efficiency Improved", highlighted: true },
-  { value: "15+", label: "Design Systems" },
+const credentials = [
+  { value: "8+", label: "years of experience" },
+  { value: "30+", label: "projects" },
+  { value: "15+", label: "design systems" },
+  { value: "40%", label: "efficiency improved" },
 ];
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" },
-  }),
-};
-
 export default function Hero() {
+  const [videoReady, setVideoReady] = useState(false);
+
+  useEffect(() => {
+    if ("requestIdleCallback" in window) {
+      const handle = window.requestIdleCallback(() => setVideoReady(true), { timeout: 2000 });
+      return () => window.cancelIdleCallback(handle);
+    }
+    const t = setTimeout(() => setVideoReady(true), 200);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
     <section className="overflow-hidden bg-white pb-16 pt-28 md:pt-36">
       <div className="mx-auto max-w-container px-6">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -56,33 +60,37 @@ export default function Hero() {
           deliver real business value.
         </motion.p>
 
+        {/* Credential strip — numbers as supporting context, not the feature */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
-          className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-6 md:grid-cols-4 md:gap-8"
+          transition={{ duration: 0.5, delay: 0.38 }}
+          className="mt-8 flex flex-wrap items-center justify-center gap-y-1.5"
+          aria-label="Career highlights"
         >
-          {stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              custom={i}
-              initial="hidden"
-              animate="visible"
-              variants={fadeUp}
-              className="text-center"
-            >
-              <div
-                className={`font-heading text-3xl font-bold md:text-4xl ${
-                  stat.highlighted ? "text-primary" : "text-text-primary"
-                }`}
-              >
-                {stat.value}
-              </div>
-              <div className="mt-1 text-xs font-medium text-text-secondary md:text-sm">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
+          {credentials.flatMap((item, i) => {
+            const el = (
+              <span key={item.label} className="px-2.5 text-sm text-text-secondary">
+                <span className="font-heading font-semibold text-text-primary tabular-nums">
+                  {item.value}
+                </span>
+                {" "}{item.label}
+              </span>
+            );
+            if (i < credentials.length - 1) {
+              return [
+                el,
+                <span
+                  key={`sep-${i}`}
+                  className="select-none text-gray-300"
+                  aria-hidden="true"
+                >
+                  ·
+                </span>,
+              ];
+            }
+            return [el];
+          })}
         </motion.div>
 
         <motion.div
@@ -95,7 +103,7 @@ export default function Hero() {
             href="#projects"
             className="rounded-full bg-dark px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-dark-hover"
           >
-            View Case Studies
+            View Showcases
           </Link>
           <Link
             href="#contact"
@@ -105,7 +113,7 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        {/* Autoplay Video */}
+        {/* Deferred autoplay showreel */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -113,15 +121,20 @@ export default function Hero() {
           className="mt-16 overflow-hidden rounded-2xl shadow-lg"
         >
           <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-            <iframe
-              className="absolute inset-0 h-full w-full"
-              src="https://www.youtube.com/embed/dVZVx_XOFrM?autoplay=1&mute=1&rel=0&loop=1&playlist=dVZVx_XOFrM"
-              title="Portfolio Showreel"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            {videoReady ? (
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/dVZVx_XOFrM?autoplay=1&mute=1&rel=0&loop=1&playlist=dVZVx_XOFrM"
+                title="Portfolio Showreel"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <div className="absolute inset-0 bg-card-bg" />
+            )}
           </div>
         </motion.div>
+
       </div>
     </section>
   );

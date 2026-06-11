@@ -4,6 +4,8 @@
 
 :root {
   --primary: #9810FA;
+  --primary-dark: #6B0FBB;
+  --primary-accent: #A23AEE;
   --primary-light: #D6AFFF;
 }
 
@@ -21,7 +23,10 @@ body {
 
 @layer utilities {
   .text-gradient-purple {
-    @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .section-pill {
@@ -31,6 +36,13 @@ body {
   .card-hover {
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
   }
+}
+
+/* Focus visible — consistent across browsers */
+*:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Custom scrollbar */
@@ -43,10 +55,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D6AFFF;
+  background: var(--primary-light);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9810FA;
+  background: var(--primary);
 }

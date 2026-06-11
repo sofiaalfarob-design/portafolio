@@ -10,6 +10,8 @@ const config: Config = {
       colors: {
         primary: "#9810FA",
         "primary-hover": "#B045FB",
+        "primary-dark": "#6B0FBB",
+        "primary-accent": "#A23AEE",
         "primary-light": "#D6AFFF",
         "primary-light-hover": "#E8D5FF",
         "primary-bg": "#F2F2F2",
@@ -20,10 +22,10 @@ const config: Config = {
         "bg-muted-alt": "#F2F2F2",
         "metric-card": "#D6AFFF",
         "text-primary": "#171717",
-        "text-secondary": "#99A1AF",
+        "text-secondary": "#6E6E82",
       },
       fontFamily: {
-        heading: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-bricolage)", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"],
       },
       maxWidth: {

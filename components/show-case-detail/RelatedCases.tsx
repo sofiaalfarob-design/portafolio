@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { getRelatedCaseStudies } from "@/data/case-studies";
+import { getRelatedShowCases } from "@/data/show-cases";
 import SectionBadge from "@/components/ui/SectionBadge";
 import CompactCaseCard from "./CompactCaseCard";
 
@@ -11,7 +11,7 @@ export default function RelatedCases({
 }: {
   relatedSlugs: string[];
 }) {
-  const related = getRelatedCaseStudies(relatedSlugs);
+  const related = getRelatedShowCases(relatedSlugs);
 
   if (related.length === 0) return null;
 
@@ -26,16 +26,16 @@ export default function RelatedCases({
           className="flex items-start justify-between"
         >
           <div>
-            <SectionBadge label="Other projects" />
+            <SectionBadge label="Other projects" variant="muted" />
             <h2 className="mt-4 font-heading text-2xl font-bold text-text-primary md:text-3xl">
               See our work
             </h2>
             <p className="mt-2 text-text-secondary">
-              Explore more case studies and projects.
+              Explore more showcases and projects.
             </p>
           </div>
           <Link
-            href="/case-studies"
+            href="/showcases"
             className="flex-shrink-0 whitespace-nowrap rounded-full border-2 border-gray-300 px-5 py-2 text-sm font-semibold text-text-primary transition-all hover:border-primary-hover hover:text-primary-hover"
           >
             View all

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { ContentSection as ContentSectionType } from "@/data/case-studies";
+import type { ContentSection as ContentSectionType } from "@/data/show-cases";
 import LightboxImage from "@/components/ui/LightboxImage";
 
 const bodyClass = "w-full font-['Inter'] text-[16px] not-italic font-normal leading-[24px] text-[#171717]";

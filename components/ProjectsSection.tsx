@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { getOrderedCaseStudies } from "@/data/case-studies";
+import { getOrderedShowCases } from "@/data/show-cases";
 import SectionBadge from "./ui/SectionBadge";
 import TagPill from "./ui/TagPill";
 
-const caseStudies = getOrderedCaseStudies(4);
+const showCases = getOrderedShowCases(4);
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -28,7 +28,7 @@ export default function ProjectsSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <SectionBadge label="Case Studies" />
+          <SectionBadge label="Showcases" />
           <h2 className="mt-4 font-heading text-3xl font-bold text-text-primary md:text-4xl lg:text-5xl">
             High-Impact Projects
           </h2>
@@ -37,7 +37,7 @@ export default function ProjectsSection() {
             implementation, and business metrics in scalable SaaS environments.
           </p>
           <Link
-            href="/case-studies"
+            href="/showcases"
             className="mt-6 inline-block rounded-full bg-dark px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-dark-hover"
           >
             View more projects
@@ -46,7 +46,7 @@ export default function ProjectsSection() {
 
         <div className="mt-10 rounded-3xl bg-gray-50 p-6 md:p-8">
           <div className="grid gap-6 md:grid-cols-2">
-            {caseStudies.map((project, i) => (
+            {showCases.map((project, i) => (
               <motion.article
                 key={project.slug}
                 custom={i}
@@ -56,11 +56,11 @@ export default function ProjectsSection() {
                 variants={cardVariants}
                 className="card-hover group overflow-hidden rounded-2xl border border-gray-100 bg-white"
               >
-                <Link href={`/case-studies/${project.slug}`} className="flex h-full flex-col">
+                <Link href={`/showcases/${project.slug}`} className="flex h-full flex-col">
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
                       src={project.thumbnailImage}
-                      alt={`${project.title} — ${project.category} case study preview`}
+                      alt={`${project.title} — ${project.category} showcase preview`}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"

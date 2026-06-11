@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import ScrollHashHandler from "@/components/ScrollHashHandler";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage",
   display: "swap",
 });
 
@@ -51,8 +57,6 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
         alt: "Sofia Alfaro — Senior Product Designer & AI Implementation Specialist",
       },
     ],
@@ -78,9 +82,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/icon.svg",
   },
   alternates: {
     canonical: "https://sofiaalfarodesign.com",
@@ -93,10 +95,53 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${bricolage.variable}`}>
       <body className="font-body antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:outline-none"
+        >
+          Skip to content
+        </a>
         <ScrollHashHandler />
         {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Sofia Alfaro",
+              jobTitle: "Senior Product Designer & AI Implementation Specialist",
+              url: "https://sofiaalfarodesign.com",
+              email: "sofia.alfablan@gmail.com",
+              sameAs: [
+                "https://www.linkedin.com/in/sofia-alfaro-designer",
+                "https://www.behance.net/sofiaalfaro9",
+                "https://github.com/sofiaalfarob-design",
+              ],
+              knowsAbout: [
+                "UX Design",
+                "Product Design",
+                "Design Systems",
+                "AI Implementation",
+                "B2B SaaS",
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Sofia Alfaro — Portfolio",
+              url: "https://sofiaalfarodesign.com",
+              author: { "@type": "Person", name: "Sofia Alfaro" },
+            }),
+          }}
+        />
       </body>
     </html>
   );

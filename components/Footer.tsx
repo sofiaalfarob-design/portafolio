@@ -3,10 +3,10 @@ import Image from "next/image";
 import basePath from "@/lib/basePath";
 
 const quickLinks = [
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "Showcases", href: "/showcases" },
   { label: "The Lab", href: "/#lab" },
   { label: "Tech Stack", href: "/#tech-stack" },
-  { label: "About Me", href: "/#tech-stack" },
+  { label: "About Me", href: "/#about" },
 ];
 
 const contactLinks = [

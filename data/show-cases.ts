@@ -31,7 +31,7 @@ export interface MetricCard {
   description: string;
 }
 
-export interface CaseStudy {
+export interface ShowCase {
   slug: string;
   category: string;
   subtitle: string;
@@ -53,7 +53,7 @@ export interface CaseStudy {
 
 import basePath from "@/lib/basePath";
 
-export const caseStudies: CaseStudy[] = [
+export const showCases: ShowCase[] = [
   {
     slug: "civitas",
     category: "SaaS UX Design & GovTech",
@@ -654,7 +654,7 @@ export const caseStudies: CaseStudy[] = [
       "Designing a complete digital identity for a newly established audiology clinic — from zero brand presence to top-3 Google Local Pack within 2–3 months of launch.",
     role: "Lead Designer (UX/UI, Brand Strategy, Copywriting, SEO, Implementation)",
     heroImage: `${basePath}/audivia-hero.png`,
-    thumbnailImage: `${basePath}/audivia-case-study-card.png`,
+    thumbnailImage: `${basePath}/audivia-show-case-card.png`,
     heroColor: "#0A1F3D",
     tools: ["Google Analytics", "Gemini Deep Research", "Figma", "Claude Design", "Cursor", "Figma Make"],
     timeline: "1 Month — Brand Creation to Digital Launch",
@@ -676,7 +676,7 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Design Strategy & Concept: \"Clinical Warmth\"",
         body: "Healthcare design lives in a tension: it must signal clinical authority while remaining emotionally approachable for patients who are often anxious or vulnerable. I built the entire visual and verbal system around what I called the \"Clinical Warmth\" framework.\n\n• Visual language: A palette rooted in calm, trust-signaling tones — soft neutrals anchored by a confident primary color that communicates expertise without coldness.\n\n• Typography: Clean, legible hierarchy that reads as professional on first glance but never intimidating — designed for patients of all ages, including older adults who are a core demographic for audiology.\n\n• Tone of voice: Copy written to be warm, clear, and jargon-free. Patients don't speak in audiological terms — the site shouldn't either.",
-        image: `${basePath}/audivia-case-study-1.png`,
+        image: `${basePath}/audivia-show-case-1.png`,
         imageAlt:
           "Multiple screens of the Audivia website showing the complete digital presence built for the audiology clinic, from hero to services, process, FAQ, and footer sections",
         imageAlmostFull: true,
@@ -701,7 +701,7 @@ export const caseStudies: CaseStudy[] = [
               "Rather than treating SEO as a post-launch layer, I embedded it into the content strategy from the start — keyword-informed copy, semantic HTML structure, Google Business alignment, and location-specific page architecture to capture local search intent.",
           },
         ],
-        image: `${basePath}/audivia-case-study-2.png`,
+        image: `${basePath}/audivia-show-case-2.png`,
         imageAlt:
           "Detailed views of the Audivia website showing the services section and patient process steps, illustrating the patient-first information architecture and trust-building design decisions",
         imageContained: true,
@@ -709,7 +709,7 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "The Design System",
         body: "Elegance in the details.\n\n• Typography: A dual-type system — a trustworthy serif for headings that signals clinical authority, paired with a highly legible sans-serif for body copy optimized for readability across age groups.\n\n• Iconography & Visual Assets: Custom-directed visual language that avoids generic stock photography. Imagery was curated to show real human connection — not clinical coldness — consistent with the \"Clinical Warmth\" framework.",
-        image: `${basePath}/audivia-case-study-3.png`,
+        image: `${basePath}/audivia-show-case-3.png`,
         imageAlt:
           "Audivia FAQ section on a laptop mockup showing the design system in action — clean typographic hierarchy, accessible color usage, and structured content layout",
         imageContained: true,
@@ -836,19 +836,19 @@ export const displayOrder = [
   "urban-bites",
 ];
 
-export function getOrderedCaseStudies(limit?: number): CaseStudy[] {
+export function getOrderedShowCases(limit?: number): ShowCase[] {
   const ordered = displayOrder
-    .map((slug) => caseStudies.find((cs) => cs.slug === slug))
-    .filter((cs): cs is CaseStudy => cs !== undefined);
+    .map((slug) => showCases.find((cs) => cs.slug === slug))
+    .filter((cs): cs is ShowCase => cs !== undefined);
   return limit ? ordered.slice(0, limit) : ordered;
 }
 
-export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
-  return caseStudies.find((cs) => cs.slug === slug);
+export function getShowCaseBySlug(slug: string): ShowCase | undefined {
+  return showCases.find((cs) => cs.slug === slug);
 }
 
-export function getRelatedCaseStudies(slugs: string[]): CaseStudy[] {
+export function getRelatedShowCases(slugs: string[]): ShowCase[] {
   return slugs
-    .map((slug) => getCaseStudyBySlug(slug))
-    .filter((cs): cs is CaseStudy => cs !== undefined);
+    .map((slug) => getShowCaseBySlug(slug))
+    .filter((cs): cs is ShowCase => cs !== undefined);
 }
