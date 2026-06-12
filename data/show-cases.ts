@@ -828,10 +828,10 @@ export const showCases: ShowCase[] = [
 export const displayOrder = [
   "civitas",
   "propelus",
-  "audivia",
+  "cleaning-app",
   "continuing-education",
   "arkose-labs",
-  "cleaning-app",
+  "audivia",
   "fine-raw",
   "urban-bites",
 ];
