@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import ScrollHashHandler from "@/components/ScrollHashHandler";
+import basePath from "@/lib/basePath";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -82,7 +83,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/icon.svg",
+    icon: `${basePath}/icon.svg`,
   },
   alternates: {
     canonical: "https://sofiaalfarodesign.com",
