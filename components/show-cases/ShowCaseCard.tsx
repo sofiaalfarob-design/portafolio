@@ -32,6 +32,11 @@ export default function ShowCaseCard({
             sizes="(max-width: 768px) 100vw, 50vw"
             quality={85}
           />
+          <div className="absolute inset-0 flex items-center justify-center bg-dark/0 transition-all duration-300 group-hover:bg-dark/25">
+            <span className="translate-y-3 rounded-full bg-white/90 px-5 py-2 text-sm font-semibold text-text-primary opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+              View Project →
+            </span>
+          </div>
         </div>
         <div className="p-6">
           <p className="mb-2 text-sm font-medium text-primary">

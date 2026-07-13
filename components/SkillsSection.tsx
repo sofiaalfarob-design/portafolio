@@ -55,9 +55,9 @@ export default function SkillsSection() {
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
               variants={cardVariants}
-              className="card-hover rounded-2xl border border-primary-light/30 bg-primary-light/5 p-6"
+              className="card-hover group rounded-2xl border border-primary-light/30 bg-primary-light/5 p-6"
             >
-              <div className="mb-3">
+              <div className="mb-3 transition-transform duration-300 group-hover:-translate-y-1">
                 <Image
                   src={iconMap[category.icon]}
                   alt=""

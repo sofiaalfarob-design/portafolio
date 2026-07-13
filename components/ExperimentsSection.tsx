@@ -67,9 +67,15 @@ function LabCard({ exp, index }: { exp: Experiment; index: number }) {
           </p>
           <button
             onClick={() => setExpanded(!expanded)}
-            className="mt-1.5 text-xs font-medium text-purple-600 hover:text-purple-800 transition-colors"
+            className="mt-1.5 inline-flex items-center gap-1 text-xs font-medium text-purple-600 transition-colors hover:text-purple-800"
           >
-            {expanded ? "Read less ↑" : "Read more ↓"}
+            {expanded ? "Read less" : "Read more"}
+            <span
+              className="transition-transform duration-300"
+              style={{ display: "inline-block", transform: expanded ? "rotate(180deg)" : "rotate(0deg)" }}
+            >
+              ↓
+            </span>
           </button>
           {exp.link && expanded && (
             <div className="mt-1">

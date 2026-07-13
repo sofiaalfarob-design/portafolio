@@ -110,7 +110,7 @@ export default function Navbar({ darkHero = false }: { darkHero?: boolean }) {
           <Link
             href={resolveHref("/#contact")}
             onClick={(e) => handleNavClick(e, "/#contact")}
-            className={`rounded-full px-6 py-2.5 text-sm font-semibold transition-all ${
+            className={`rounded-full px-6 py-2.5 text-sm font-semibold transition-all hover:-translate-y-0.5 active:scale-[0.97] ${
               useLightText
                 ? "bg-white text-gray-900 hover:bg-white/80"
                 : "bg-[#1a1a1a] text-white hover:bg-dark-hover"

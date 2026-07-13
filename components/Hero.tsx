@@ -101,13 +101,13 @@ export default function Hero() {
         >
           <Link
             href="#projects"
-            className="rounded-full bg-dark px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-dark-hover"
+            className="rounded-full bg-dark px-8 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-dark-hover active:scale-[0.97]"
           >
             View Showcases
           </Link>
           <Link
             href="#contact"
-            className="rounded-full border-2 border-gray-300 px-8 py-3 text-sm font-semibold text-text-primary transition-all hover:border-primary-hover hover:text-primary-hover"
+            className="rounded-full border-2 border-gray-300 px-8 py-3 text-sm font-semibold text-text-primary transition-all hover:-translate-y-0.5 hover:border-primary-hover hover:text-primary-hover active:scale-[0.97]"
           >
             Let&apos;s Talk
           </Link>

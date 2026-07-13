@@ -67,12 +67,12 @@ export default function WhyWorkWithMe() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="grid grid-cols-1 gap-3 border-t border-gray-200 py-8 md:grid-cols-12 md:gap-8 md:py-10"
+              className="group -mx-4 grid grid-cols-1 gap-3 rounded-xl border-t border-gray-200 px-4 py-8 transition-colors duration-300 hover:bg-primary-light/5 md:grid-cols-12 md:gap-8 md:py-10"
             >
               <span className="font-heading text-5xl font-bold text-primary md:col-span-1">
                 {item.number}
               </span>
-              <h3 className="font-heading text-xl font-bold text-text-primary md:col-span-4">
+              <h3 className="font-heading text-xl font-bold text-text-primary transition-colors duration-300 group-hover:text-primary md:col-span-4">
                 {item.title}
               </h3>
               <p className="text-base leading-relaxed text-text-secondary md:col-span-7">
