@@ -8,6 +8,15 @@ export interface TechCard {
   description: string;
 }
 
+export interface ColorSwatch {
+  hex: string;
+  name: string;
+  ratio: string;
+  passes: boolean;
+  /** "button" renders the hex as a filled button preview; "text" renders it as sample text on a dark surface. Defaults to "button". */
+  kind?: "button" | "text";
+}
+
 export interface ContentSection {
   heading?: string;
   body: string;
@@ -24,6 +33,8 @@ export interface ContentSection {
   topImageContainedLg?: boolean;
   topImageAlmostFull?: boolean;
   subCards?: TechCard[];
+  colorSwatches?: ColorSwatch[];
+  colorSwatchesCaption?: string;
 }
 
 export interface MetricCard {
@@ -886,7 +897,45 @@ export const showCases: ShowCase[] = [
       },
       {
         heading: "The Design System: Glass with Constraints",
-        body: "The visual direction came from reference screens I studied: dark backgrounds, lavender and salmon accents, Playfair Display for editorial moments, a navigation system that felt native to mobile. The aesthetic was clear. The execution challenge was technical.\n\nThe orbe, the breathing element at the center of the app, needed to feel alive even before the animation started. I used Figma shaders to build the radial gradient effect inside the orbe: a layered composition with a white highlight at 38% horizontal, a lavender mid-zone, and a deep teal base, creating the illusion of depth and translucency that CSS radial-gradient then reproduced in code. That same shader work informed the glass card surfaces too, including the subtle bloom effect on hover states that makes the glass feel responsive rather than decorative.\n\nGlassmorphism has a known accessibility problem: semi-transparent surfaces over dark backgrounds can fail contrast ratios without anyone noticing. I calculated every token mathematically using the WCAG 2.1 relative luminance formula, with no eyeballing and no browser plugins. The two brand colors from the reference screens failed immediately as button backgrounds:\n\n• #869CF4 (lavender) + white text hits 2.60:1, failing AA\n\n• #FF9F92 (salmon) + white text hits 1.98:1, failing AA\n\nI derived corrected button variants (#5468D4 at 4.87:1 and #B8483C at 5.20:1) that pass AA while preserving the palette's visual identity. The muted text token #9BA3B8 was the minimum allowed at 5.76:1 on the darkest glass surface. Every token in the system has a verified ratio: 12 color tokens, 0 estimated, 100% WCAG AA.\n\nThe system was documented as a PRD-style markdown file Claude Code could read directly, not a Figma annotation layer, but a technical specification with:\n\n• CSS custom properties with semicolons, after catching that missing semicolons silently break CSS variables\n\n• @supports (backdrop-filter: blur(1px)) fallback patterns for browsers that don't support glass\n\n• @media (prefers-reduced-motion: no-preference) wrapping every animation, not the inverse pattern\n\n• Explicit HTML structure for the orbe halos using named classes instead of :nth-child, because DOM order changes break nth-child selectors silently\n\n• A separate --color-border-focus-solid token from the rgba focus ring, because rgba fails contrast in contexts of unknown luminance like modals",
+        body: "The visual direction came from reference screens I studied: dark backgrounds, lavender and salmon accents, Playfair Display for editorial moments, a navigation system that felt native to mobile. The aesthetic was clear. The execution challenge was technical.\n\nThe orbe, the breathing element at the center of the app, needed to feel alive even before the animation started. I used Figma shaders to build the radial gradient effect inside the orbe: a layered composition with a white highlight at 38% horizontal, a lavender mid-zone, and a deep teal base, creating the illusion of depth and translucency that CSS radial-gradient then reproduced in code. That same shader work informed the glass card surfaces too, including the subtle bloom effect on hover states that makes the glass feel responsive rather than decorative.\n\nThe system was documented as a PRD-style markdown file Claude Code could read directly, not a Figma annotation layer, but a technical specification with:\n\n• CSS custom properties with semicolons, after catching that missing semicolons silently break CSS variables\n\n• @supports (backdrop-filter: blur(1px)) fallback patterns for browsers that don't support glass\n\n• @media (prefers-reduced-motion: no-preference) wrapping every animation, not the inverse pattern\n\n• Explicit HTML structure for the orbe halos using named classes instead of :nth-child, because DOM order changes break nth-child selectors silently\n\n• A separate --color-border-focus-solid token from the rgba focus ring, because rgba fails contrast in contexts of unknown luminance like modals",
+      },
+      {
+        heading: "WCAG AA: Mathematically Verified",
+        body: "Glassmorphism has a known accessibility problem: semi-transparent surfaces over dark backgrounds can fail contrast ratios without anyone noticing. I calculated every token mathematically using the WCAG 2.1 relative luminance formula, with no eyeballing and no browser plugins.\n\nThe two brand colors from the reference screens failed immediately as button backgrounds, so I derived corrected variants that pass AA while preserving the palette's visual identity. The muted text token needed the same scrutiny, since its rgba surface made the true contrast easy to miscalculate. Every token below is checked against the background it actually renders on.",
+        colorSwatches: [
+          {
+            hex: "#869CF4",
+            name: "Lavender (original)",
+            ratio: "2.60:1",
+            passes: false,
+          },
+          {
+            hex: "#FF9F92",
+            name: "Salmon (original)",
+            ratio: "1.98:1",
+            passes: false,
+          },
+          {
+            hex: "#5468D4",
+            name: "Lavender (corrected)",
+            ratio: "4.87:1",
+            passes: true,
+          },
+          {
+            hex: "#B8483C",
+            name: "Salmon (corrected)",
+            ratio: "5.20:1",
+            passes: true,
+          },
+          {
+            hex: "#9BA3B8",
+            name: "Muted text (darkest glass surface)",
+            ratio: "5.76:1",
+            passes: true,
+            kind: "text",
+          },
+        ],
+        colorSwatchesCaption: "12 color tokens verified. 0 estimated. 100% WCAG AA.",
       },
       {
         heading: "The AI Workflow: Structured Prompts for Claude Code",

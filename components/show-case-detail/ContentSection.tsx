@@ -86,6 +86,63 @@ export default function ContentSection({
         </div>
       )}
 
+      {section.colorSwatches && section.colorSwatches.length > 0 && (
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {section.colorSwatches.map((swatch) => (
+            <div
+              key={swatch.hex + swatch.name}
+              className="overflow-hidden rounded-2xl border border-gray-200 bg-white"
+            >
+              <div
+                className="flex h-24 items-center justify-center"
+                style={{ backgroundColor: "#0B0F1A" }}
+              >
+                {swatch.kind === "text" ? (
+                  <span
+                    className="text-sm font-semibold"
+                    style={{ color: swatch.hex }}
+                  >
+                    Racha · 3 días
+                  </span>
+                ) : (
+                  <span
+                    className="rounded-full px-5 py-2 text-sm font-semibold text-white"
+                    style={{ backgroundColor: swatch.hex }}
+                  >
+                    Respirar ahora
+                  </span>
+                )}
+              </div>
+              <div className="flex items-center justify-between gap-3 px-4 py-3">
+                <div>
+                  <p className="text-sm font-semibold text-text-primary">
+                    {swatch.name}
+                  </p>
+                  <p className="text-xs text-text-secondary">
+                    {swatch.hex} · {swatch.ratio}
+                  </p>
+                </div>
+                <span
+                  className={`shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold ${
+                    swatch.passes
+                      ? "bg-green-100 text-green-700"
+                      : "bg-red-100 text-red-700"
+                  }`}
+                >
+                  {swatch.passes ? "AA Pass" : "Fails AA"}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {section.colorSwatchesCaption && (
+        <p className="mt-4 text-center text-sm font-medium text-text-secondary">
+          {section.colorSwatchesCaption}
+        </p>
+      )}
+
       {section.topImage && (
         <div
           className={`mt-8 overflow-hidden rounded-2xl ${
