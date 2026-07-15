@@ -822,11 +822,159 @@ export const showCases: ShowCase[] = [
     ],
     relatedCaseSlugs: ["urban-bites", "propelus", "arkose-labs"],
   },
+  {
+    slug: "niebla",
+    category: "UX Research & Design · AI Implementation · Design Engineering",
+    subtitle: "UX Research & Design · AI Implementation · Design Engineering",
+    title:
+      "Niebla: Designing and Building a Full-Stack Wellness App From Research to Working Code",
+    detailTitle: "Niebla: From User Research to Functional App",
+    description:
+      "Designing and building a full-stack wellness app from research to working code, featuring a WCAG-verified glass design system, AI-generated prompts, Figma shaders, and a structured Claude Code workflow.",
+    role: "Lead Designer, Researcher & AI Orchestrator",
+    heroImage: `${basePath}/hero-niebla.png`,
+    thumbnailImage: `${basePath}/thumnail-niebla.png`,
+    heroColor: "#0B0F1A",
+    tools: ["Figma", "Figma Shaders", "Next.js", "Claude Code", "Anthropic API", "Design Systems"],
+    timeline: "3 Weeks: Research to Working App",
+    metrics: "3 Weeks Research to App | 9 Structured Prompts | 100% WCAG AA | 0 Production Bugs",
+    tags: [
+      { label: "UX Research", variant: "purple" },
+      { label: "AI Implementation", variant: "neutral" },
+      { label: "Design Systems", variant: "neutral" },
+      { label: "Claude Code", variant: "neutral" },
+    ],
+    contentSections: [
+      {
+        heading: "The Challenge: A Tool I Actually Needed",
+        body: "Niebla didn't start as a portfolio piece. It started as a personal need: a way to build breathing pauses into a busy day and process thoughts through writing before sleep. The design challenge was real. Most wellness apps feel either too clinical or too spiritual, too gamified or too empty. None of them felt like mine.\n\nThe engineering challenge was equally real. Could I take a full UX process (research, persona, user journey, design system) and turn it into a working, deployed web app using AI as my development partner? Not a prototype. Not a Figma mock. An actual app with a database, authentication, push notifications, and AI-generated content.\n\nThe answer became Niebla.",
+      },
+      {
+        heading: "What Niebla Does",
+        body: "Niebla is a web app with two coexisting modes that serve different moments of the day.\n\nBreathing pauses arrive as gentle push notifications 2–3 times daily. The user opens the app, and the orb (the app's signature visual element) guides them through a 4-7-8 breathing cycle for 2 minutes. No setup, no decisions, no friction.\n\nA nighttime ritual closes the day. The app sends a notification at a user-defined time. If the user chose the writing mode, the Anthropic API generates a personalized reflection prompt based on their recent journal entries. They write for 10 minutes in a distraction-free space. If they chose meditation, the orb guides them for 10 minutes instead.\n\nEverything gets tracked: breathing sessions, writing entries, meditation sessions. It all surfaces as a streak and history that become the emotional hook keeping users engaged.",
+        image: `${basePath}/niebla-internal-image.png`,
+        imageAlt:
+          "Four Niebla screens: the home view with a 3-day streak and last sessions, a weekly planning reference screen, the breathing player with an ambient sound library, and the dashboard showing daily goal progress",
+        imageContained: true,
+      },
+      {
+        heading: "The Research Foundation",
+        body: "Before designing a single screen, I built the research layer that would inform every decision. Camila is 31, a project coordinator in Bogotá with diagnosed generalized anxiety. Her psychologist recommended self-regulation techniques to complement therapy. She's tried Calm and Headspace. Both felt too spiritual or too gamified. She identifies with \"wellness,\" not \"meditation.\" She abandons apps that don't show visible progress in the first week.\n\nCamila's core insight shaped the entire product: she doesn't want to cure her anxiety. She wants to not let it accumulate until it becomes unmanageable. That's a fundamentally different design brief than most wellness apps are written for.\n\nI mapped the full journey from discovery to reactivation after abandonment, including the stage most products ignore: what happens when a user breaks their streak after 14 days and has to decide whether to come back or delete the app. The design answer is no judgment, no fanfare, no guilt. \"Welcome back\" and a streak that resets to Day 1 quietly. The consistency of the tone across every touchpoint is what makes users return rather than delete.",
+        subCards: [
+          {
+            title: "Notifications Go Silent",
+            description:
+              "Camila has notifications muted on Android, so the ones that do reach her need to feel worth opening, not generic.",
+          },
+          {
+            title: "A Blank Page Is a Barrier",
+            description:
+              "Journaling intimidates her. An open-ended blank page isn't an invitation to write. It's a reason to close the app.",
+          },
+          {
+            title: "Wins Need to Be Fast",
+            description:
+              "She needs small, visible progress within the first week, or she abandons the app like she has with every other wellness tool.",
+          },
+        ],
+        image: `${basePath}/user-persona-niebla.png`,
+        imageAlt:
+          "User persona document for Camila R., 31, project coordinator in Bogotá with diagnosed anxiety. It documents her motivations, frustrations, behaviors, key usage scenarios, and the three usage modes: breathing breaks, nighttime writing ritual, and traditional meditation",
+        imageAlmostFull: true,
+        imageLightbox: true,
+        imageLightboxZoom: 1.5,
+      },
+      {
+        heading: "The Design System: Glass with Constraints",
+        body: "The visual direction came from reference screens I studied: dark backgrounds, lavender and salmon accents, Playfair Display for editorial moments, a navigation system that felt native to mobile. The aesthetic was clear. The execution challenge was technical.\n\nThe orbe, the breathing element at the center of the app, needed to feel alive even before the animation started. I used Figma shaders to build the radial gradient effect inside the orbe: a layered composition with a white highlight at 38% horizontal, a lavender mid-zone, and a deep teal base, creating the illusion of depth and translucency that CSS radial-gradient then reproduced in code. That same shader work informed the glass card surfaces too, including the subtle bloom effect on hover states that makes the glass feel responsive rather than decorative.\n\nGlassmorphism has a known accessibility problem: semi-transparent surfaces over dark backgrounds can fail contrast ratios without anyone noticing. I calculated every token mathematically using the WCAG 2.1 relative luminance formula, with no eyeballing and no browser plugins. The two brand colors from the reference screens failed immediately as button backgrounds:\n\n• #869CF4 (lavender) + white text hits 2.60:1, failing AA\n\n• #FF9F92 (salmon) + white text hits 1.98:1, failing AA\n\nI derived corrected button variants (#5468D4 at 4.87:1 and #B8483C at 5.20:1) that pass AA while preserving the palette's visual identity. The muted text token #9BA3B8 was the minimum allowed at 5.76:1 on the darkest glass surface. Every token in the system has a verified ratio: 12 color tokens, 0 estimated, 100% WCAG AA.\n\nThe system was documented as a PRD-style markdown file Claude Code could read directly, not a Figma annotation layer, but a technical specification with:\n\n• CSS custom properties with semicolons, after catching that missing semicolons silently break CSS variables\n\n• @supports (backdrop-filter: blur(1px)) fallback patterns for browsers that don't support glass\n\n• @media (prefers-reduced-motion: no-preference) wrapping every animation, not the inverse pattern\n\n• Explicit HTML structure for the orbe halos using named classes instead of :nth-child, because DOM order changes break nth-child selectors silently\n\n• A separate --color-border-focus-solid token from the rgba focus ring, because rgba fails contrast in contexts of unknown luminance like modals",
+      },
+      {
+        heading: "The AI Workflow: Structured Prompts for Claude Code",
+        body: "The app was built using Claude Code as the development partner, with a 9-prompt structured workflow I designed as its own artifact. The key insight: Claude Code performs dramatically better when given a single, well-scoped task with explicit references to specific document sections than when given an open-ended brief. Each prompt referenced exact section numbers in the PRD, specified the HTML structure required, named the CSS classes to use, and defined the edge case behavior explicitly.\n\nWriting the PRD rigorously surfaced problems that would have caused production bugs:\n\n• The cron job for push notifications was initially a stub with comments. Writing it completely meant handling 410 Gone responses (invalid push subscriptions) and cleaning them from the database automatically.\n\n• The streak calculation used new Date() without timezone context, which would have broken for users in any timezone other than the server's. The function was rewritten to accept a timezone string and use toLocaleDateString for all comparisons.\n\n• The /api/generate-prompt endpoint had no auth, so any unauthenticated request could consume the Anthropic API key. Adding JWT verification before the Anthropic call was a one-line fix that the document review caught.\n\nThe writing ritual's core feature is that the prompt doesn't repeat. The API call passes the user's name and the last 3 journal entries as context, asking Claude to generate a single open question in under 25 words: soft, not prescriptive, inviting release rather than problem-solving. 10 fallback prompts handle API failures, selected at random with no repetition and tracked by a module-level variable that remembers the last index used.",
+        subCards: [
+          {
+            title: "niebla-prd.md",
+            description:
+              "The complete Supabase schema, Row Level Security policies, every API endpoint (including auth verification on each route), the push notification cron job, the timezone-aware streak function, and a \"do not build in v1\" list.",
+          },
+          {
+            title: "niebla-design-system.md",
+            description:
+              "All CSS tokens, component CSS with every interactive state, the orbe's exact HTML structure, and the full WCAG verification table.",
+          },
+          {
+            title: "niebla-user-journey.md",
+            description:
+              "The 8-stage journey from discovery to reactivation, with the emotional state at each stage and the design decisions that support each transition.",
+          },
+        ],
+      },
+      {
+        heading: "The Result: A Working App",
+        body: "Niebla shipped with:\n\n• 8 screens fully implemented in Next.js 14 with App Router\n\n• Supabase for auth and PostgreSQL with RLS on all 5 tables\n\n• Framer Motion for the orbe breathing animation and page transitions\n\n• Radix UI primitives for the exit confirmation dialog and settings toggles, used for behavior only, with no styles\n\n• Web Push + Vercel Cron for scheduled notifications with timezone-aware delivery\n\n• Anthropic API generating personalized nightly reflection prompts\n\n• Lucide React icons imported individually, never as a wildcard",
+      },
+      {
+        heading: "What This Showcase Demonstrates",
+        body: "End-to-end ownership, technical design thinking, and AI used as a multiplier rather than a replacement: the four qualities this project was built to prove.",
+        subCards: [
+          {
+            title: "End-to-End Ownership",
+            description:
+              "Research → persona → user journey → design system → PRD → prompts → working app. No handoff to a developer. No gap between design intent and implementation.",
+          },
+          {
+            title: "Technical Design Thinking",
+            description:
+              "The decisions that matter most here are invisible to the user: the WCAG math, the @supports fallback, the timezone-aware streak, the auth on every API route. Catching these before they become production bugs is a different kind of collaborator.",
+          },
+          {
+            title: "AI as a Multiplier, Not a Replacement",
+            description:
+              "Claude Code built the app. I designed the system that told it exactly what to build, caught the gaps in every document review, and made the aesthetic decisions a language model can't. The 9-prompt architecture is the artifact, not just the app it produced.",
+          },
+          {
+            title: "Figma as a Technical Tool",
+            description:
+              "Using shaders in Figma to prototype the glass and orbe effects before implementing them in CSS meant the code was a translation, not an experiment. The design system document was the handoff, and it was written for a machine.",
+          },
+        ],
+      },
+    ],
+    businessImpact: [
+      {
+        headline: "3 Weeks",
+        description:
+          "From user research to a fully working, deployed app: research, persona, design system, PRD, prompts, and code, with no handoff to a developer.",
+      },
+      {
+        headline: "100% WCAG AA",
+        description:
+          "Every one of the 12 color tokens in the glass design system mathematically verified against the WCAG 2.1 relative luminance formula, with zero estimated.",
+      },
+      {
+        headline: "9 Prompts",
+        description:
+          "A structured, 9-prompt Claude Code workflow, each scoped to a single phase and referencing exact PRD section numbers, replaced an open-ended AI brief.",
+      },
+      {
+        headline: "0 Production Bugs",
+        description:
+          "Rigorous PRD review caught the incomplete notification cron job, the timezone-unaware streak calculation, and an unauthenticated API route before any of them reached production.",
+      },
+      {
+        headline: "8 Screens",
+        description:
+          "Login, onboarding, home, breathe, ritual, journal, history, and settings: a complete, deployed app, not a prototype.",
+      },
+    ],
+    relatedCaseSlugs: ["civitas", "cleaning-app", "audivia"],
+  },
 ];
 
 // Controls display order across all pages
 export const displayOrder = [
   "civitas",
+  "niebla",
   "propelus",
   "cleaning-app",
   "continuing-education",
